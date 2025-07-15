@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="w-[30%] m-auto">
             <Image imgSrc={HeaderLogo} imgAlt={"FooterLogo"} />
             <p className="pr-[100px] mt-10 text-sm text-">
-              1418 River Drive, Suite 35 Cottonhall, CA 9622 United States
+              1418 River Drive, Suite 35 Cottonhall, CA 96232 United States
             </p>
             <h6 className="py-10 text-sm">
               sale@uomo.com <br /> <span>+1 246-345-0695</span>
