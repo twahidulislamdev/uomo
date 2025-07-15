@@ -3,3 +3,8 @@
 @plugin "daisyui" {
   themes: "false";
 }
+
+@theme {
+  --color-mainColor: #222222;
+  --color-seconderyColor: #767676;
+}

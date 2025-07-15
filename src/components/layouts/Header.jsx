@@ -5,6 +5,7 @@ import HeaderLogo from "../../assets/headerLogo.png";
 import { BsSearch } from "react-icons/bs";
 import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import { HiOutlineShoppingBag, HiMiniBars3CenterLeft } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,27 +18,33 @@ const Header = () => {
             </div>
             <div className="m-auto">
               <ul className="flex items-center gap-x-10">
-                <li className="text-sm text-menuColor hover:text-black font-medium hover:cursor-pointer hover:border-b-2 hover:border-black hover:translate-x-0 transition-all ease-in-out ">
+                <Link to={"/"}>
+                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   HOME
+                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2  h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
                 </li>
-
-                <li className="text-sm text-menuColor hover:text-black font-medium hover:cursor-pointer hover:border-b-2 hover:border-black hover:translate-x-0 transition-all ease-in-out ">
+                </Link>
+                <Link to={"/shop"}>
+                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   SHOP
+                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
                 </li>
-
-                <li className="text-sm text-menuColor hover:text-black font-medium hover:cursor-pointer hover:border-b-2 hover:border-black hover:translate-x-0 transition-all ease-in-out ">
+                </Link>
+                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   COLLECTION
+                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
                 </li>
-
-                <li className="text-sm text-menuColor hover:text-black font-medium hover:cursor-pointer hover:border-b-2 hover:border-black hover:translate-x-0 transition-all ease-in-out ">
+                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   Journal
+                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
                 </li>
-
-                <li className="text-sm text-menuColor hover:text-black font-medium hover:cursor-pointer hover:border-b-2 hover:border-black hover:translate-x-0 transition-all ease-in-out ">
+                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   LOOKBOOK
+                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
                 </li>
-                <li className="text-sm text-menuColor hover:text-black font-medium hover:cursor-pointer hover:border-b-2 hover:border-black hover:translate-x-0 transition-all ease-in-out ">
+                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   PAGES
+                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
                 </li>
               </ul>
             </div>
