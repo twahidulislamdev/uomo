@@ -32,7 +32,7 @@ const Banner = () => {
                 <div className="w-[65%]">
                   <Heading
                     className={"text-[70px] font-medium"}
-                    txt={"The Classics"}
+                    txt={"Man Collection"}
                     as={"h1"}
                   />
                   <p className="text-base text-[#222222]">
@@ -67,7 +67,7 @@ const Banner = () => {
                 <div className="w-[65%]">
                   <Heading
                     className={"text-[70px] font-medium"}
-                    txt={"The Classics"}
+                    txt={"Women Collection"}
                     as={"h1"}
                   />
                   <p className="text-base text-[#222222]">

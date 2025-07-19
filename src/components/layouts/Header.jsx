@@ -17,9 +17,9 @@ const Header = () => {
               <Image imgSrc={HeaderLogo} imgAlt={"Header Logo"} />
             </div>
             <div className="m-auto">
-              <ul className="flex items-center gap-x-8">
+              <ul className="flex items-center gap-x-10">
                 <Link to={"/"}>
-                  <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                  <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                     HOME
                     <span
                       className="absolute left-0 bottom-0  h-0.5 bg-black transform  
@@ -29,7 +29,7 @@ const Header = () => {
                   </li>
                 </Link>
                 <Link to={"/shop"}>
-                  <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                  <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                     SHOP
                     <span
                       className="absolute left-0 bottom-0  h-0.5 bg-black transform  
@@ -38,7 +38,7 @@ const Header = () => {
                     ></span>
                   </li>
                 </Link>
-                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   COLLECTION
                   <span
                       className="absolute left-0 bottom-0  h-0.5 bg-black transform  
@@ -46,7 +46,7 @@ const Header = () => {
                       transition-all duration-300 ease-in-out"
                     ></span>
                 </li>
-                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   Journal
                   <span
                       className="absolute left-0 bottom-0  h-0.5 bg-black transform  
@@ -54,7 +54,7 @@ const Header = () => {
                       transition-all duration-300 ease-in-out"
                     ></span>
                 </li>
-                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   LOOKBOOK
                   <span
                       className="absolute left-0 bottom-0  h-0.5 bg-black transform  
@@ -62,7 +62,7 @@ const Header = () => {
                       transition-all duration-300 ease-in-out"
                     ></span>
                 </li>
-                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   PAGES
                   <span
                       className="absolute left-0 bottom-0  h-0.5 bg-black transform  
