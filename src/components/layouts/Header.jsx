@@ -17,34 +17,58 @@ const Header = () => {
               <Image imgSrc={HeaderLogo} imgAlt={"Header Logo"} />
             </div>
             <div className="m-auto">
-              <ul className="flex items-center gap-x-10">
+              <ul className="flex items-center gap-x-8">
                 <Link to={"/"}>
-                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
-                  HOME
-                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2  h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
-                </li>
+                  <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                    HOME
+                    <span
+                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                    ></span>
+                  </li>
                 </Link>
                 <Link to={"/shop"}>
-                <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
-                  SHOP
-                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
-                </li>
+                  <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                    SHOP
+                    <span
+                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                    ></span>
+                  </li>
                 </Link>
                 <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   COLLECTION
-                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
+                  <span
+                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                    ></span>
                 </li>
                 <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   Journal
-                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
+                  <span
+                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                    ></span>
                 </li>
                 <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   LOOKBOOK
-                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
+                  <span
+                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                    ></span>
                 </li>
                 <li className="relative list-none px-3 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   PAGES
-                  {/* <span className=" absolute bottom-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-black transition-all duration-300 ease-in-out group-hover:w-full group-hover:left-0 group-hover:translate-x-0"></span> */}
+                  <span
+                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                    ></span>
                 </li>
               </ul>
             </div>
