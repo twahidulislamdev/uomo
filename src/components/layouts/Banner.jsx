@@ -35,7 +35,7 @@ const Banner = () => {
                     txt={"Man Collection"}
                     as={"h1"}
                   />
-                  <p className="text-base text-[#222222]">
+                  <p className="text-base text-mainColor">
                     An exclusive selection of this season's trends.
                   </p>
                   <Link to={"/shop"}>

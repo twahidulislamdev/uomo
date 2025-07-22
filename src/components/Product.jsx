@@ -1,11 +1,10 @@
-import Badge from "./Badge";
 import Flex from "./Flex";
 import {
   HiOutlineShoppingBag,
   HiOutlineEye,
   HiOutlineHeart,
 } from "react-icons/hi2";
-const Product = ({ imgSrc, imgAlt, text, title, price, productColor, imgSrcTwo }) => {
+const Product = ({ imgSrc, imgAlt, badgeText, title, price, productColor, imgSrcTwo, badgeClassName }) => {
   return (
     <>
       <div className="w-[24%] relative group border-2 border-gray-100">
@@ -24,8 +23,12 @@ const Product = ({ imgSrc, imgAlt, text, title, price, productColor, imgSrcTwo }
             className=" absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
           />
         </div>
-
-        <Badge className={"absolute top-5 left-5"} badgeText={text} />
+        <div
+      className={`absolute top-5 left-5 py-2 px-8  text-black font-bold text-center text-sm w-[90px] ${badgeClassName}`}
+    >
+      {badgeText}
+    </div>
+        {/* <Badge className={"absolute top-5 left-5"} badgeText={text} /> */}
         <div className=" p-7.5 space-y-3 absolute bottom-22 left-0 w-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
           <Flex className={"justify-center space-x-5"}>
             <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-red-500 ">

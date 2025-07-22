@@ -70,80 +70,88 @@ const Trending = () => {
                 imgSrc={ProductOne}
                 imgAlt={"Arive One"}
                 imgSrcTwo={ProductOneSide}
-                text={"New"}
+                badgeText={"New"}
                 title={"Basic Crew Neck Tee"}
                 price={"$44.00"}
                 productColor={"Black"}
+                badgeClassName={"bg-white"}
               />
               <Product
                 className={""}
                 imgSrc={ProductTwo}
                 imgAlt={"Arive One"}
                 imgSrcTwo={ProductTwoSide}
-                text={"New"}
+                badgeText={"10%"}
                 title={"Basic Crew Neck Tee"}
                 price={"$44.00"}
                 productColor={"Black"}
+                badgeClassName={"bg-green-300"}
               />
               <Product
                 className={""}
                 imgSrc={ProductThree}
                 imgAlt={"Arive One"}
-                text={"New"}
+                badgeText={"New"}
                 imgSrcTwo={ProductThreeSide}
                 title={"Basic Crew Neck Tee"}
                 price={"$44.00"}
                 productColor={"Black"}
+                badgeClassName={"bg-white"}
               />
               <Product
                 className={""}
                 imgSrc={ProductFour}
                 imgAlt={"Arive One"}
                 imgSrcTwo={ProductFourSide}
-                text={"New"}
+                badgeText={"10%"}
                 title={"Basic Crew Neck Tee"}
                 price={"$44.00"}
                 productColor={"Black"}
+                badgeClassName={"bg-green-300"}
               />
               <Product
                 className={""}
                 imgSrc={ProductFive}
                 imgAlt={"Arive One"}
                 imgSrcTwo={ProductFiveSide}
-                text={"New"}
+                badgeText={"New"}
                 title={"Basic Crew Neck Tee"}
                 price={"$44.00"}
                 productColor={"Black"}
+                 badgeClassName={'bg-white'}
               />
               <Product
                 className={""}
                 imgSrc={ProductSix}
                 imgAlt={"Arive One"}
                 imgSrcTwo={ProductSixSide}
-                text={"New"}
+                badgeText={"10%"}
                 title={"Basic Crew Neck Tee"}
                 price={"$44.00"}
                 productColor={"Black"}
+                badgeClassName={"bg-green-300"}
               />
               <Product
                 className={""}
                 imgSrc={ProductSeven}
                 imgAlt={"Arive One"}
                 imgSrcTwo={ProductSevenSide}
-                text={"New"}
+                badgeText={"New"}
                 title={"Basic Crew Neck Tee"}
                 price={"$44.00"}
                 productColor={"Black"}
+                 badgeClassName={'bg-white'}
               />
               <Product
                 className={""}
                 imgSrc={ProductEight}
                 imgAlt={"Arive One"}
                 imgSrcTwo={ProductEightSide}
-                text={"New"}
+                badgeText={"10%"}
                 title={"Basic Crew Neck Tee"}
                 price={"$44.00"}
                 productColor={"Black"}
+                badgeClassName={"bg-green-300"}
               />
             </Flex>
           </div>
