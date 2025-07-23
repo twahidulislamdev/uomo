@@ -4,6 +4,7 @@ import Button from '../Button'
 import Trending from '../layouts/Trending'
 import Collection from '../layouts/Collection'
 import Testimonials from '../layouts/Testimonials'
+import InsideCollection from '../layouts/InsideCollection'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
     <Trending/>
     <Collection/>
     <Testimonials/>
+    <InsideCollection/>
     </>
   )
 }

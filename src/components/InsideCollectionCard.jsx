@@ -4,7 +4,8 @@ import {
   HiOutlineEye,
   HiOutlineHeart,
 } from "react-icons/hi2";
-const Product = ({
+
+const InsideCollectionCard = ({
   imgSrc,
   imgAlt,
   badgeText,
@@ -13,11 +14,12 @@ const Product = ({
   productColor,
   imgSrcTwo,
   badgeClassName,
+  delTxt,
   priceClassName
 }) => {
   return (
     <>
-      <div className="w-[24%] relative group border-2 border-gray-100">
+      <div className="mx-2 relative group border-2 border-gray-100">
         <div className="relative h-100 overflow-hidden">
           {/* Default Image */}
           <img
@@ -57,11 +59,14 @@ const Product = ({
             {productColor}
           </p>
           <h3 className="text-[#262626] text-base font-bold py-1">{title}</h3>
+          <Flex className={"gap-x-5"}>
             <h4 className={`text-mainColor text-base font-bold ${priceClassName}`}>{price}</h4>
+            <del className={`text-seconderyColor`}>{delTxt}</del>
+          </Flex>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Product;
+export default InsideCollectionCard
