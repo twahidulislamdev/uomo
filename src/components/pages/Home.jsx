@@ -3,6 +3,7 @@ import Banner from '../layouts/Banner'
 import Button from '../Button'
 import Trending from '../layouts/Trending'
 import Collection from '../layouts/Collection'
+import Testimonials from '../layouts/Testimonials'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
     <Banner/>
     <Trending/>
     <Collection/>
+    <Testimonials/>
     </>
   )
 }

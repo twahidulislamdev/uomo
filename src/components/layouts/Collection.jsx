@@ -11,7 +11,7 @@ const Collection = () => {
       <div className="mb-10">
         <Container>
           <Flex className={"justify-between"}>
-            <div className="w-[49%] h-full space-y-5">
+            <div data-aos="fade-right" className="w-[49%] h-full space-y-5">
               {/* Left Card One Start  */}
               <div className="w-full h-[430px] bg-[url(/src/assets/collectionOne.jpg)] bg-cover bg-center bg-no-repeat relative">
                 <div className="p-5 absolute left-5 bottom-5 ">

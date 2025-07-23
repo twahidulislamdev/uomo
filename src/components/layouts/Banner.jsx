@@ -23,16 +23,16 @@ const Banner = () => {
   };
   return (
     <>
-      <div className="">
-        <Container className={" "}>
-          <Slider {...settings}>
-            {/* Slider One Start */}
+      <div className="mx-10">
+        <Slider className="" {...settings}>
+          {/* Slider One Start */}
             <div className="">
-              <Flex className={"justify-between items-center"}>
-                <div className="w-[65%]">
+              <Container >
+              <Flex className={"justify-around items-center"}>
+                <div className="w-[60%]">
                   <Heading
                     className={"text-[70px] font-medium"}
-                    txt={"Man Collection"}
+                    txt={"The Classics"}
                     as={"h1"}
                   />
                   <p className="text-base text-mainColor">
@@ -51,7 +51,7 @@ const Banner = () => {
                     </button>
                   </Link>
                 </div>
-                <div className="w-[35%]">
+                <div className="w-[40%]">
                   <Image
                     className={""}
                     imgSrc={SliderOne}
@@ -59,18 +59,20 @@ const Banner = () => {
                   />
                 </div>
               </Flex>
+            </Container>
             </div>
-            {/* Slider one End */}
-            {/* Slider Two Start */}
-            <div className="">
-              <Flex className={"justify-between items-center"}>
-                <div className="w-[65%]">
+          {/* Slider one End */}
+          {/* Slider Two Start */}
+          <div className="">
+              <Container className={""}>
+              <Flex className={"justify-center items-center"}>
+                <div className="w-[60%]">
                   <Heading
                     className={"text-[70px] font-medium"}
-                    txt={"Women Collection"}
+                    txt={"The Classics"}
                     as={"h1"}
                   />
-                  <p className="text-base text-[#222222]">
+                  <p className="text-base text-mainColor">
                     An exclusive selection of this season's trends.
                   </p>
                   <Link to={"/shop"}>
@@ -86,7 +88,7 @@ const Banner = () => {
                     </button>
                   </Link>
                 </div>
-                <div className="w-[35%]">
+                <div className="w-[40%]">
                   <Image
                     className={""}
                     imgSrc={SliderTwo}
@@ -94,18 +96,20 @@ const Banner = () => {
                   />
                 </div>
               </Flex>
+            </Container>
             </div>
-            {/* Slider Two End */}
-            {/* Slider Three Start */}
-            <div className="">
+          {/* Slider Two End */}
+          {/* Slider Three Start */}
+          {/* <div className="">
+              <Container className={""}>
               <Flex className={"justify-between items-center"}>
-                <div className="w-[65%]">
+                <div className="w-[60%]">
                   <Heading
                     className={"text-[70px] font-medium"}
                     txt={"The Classics"}
                     as={"h1"}
                   />
-                  <p className="text-base text-[#222222]">
+                  <p className="text-base text-mainColor">
                     An exclusive selection of this season's trends.
                   </p>
                   <Link to={"/shop"}>
@@ -121,20 +125,19 @@ const Banner = () => {
                     </button>
                   </Link>
                 </div>
-                <div className="">
+                <div className="w-[40%]">
                   <Image
-                    className={""}
+                    className={"h-full w-full"}
                     imgSrc={SliderThree}
                     imgAlt={"Fashion item"}
                   />
                 </div>
               </Flex>
-            </div>
-            {/* Slider Three End */}
-          </Slider>
-        </Container>
+            </Container>
+            </div> */}
+          {/* Slider Three End */}
+        </Slider>
       </div>
-      
     </>
   );
 };
