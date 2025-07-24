@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Flex from "./Flex";
 import {
   HiOutlineShoppingBag,
@@ -38,9 +39,11 @@ const LimitedEditionCard = ({
             <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200">
               <HiOutlineEye className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
+            <Link to={"/collect"}>
             <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
               <HiOutlineHeart className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
+            </Link>
           </Flex>
         </div>
       </div>

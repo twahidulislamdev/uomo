@@ -16,6 +16,7 @@ import Slider from "react-slick";
 import LimitedEditionCard from "../LimitedEditionCard";
 import TestiPrevArrow from "../TestiPrevArrow";
 import TestiNextArrow from "../TestiNextArrow";
+import { Link } from "react-router-dom";
 
 const LimitedEdition = () => {
   const settings = {
@@ -37,6 +38,7 @@ const LimitedEdition = () => {
           <div className="mt-15 ">
             <Slider className="" {...settings}>
               <div className="">
+                <Link to={"/shop"}>
                 <LimitedEditionCard
                   className={""}
                   imgSrc={LimitedOne}
@@ -47,6 +49,7 @@ const LimitedEdition = () => {
                   productColor={"Gray"}
                   badgeClassName={"bg-white"}
                 />
+                </Link>
               </div>
               <div className="">
                 <LimitedEditionCard
