@@ -1,16 +1,14 @@
-import React from "react";
+
 import Container from "../Container";
-import Heading from "../Heading";
 
 const ShopBanner = () => {
   return (
+    <>
     <div className="py-[100px] w-full bg-[url(/src/assets/bannerBg.png)] bg-no-repeat bg-center bg-cover">
       <Container>
-        <Heading
-          className={"text-7xl font-bold text-center text-mainColor"}
-          txt={"THE SHOP"}
-          as={"h3"}
-        />
+        <h3 className={"text-7xl font-bold text-center text-mainColor"}>
+          THE SHOP
+        </h3>
         <ul className="flex justify-center text-center gap-x-10 m-auto mt-10">
           <li className="text-base font-semibold uppercase text-mainColor relative list-none px-2 py-2 cursor-pointer group hover:text-black hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
             Stay Home
@@ -59,6 +57,7 @@ const ShopBanner = () => {
         </ul>
       </Container>
     </div>
+    </>
   );
 };
 
