@@ -6,6 +6,7 @@ import Collection from '../layouts/Collection'
 import Testimonials from '../layouts/Testimonials'
 import InsideCollection from '../layouts/InsideCollection'
 import LimitedEdition from '../layouts/LimitedEdition'
+import LatestBlog from '../layouts/LatestBlog'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
     <Testimonials/>
     <InsideCollection/>
     <LimitedEdition/>
+    <LatestBlog/>
     </>
   )
 }

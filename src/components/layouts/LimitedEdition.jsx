@@ -17,7 +17,6 @@ import LimitedEditionCard from "../LimitedEditionCard";
 import TestiPrevArrow from "../TestiPrevArrow";
 import TestiNextArrow from "../TestiNextArrow";
 
-
 const LimitedEdition = () => {
   const settings = {
     dots: false,
@@ -32,9 +31,11 @@ const LimitedEdition = () => {
   };
   return (
     <>
-      <div className="bg-black pt-15 pb-20 mb-10">
+      <div className="bg-black pt-15 pb-20 ">
         <Container>
-          <h3 className="text-[35px] text-white text-center">Limited Edition</h3>
+          <h3 className="text-[35px] text-white text-center">
+            Limited Edition
+          </h3>
           <div className="mt-10">
             <Slider className="" {...settings}>
               <div className="">
@@ -48,7 +49,6 @@ const LimitedEdition = () => {
                   productColor={"Gray"}
                   badgeClassName={"bg-white"}
                 />
-                
               </div>
               <div className="">
                 <LimitedEditionCard
