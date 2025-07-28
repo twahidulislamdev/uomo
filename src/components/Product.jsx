@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Flex from "./Flex";
 import {
   HiOutlineShoppingBag,
@@ -18,6 +19,7 @@ const Product = ({
   return (
     <>
       <div className="w-[24%] relative group border-2 border-gray-100">
+        <Link to={"/shop"}>
         <div className="relative h-100 overflow-hidden">
           {/* Default Image */}
           <img
@@ -33,6 +35,7 @@ const Product = ({
             className=" absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
           />
         </div>
+        </Link>
         <div
           className={`absolute top-2 left-2 py-2 px-5 text-black font-bold text-center text-sm ${badgeClassName}`}
         >

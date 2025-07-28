@@ -18,7 +18,10 @@ const LimitedEditionCard = ({
       <div className="mx-3 relative group border-2 border-gray-100 bg-[url(/src/assets/collectionThree.jpg)]">
         <div className="relative h-[420px] ">
           {/* Default Image */}
+          <Link to={"/shop"}>
           <img src={imgSrc} alt={imgAlt} className="w-full h-full flex justify-center items-center  " />
+          </Link>
+          {/* Default Image */}
           <div className="absolute bottom-3 left-2 pt-10 px-2  z-10 ">
             
             <h3 className="text-[#262626] text-base font-bold py-1">{title}</h3>

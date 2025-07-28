@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Flex from "./Flex";
 import {
   HiOutlineShoppingBag,
@@ -15,26 +16,28 @@ const InsideCollectionCard = ({
   imgSrcTwo,
   badgeClassName,
   delTxt,
-  priceClassName
+  priceClassName,
 }) => {
   return (
     <>
       <div className="mx-2 relative group border-2 border-gray-100">
-        <div className="relative h-100 overflow-hidden">
-          {/* Default Image */}
-          <img
-            src={imgSrc}
-            alt={imgAlt}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-          />
+        <Link to={"/shop"}>
+          <div className="relative h-100 overflow-hidden">
+            {/* Default Image */}
+            <img
+              src={imgSrc}
+              alt={imgAlt}
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+            />
 
-          {/* Hover Image */}
-          <img
-            src={imgSrcTwo}
-            alt="Zessi Dress - Alternate View"
-            className=" absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-          />
-        </div>
+            {/* Hover Image */}
+            <img
+              src={imgSrcTwo}
+              alt="Zessi Dress - Alternate View"
+              className=" absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            />
+          </div>
+        </Link>
         <div
           className={`absolute top-2 left-2 py-2 px-5 text-black font-bold text-center text-sm ${badgeClassName}`}
         >
@@ -60,13 +63,17 @@ const InsideCollectionCard = ({
           </p>
           <h3 className="text-[#262626] text-base font-bold py-1">{title}</h3>
           <Flex className={"gap-x-5"}>
-            <h4 className={`text-mainColor text-base font-bold ${priceClassName}`}>{price}</h4>
+            <h4
+              className={`text-mainColor text-base font-bold ${priceClassName}`}
+            >
+              {price}
+            </h4>
             <del className={`text-seconderyColor`}>{delTxt}</del>
           </Flex>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default InsideCollectionCard
+export default InsideCollectionCard;

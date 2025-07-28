@@ -16,11 +16,11 @@ import Slider from "react-slick";
 import LimitedEditionCard from "../LimitedEditionCard";
 import TestiPrevArrow from "../TestiPrevArrow";
 import TestiNextArrow from "../TestiNextArrow";
-import { Link } from "react-router-dom";
+
 
 const LimitedEdition = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -32,13 +32,12 @@ const LimitedEdition = () => {
   };
   return (
     <>
-      <div className="bg-[#F8F8F8] py-15 mb-10">
+      <div className="bg-black pt-15 pb-20 mb-10">
         <Container>
-          <h3 className="text-[35px] text-center">Limited Edition</h3>
-          <div className="mt-15 ">
+          <h3 className="text-[35px] text-white text-center">Limited Edition</h3>
+          <div className="mt-10">
             <Slider className="" {...settings}>
               <div className="">
-                <Link to={"/shop"}>
                 <LimitedEditionCard
                   className={""}
                   imgSrc={LimitedOne}
@@ -49,7 +48,7 @@ const LimitedEdition = () => {
                   productColor={"Gray"}
                   badgeClassName={"bg-white"}
                 />
-                </Link>
+                
               </div>
               <div className="">
                 <LimitedEditionCard
