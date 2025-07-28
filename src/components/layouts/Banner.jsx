@@ -19,14 +19,14 @@ const Banner = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3500,
   };
   return (
     <>
       <div className="mx-10">
         <Slider className="" {...settings}>
           {/* Slider One Start */}
-            <div className="">
+            <div className="mb-5">
               <Container >
               <Flex className={"justify-around items-center"}>
                 <div className="w-[60%]">
@@ -63,7 +63,7 @@ const Banner = () => {
             </div>
           {/* Slider one End */}
           {/* Slider Two Start */}
-          <div className="">
+          <div className="mb-5">
               <Container className={""}>
               <Flex className={"justify-center items-center"}>
                 <div className="w-[60%]">

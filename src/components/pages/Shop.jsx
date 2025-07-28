@@ -1,7 +1,12 @@
 import React from "react";
+import ShopBanner from "../layouts/ShopBanner";
 
 const Shop = () => {
-  return <div>Shop</div>;
+  return (
+    <>
+    <ShopBanner/>
+    </>
+  )
 };
 
 export default Shop;

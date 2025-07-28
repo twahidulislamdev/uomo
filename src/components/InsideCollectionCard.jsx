@@ -20,7 +20,7 @@ const InsideCollectionCard = ({
 }) => {
   return (
     <>
-      <div className="mx-2 relative group border-2 border-gray-100">
+      <div className="mx-2 relative group border-2 border-gray-100 mb-5">
         <Link to={"/shop"}>
           <div className="relative h-100 overflow-hidden">
             {/* Default Image */}

@@ -6,7 +6,7 @@ import Flex from "./Flex";
 const LatestBlogCard = ({ imgSrc, imgAlt, adminTxt, dateTxt, pTxt }) => {
   return (
     <>
-      <div className="w-[23%] bg-white ">
+      <div className="mx-3 bg-white mb-5 ">
         <img className="w-full " src={imgSrc} alt={imgAlt} />
 
         <div className="w-full py-5 ">
