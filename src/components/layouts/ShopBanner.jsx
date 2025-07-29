@@ -1,6 +1,5 @@
-
 import Container from "../Container";
-
+import BannerBg from "../../assets/bannerBg.png"
 const ShopBanner = () => {
   return (
     <>
