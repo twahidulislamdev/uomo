@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../Container";
 import Flex from "../Flex";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -7,16 +6,16 @@ import DefaultSorting from "./DefaultSorting";
 const ShopProducts = () => {
   return (
     <>
-      <div className="py-15">
+      <div className="py-[60px]">
         <Container>
           <Flex className={"justify-between gap-x-5"}>
             <div className="w-[30%]">
-              <div className="">
+              <div>
                 <Flex className={"justify-between items-center mb-3"}>
                   <h4 className="text-lg font-semibold text-mainColor">
                     PRODUCT CATEGORIES
                   </h4>
-                  <RiArrowDropDownLine className="text-3xl  text-mainColor" />
+                  <RiArrowDropDownLine className="text-3xl text-mainColor" />
                 </Flex>
                 <ul className="space-y-3">
                   <li className="text-sm text-mainColor">Sweatshirts</li>
@@ -42,7 +41,7 @@ const ShopProducts = () => {
                 <DefaultSorting />
               </Flex>
               <div className="">
-                    
+                {/* Product Grid Here */}
               </div>
             </div>
           </Flex>
