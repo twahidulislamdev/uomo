@@ -27,7 +27,7 @@ const LatestBlog = () => {
         <Slider {...settings}>
           <div>
             <LatestBlogCard
-              imgSrc={BlogTwo}
+              imgSrc={BlogThree}
               imgAlt="Blog One"
               adminTxt="BY ADMIN"
               dateTxt="APRIL 05, 2025"

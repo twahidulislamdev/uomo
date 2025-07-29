@@ -31,7 +31,7 @@ const DefaultSorting = () => {
 
           {/* Dropdown Menu */}
           {isOpen && (
-            <div className="absolute right-0 z-10 mt-2 w-45 origin-top-right  divide-y  rounded-md    ring-opacity-5 focus:outline-none shadow-2xl">
+            <div className="absolute right-0 z-10 mt-2 w-45 origin-top-right  divide-y  rounded-md    ring-opacity-5 focus:outline-none shadow-2xl bg-white">
               <div className="py-1">
                 <button
                   onClick={() => handleItemClick("Profile")}
