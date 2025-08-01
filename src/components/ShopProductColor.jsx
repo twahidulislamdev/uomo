@@ -18,24 +18,14 @@ const ShopProductColor = () => {
   ];
 
   return (
-    <div className="w-full  bg-white mt-10">
-      <div
-        className="flex items-center justify-between cursor-pointer py-4 "
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
+    <div className="w-full bg-white mt-10">
+      <div className="flex items-center justify-between py-4 ">
         <h3 className="text-lg font-semibold text-gray-900 tracking-wide">
           COLOR
         </h3>
-        {/* <svg 
-          className={`w-5 h-5 mr-10 text-gray-600 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
-          fill="none" 
-          stroke="currentColor" 
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg> */}
         <IoIosArrowUp
-          className={`text-xl text-mainColor mr-10 ${
+          onClick={() => setIsExpanded(!isExpanded)}
+          className={`text-xl text-mainColor cursor-pointer mr-10 ${
             isExpanded ? "rotate-180" : ""
           } `}
         />
@@ -53,7 +43,7 @@ const ShopProductColor = () => {
                     : "border-gray-200 hover:border-gray-400"
                 } ${color.bgColor}`}
                 onClick={() => setSelectedColor(color.name)}
-                aria-label={`Select ${color.name} color`} 
+                aria-label={`Select ${color.name} color`}
               />
             ))}
           </div>

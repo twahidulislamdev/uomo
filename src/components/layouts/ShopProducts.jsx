@@ -14,6 +14,7 @@ import ShopCard from "../ShopCard";
 import ShopProductCatagories from "../ShopProductCatagories";
 import ShopProductSize from "../ShopProductSize";
 import ShopProductColor from "../ShopProductColor";
+import ShopProductBrand from "../ShopProductBrand";
 
 const ShopProducts = () => {
   return (
@@ -33,6 +34,11 @@ const ShopProducts = () => {
               {/* Color Section start  */}
               <ShopProductSize />
               {/* Color Section End  */}
+
+              {/* Color Section start  */}
+              {/* <ShopProductBrand /> */}
+              {/* Color Section End  */}
+
             </div>
             {/* Product Card Section start */}
             <div className="w-[70%]">

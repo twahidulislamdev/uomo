@@ -5,12 +5,11 @@ import { IoIosArrowUp } from "react-icons/io";
 const ShopProductSize = () => {
   const [isExpand, SetExpand] = useState(true);
   return (
-    <div className="mt-5" onClick={() => SetExpand(!isExpand)}>
+    <div className="mt-5">
       <Flex className={"justify-between items-center mb-5"}>
-        <h4 className="text-lg font-semibold text-mainColor">
-          Size
-        </h4>
+        <h4 className="text-lg font-semibold text-mainColor">SIZE</h4>
         <IoIosArrowUp
+          onClick={() => SetExpand(!isExpand)}
           className={`text-xl text-mainColor mr-10 cursor-pointer ${
             isExpand ? "rotate-180" : ""
           }`}
