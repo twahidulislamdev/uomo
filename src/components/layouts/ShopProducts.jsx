@@ -1,6 +1,5 @@
 import Container from "../Container";
 import Flex from "../Flex";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import DefaultSorting from "./DefaultSorting";
 import ProductOne from "../../assets/productOne.jpg";
 import ProductTwo from "../../assets/productTwo.jpg";
@@ -12,6 +11,9 @@ import ProductSeven from "../../assets/productSeven.jpg";
 import ProductEight from "../../assets/productEight.jpg";
 import ProductFifteen from "../../assets/productFifteen.jpg";
 import ShopCard from "../ShopCard";
+import ShopProductCatagories from "../ShopProductCatagories";
+import ShopProductSize from "../ShopProductSize";
+import ShopProductColor from "../ShopProductColor";
 
 const ShopProducts = () => {
   return (
@@ -20,29 +22,19 @@ const ShopProducts = () => {
         <Container>
           <Flex className={"justify-between gap-x-5"}>
             <div className="w-[30%]">
-              <div>
-                <Flex className={"justify-between items-center mb-5"}>
-                  <h4 className="text-lg font-semibold text-mainColor">
-                    PRODUCT CATEGORIES
-                  </h4>
-                  <RiArrowDropDownLine className="text-3xl text-mainColor mr-10" />
-                </Flex>
-                <ul className="space-y-3">
-                  <li className="text-sm text-mainColor">Sweatshirts</li>
-                  <li className="text-sm text-mainColor">Dresses</li>
-                  <li className="text-sm text-mainColor">Jackets</li>
-                  <li className="text-sm text-mainColor">Jeans</li>
-                  <li className="text-sm text-mainColor">Men</li>
-                  <li className="text-sm text-mainColor">Shorts</li>
-                  <li className="text-sm text-mainColor">Swimwear</li>
-                  <li className="text-sm text-mainColor">Trousers</li>
-                  <li className="text-sm text-mainColor">T-Shirts & Tops</li>
-                  <li className="text-sm text-mainColor">
-                    Jumpers & Cardigans
-                  </li>
-                </ul>
-              </div>
+              {/* Product Catagaries Start  */}
+              <ShopProductCatagories />
+              {/* Product Catagaries End  */}
+
+              {/* Color Section start  */}
+              <ShopProductColor />
+              {/* Color Section End  */}
+
+              {/* Color Section start  */}
+              <ShopProductSize />
+              {/* Color Section End  */}
             </div>
+            {/* Product Card Section start */}
             <div className="w-[70%]">
               <Flex className={"justify-between items-center"}>
                 <h6 className="text-base font-medium text-mainColor">
@@ -147,6 +139,7 @@ const ShopProducts = () => {
               </div>
               {/* Product part End  */}
             </div>
+            {/* Product Card Section End */}
           </Flex>
         </Container>
       </div>

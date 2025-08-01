@@ -23,7 +23,7 @@ const DefaultSorting = () => {
           >
             DEFAULT SORTING
             <ChevronDown
-              className={`ml-2 h-5 w-5 text-  text-mainColor transition-transform duration-200 ${
+              className={`ml-2 h-5 w-5 text-  text-mainColor transition-transform duration-200 cursor-pointer ${
                 isOpen ? "rotate-180" : "rotate-0"
               }`}
             />
@@ -34,8 +34,8 @@ const DefaultSorting = () => {
             <div className="absolute right-0 z-10 mt-2 w-45 origin-top-right  divide-y  rounded-md    ring-opacity-5 focus:outline-none shadow-2xl bg-white">
               <div className="py-1">
                 <button
-                  onClick={() => handleItemClick("Profile")}
                   className="flex items-center w-full px-4 py-2 text-sm hover:text-gray-900 transition-colors duration-150 hover:bg-gray-200"
+                  onClick={() => handleItemClick("Settings")}
                 >
                   FEATURED
                 </button>
