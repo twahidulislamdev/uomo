@@ -26,8 +26,7 @@ const ShopProductColor = () => {
         <IoIosArrowUp
           onClick={() => setIsExpanded(!isExpanded)}
           className={`text-xl text-mainColor cursor-pointer mr-10 ${
-            isExpanded ? "rotate-180" : ""
-          } `}
+            isExpanded ? "rotate-180" : ""} `}
         />
       </div>
 

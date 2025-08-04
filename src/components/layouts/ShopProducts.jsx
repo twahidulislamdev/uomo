@@ -35,9 +35,9 @@ const ShopProducts = () => {
               <ShopProductSize />
               {/* Color Section End  */}
 
-              {/* Color Section start  */}
-              {/* <ShopProductBrand /> */}
-              {/* Color Section End  */}
+              {/* Brand Section start  */}
+              <ShopProductBrand />
+              {/* Brand Section End  */}
 
             </div>
             {/* Product Card Section start */}
