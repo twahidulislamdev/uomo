@@ -38,7 +38,6 @@ const ShopProducts = () => {
               {/* Brand Section start  */}
               <ShopProductBrand />
               {/* Brand Section End  */}
-
             </div>
             {/* Product Card Section start */}
             <div className="w-[70%]">
@@ -46,7 +45,32 @@ const ShopProducts = () => {
                 <h6 className="text-base font-medium text-mainColor">
                   HOME / SHOP
                 </h6>
-                <DefaultSorting />
+                <div className="flex gap-x-10">
+                  <DefaultSorting />
+                  <div className={"flex"}>
+                    <h5 className="text-base mr-5 text-menuColor">View</h5>
+                    <ul className="flex gap-x-3">
+                      {/* First View start  */}
+                      <li className="text-base font-semibold uppercase text-mainColor relative list-none  cursor-pointer px-1 group hover:text-black hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out">
+                        2
+                        <span className="absolute left-0 bottom-0  h-0.5 bg-black transform w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 transition-all duration-300 ease-in-out"></span>
+                      </li>
+                      {/* First View End  */}
+                      {/* Second View start  */}
+                      <li className="text-base font-semibold uppercase text-mainColor relative list-none  cursor-pointer px-1 group hover:text-black hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out">
+                        3
+                        <span className="absolute left-0 bottom-0  h-0.5 bg-black transform w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 transition-all duration-300 ease-in-out"></span>
+                      </li>
+                      {/* Second View End  */}
+                      {/* Third View start  */}
+                      <li className="text-base font-semibold uppercase text-mainColor relative list-none  cursor-pointer px-1 group hover:text-black hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out">
+                        4
+                        <span className="absolute left-0 bottom-0  h-0.5 bg-black transform w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 transition-all duration-300 ease-in-out"></span>
+                      </li>
+                      {/* Third View End  */}
+                    </ul>
+                  </div>
+                </div>
               </Flex>
               {/* Product Part Start  */}
               <div className="mt-5">
