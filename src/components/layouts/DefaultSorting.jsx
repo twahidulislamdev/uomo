@@ -19,7 +19,7 @@ const DefaultSorting = () => {
           {/* Dropdown Button */}
           <button
             onClick={toggleDropdown}
-            className="inline-flex items-center justify-center w-48 px-4 focus:outline-none focus:ring-offset-2 text-sm font-medium text-mainColor  transition-colors duration-200"
+            className="inline-flex items-center justify-center w-48 px-4 focus:outline-none focus:ring-offset-2 text-sm font-medium text-mainColor  transition-colors duration-250"
           >
             DEFAULT SORTING
             <ChevronDown
