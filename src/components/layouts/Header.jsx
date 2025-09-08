@@ -39,36 +39,36 @@ const Header = () => {
                   </li>
                 </Link>
                 <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
-                  COLLECTION
+                  BLOG
                   <span
-                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
                       w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
                       transition-all duration-300 ease-in-out"
-                    ></span>
+                  ></span>
                 </li>
                 <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
-                  Journal
+                  ABOUT
                   <span
-                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
                       w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
                       transition-all duration-300 ease-in-out"
-                    ></span>
+                  ></span>
                 </li>
                 <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
-                  LOOKBOOK
+                  CONTACT
                   <span
-                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
                       w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
                       transition-all duration-300 ease-in-out"
-                    ></span>
+                  ></span>
                 </li>
                 <li className="relative list-none px-2 py-2 text-sm  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
                   PAGES
                   <span
-                      className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
                       w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
                       transition-all duration-300 ease-in-out"
-                    ></span>
+                  ></span>
                 </li>
               </ul>
             </div>

@@ -19,16 +19,36 @@ const ShopProductCatagories = () => {
       </Flex>
       {isExpand && (
         <ul className="space-y-3">
-          <li className="text-sm text-mainColor">Sweatshirts</li>
-          <li className="text-sm text-mainColor">Dresses</li>
-          <li className="text-sm text-mainColor">Jackets</li>
-          <li className="text-sm text-mainColor">Jeans</li>
-          <li className="text-sm text-mainColor">Men</li>
-          <li className="text-sm text-mainColor">Shorts</li>
-          <li className="text-sm text-mainColor">Swimwear</li>
-          <li className="text-sm text-mainColor">Trousers</li>
-          <li className="text-sm text-mainColor">T-Shirts & Tops</li>
-          <li className="text-sm text-mainColor">Jumpers & Cardigans</li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            Sweatshirts
+          </li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            Dresses
+          </li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            Jackets
+          </li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            Jeans
+          </li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            Men
+          </li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            Shorts
+          </li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            Swimwear
+          </li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            Trousers
+          </li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            T-Shirts & Tops
+          </li>
+          <li className="text-sm text-mainColor hover:bg-neutral-100 hover:cursor-pointer w-[200px] py-1 px-2 rounded-lg ">
+            Jumpers & Cardigans
+          </li>
         </ul>
       )}
     </div>
