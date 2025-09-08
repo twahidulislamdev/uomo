@@ -73,12 +73,22 @@ const Header = () => {
               </ul>
             </div>
             <div className="">
-              <Flex className={"gap-x-8"}>
-                <BsSearch className="text-xl" />
-                <FaRegUser className="text-xl" />
-                <FaRegHeart className="text-xl" />
-                <HiOutlineShoppingBag className="text-2xl font-extrabold" />
-                <HiMiniBars3CenterLeft className="text-2xl" />
+              <Flex className="justify-center items-center *:mr-3 gap-x-3">
+                {/* Search part Start  */}
+                <div className="relative flex justify-center items-center ">
+                  <input
+                    className=" py-1.5 px-5 outline-1 outline-gray-200 bg-[#F5F5F5]"
+                    type="text"
+                    size={"23"}
+                    placeholder="What are you looking for?"
+                  />
+                  <BsSearch className="absolute right-3 text-xl " />
+                </div>
+                {/* Search part End  */}
+                <FaRegHeart className=" text-xl hover:cursor-pointer" />
+                <FaRegUser className=" text-xl hover:cursor-pointer" />
+                <HiOutlineShoppingBag className=" text-2xl  hover:cursor-pointer" />
+                <HiMiniBars3CenterLeft className=" text-2xl  hover:cursor-pointer" />
               </Flex>
             </div>
           </Flex>
