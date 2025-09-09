@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Container from "../Container";
 import Flex from "../Flex";
 import Image from "../Image";
@@ -6,8 +7,15 @@ import { BsSearch } from "react-icons/bs";
 import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import { HiOutlineShoppingBag, HiMiniBars3CenterLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import { RiCloseLargeLine } from "react-icons/ri";
+import { ImCross } from "react-icons/im";
 
 const Header = () => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isUserOpen, setIsUserOpen] = useState(false);
+
   return (
     <>
       <div className="py-7">
@@ -73,7 +81,7 @@ const Header = () => {
               </ul>
             </div>
             <div className="">
-              <Flex className="justify-center items-center *:mr-3 gap-x-3">
+              <Flex className="justify-center items-center *:mr-3 gap-x-5">
                 {/* Search part Start  */}
                 <div className="relative flex justify-center items-center ">
                   <input
@@ -86,14 +94,84 @@ const Header = () => {
                 </div>
                 {/* Search part End  */}
                 <FaRegHeart className=" text-xl hover:cursor-pointer" />
-                <FaRegUser className=" text-xl hover:cursor-pointer" />
-                <HiOutlineShoppingBag className=" text-2xl  hover:cursor-pointer" />
-                <HiMiniBars3CenterLeft className=" text-2xl  hover:cursor-pointer" />
+                <FaRegUser
+                  onClick={() => setIsUserOpen(true)}
+                  className=" text-xl hover:cursor-pointer"
+                />
+                <HiOutlineShoppingBag
+                  onClick={() => setIsCartOpen(true)}
+                  className=" text-2xl  hover:cursor-pointer"
+                />
+                <HiMiniBars3CenterLeft
+                  onClick={() => setIsMenuOpen(true)}
+                  className=" text-2xl  hover:cursor-pointer"
+                />
               </Flex>
             </div>
           </Flex>
         </Container>
       </div>
+
+      {/* User Sidebar Start  */}
+      <div
+        className={`fixed top-0 right-0 w-[480px] h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          isUserOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* User Heading and Cross go here */}
+        <div className="p-4 flex justify-between items-center ">
+          <h2 className="text-2xl font-semibold">LOGIN</h2>
+          <ImCross
+            onClick={() => setIsUserOpen(false)}
+            className="text-xl  cursor-pointer"
+          />
+        </div>
+        {/* Cart Heading and Cross go here */}
+        <div className=""></div>
+      </div>
+      {/* User Sidebar End  */}
+      
+      {/* ------------------------------------------------------------------------- */}
+
+      {/* Cart Sidebar Start  */}
+      <div
+        className={`fixed top-0 right-0 w-[480px] h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          isCartOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Cart Heading and Cross go here */}
+        <div className="p-4 flex justify-between items-center ">
+          <h2 className="text-2xl font-semibold">SHOPPING BAG </h2>
+          <ImCross
+            onClick={() => setIsCartOpen(false)}
+            className="text-xl  cursor-pointer"
+          />
+        </div>
+        {/* Cart Heading and Cross go here */}
+        <div className=""></div>
+      </div>
+      {/* Cart Sidebar End */}
+
+      {/* ---------------------------------------------------------------------------- */}
+
+      {/* Three Bar Sidebar Start  */}
+      <div
+        className={`fixed top-0 right-0 w-full h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Menu Heading and Cross go here */}
+        <div className="p-4 flex justify-between items-center ">
+          <h2 className="text-2xl font-semibold">MENU</h2>
+          <ImCross
+            onClick={() => setIsMenuOpen(false)}
+            className="text-xl  cursor-pointer"
+          />
+        </div>
+        {/* Menu Heading and Cross go here */}
+      </div>
+
+      {/* Three Bar Sidebar End  */}
     </>
   );
 };

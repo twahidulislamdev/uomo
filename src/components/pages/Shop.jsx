@@ -106,9 +106,12 @@ const Shop = () => {
             {/* Product Card Section start */}
             <div className="w-[70%]">
               <Flex className={"justify-between items-center"}>
+                {/* Breadcrumb Start */}
                 <h6 className="text-base font-medium text-mainColor">
                   HOME / SHOP
                 </h6>
+                {/* Breadcrumb End */}
+                {/* See All Button Start */}
                 <div className="flex gap-x-5">
                   <DefaultSorting />
                   <div className={"flex"}>
@@ -135,6 +138,7 @@ const Shop = () => {
                     </ul>
                   </div>
                 </div>
+                {/* See All Button End */}
               </Flex>
               {/* Product Part Start  */}
               <div className="mt-5">
@@ -232,11 +236,58 @@ const Shop = () => {
                 </Flex>
               </div>
               {/* Product part End  */}
+              {/* See All Button Start */}
+              <div className=" flex justify-center mt-5 ">
+                <ul className="flex gap-x-5">
+                  <li className="relative  list-none px-2 py-2 text-lg  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                  1
+                  <span
+                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                  ></span>
+                </li>
+                  <li className="relative list-none px-2 py-2 text-lg  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                  2
+                  <span
+                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                  ></span>
+                </li>
+                  <li className="relative list-none px-2 py-2 text-lg  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                  3
+                  <span
+                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                  ></span>
+                </li>
+                  <li className="relative list-none px-2 py-2 text-lg  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                  4
+                  <span
+                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                  ></span>
+                </li>
+                  <li className="relative list-none px-2 py-2 text-lg  text-black  font-medium cursor-pointer group  hover:text-black  hover:cursor-pointer hover:translate-x-0 transition-all ease-in-out ">
+                  5
+                  <span
+                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
+                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
+                      transition-all duration-300 ease-in-out"
+                  ></span>
+                </li>
+                </ul>
+              </div>
+              {/* See All Button End  */}
             </div>
             {/* Product Card Section End */}
           </Flex>
         </Container>
       </div>
+
       {/* Shop Products Part End  */}
     </>
   );
