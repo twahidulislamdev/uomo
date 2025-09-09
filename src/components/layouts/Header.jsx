@@ -12,13 +12,12 @@ import { ImCross } from "react-icons/im";
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserOpen, setIsUserOpen] = useState(false);
 
   return (
     <>
-      <div className="py-7">
+      <div className="w-full py-5">
         <Container>
           <Flex className={"justify-between items-center"}>
             <div className="">
@@ -110,68 +109,68 @@ const Header = () => {
             </div>
           </Flex>
         </Container>
+         <div className="">
+            {/* User Sidebar Start  */}
+            <div
+              className={`fixed top-0 right-0 w-[480px] h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+                isUserOpen ? "translate-x-0" : "translate-x-full"
+              }`}
+            >
+              {/* User Heading and Cross go here */}
+              <div className="p-4 flex justify-between items-center ">
+                <h2 className="text-2xl font-semibold">LOGIN</h2>
+                <ImCross
+                  onClick={() => setIsUserOpen(false)}
+                  className="text-xl  cursor-pointer"
+                />
+              </div>
+              {/* Cart Heading and Cross go here */}
+              <div className=""></div>
+            </div>
+            {/* User Sidebar End  */}
+
+            {/* ------------------------------------------------------------------------- */}
+
+            {/* Cart Sidebar Start  */}
+            <div
+              className={`fixed top-0 right-0 w-[480px] h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+                isCartOpen ? "translate-x-0" : "translate-x-full"
+              }`}
+            >
+              {/* Cart Heading and Cross go here */}
+              <div className="p-4 flex justify-between items-center ">
+                <h2 className="text-2xl font-semibold">SHOPPING BAG </h2>
+                <ImCross
+                  onClick={() => setIsCartOpen(false)}
+                  className="text-xl  cursor-pointer"
+                />
+              </div>
+              {/* Cart Heading and Cross go here */}
+              <div className=""></div>
+            </div>
+            {/* Cart Sidebar End */}
+
+            {/* ---------------------------------------------------------------------------- */}
+
+            {/* Three Bar Sidebar Start  */}
+            <div
+              className={`fixed top-0 right-0 w-full h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+                isMenuOpen ? "translate-x-0" : "translate-x-full"
+              }`}
+            >
+              {/* Menu Heading and Cross go here */}
+              <div className="p-4 flex justify-between items-center ">
+                <h2 className="text-2xl font-semibold">MENU</h2>
+                <ImCross
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-xl  cursor-pointer"
+                />
+              </div>
+              {/* Menu Heading and Cross go here */}
+            </div>
+            {/* Three Bar Sidebar End  */}
+          </div>
       </div>
-
-      {/* User Sidebar Start  */}
-      <div
-        className={`fixed top-0 right-0 w-[480px] h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isUserOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {/* User Heading and Cross go here */}
-        <div className="p-4 flex justify-between items-center ">
-          <h2 className="text-2xl font-semibold">LOGIN</h2>
-          <ImCross
-            onClick={() => setIsUserOpen(false)}
-            className="text-xl  cursor-pointer"
-          />
-        </div>
-        {/* Cart Heading and Cross go here */}
-        <div className=""></div>
-      </div>
-      {/* User Sidebar End  */}
-      
-      {/* ------------------------------------------------------------------------- */}
-
-      {/* Cart Sidebar Start  */}
-      <div
-        className={`fixed top-0 right-0 w-[480px] h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isCartOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {/* Cart Heading and Cross go here */}
-        <div className="p-4 flex justify-between items-center ">
-          <h2 className="text-2xl font-semibold">SHOPPING BAG </h2>
-          <ImCross
-            onClick={() => setIsCartOpen(false)}
-            className="text-xl  cursor-pointer"
-          />
-        </div>
-        {/* Cart Heading and Cross go here */}
-        <div className=""></div>
-      </div>
-      {/* Cart Sidebar End */}
-
-      {/* ---------------------------------------------------------------------------- */}
-
-      {/* Three Bar Sidebar Start  */}
-      <div
-        className={`fixed top-0 right-0 w-full h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {/* Menu Heading and Cross go here */}
-        <div className="p-4 flex justify-between items-center ">
-          <h2 className="text-2xl font-semibold">MENU</h2>
-          <ImCross
-            onClick={() => setIsMenuOpen(false)}
-            className="text-xl  cursor-pointer"
-          />
-        </div>
-        {/* Menu Heading and Cross go here */}
-      </div>
-
-      {/* Three Bar Sidebar End  */}
     </>
   );
 };
