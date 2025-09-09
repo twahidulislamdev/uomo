@@ -7,8 +7,7 @@ import { BsSearch } from "react-icons/bs";
 import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import { HiOutlineShoppingBag, HiMiniBars3CenterLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
-import { RiCloseLargeLine } from "react-icons/ri";
-import { ImCross } from "react-icons/im";
+import { GrClose } from "react-icons/gr";
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -86,7 +85,7 @@ const Header = () => {
                   <input
                     className=" py-1.5 px-5 outline-1 outline-gray-200 bg-[#F5F5F5]"
                     type="text"
-                    size={"23"}
+                    size={"27"}
                     placeholder="What are you looking for?"
                   />
                   <BsSearch className="absolute right-3 text-xl " />
@@ -109,67 +108,65 @@ const Header = () => {
             </div>
           </Flex>
         </Container>
-         <div className="">
-            {/* User Sidebar Start  */}
-            <div
-              className={`fixed top-0 right-0 w-[470px] h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-                isUserOpen ? "translate-x-0" : "translate-x-full"
-              }`}
-            >
-              {/* User Heading and Cross go here */}
-              <div className="p-4 flex justify-between items-center ">
-                <h2 className="text-2xl font-semibold">LOGIN</h2>
-                <ImCross
-                  onClick={() => setIsUserOpen(false)}
-                  className="text-xl  cursor-pointer"
-                />
-              </div>
-              {/* Cart Heading and Cross go here */}
-              <div className=""></div>
-            </div>
-            {/* User Sidebar End  */}
-
-            {/* ------------------------------------------------------------------------- */}
-
-            {/* Cart Sidebar Start  */}
-            <div
-              className={`fixed top-0 right-0 w-[470px] h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-                isCartOpen ? "translate-x-0" : "translate-x-full"
-              }`}
-            >
-              {/* Cart Heading and Cross go here */}
-              <div className="p-4 flex justify-between items-center ">
-                <h2 className="text-2xl font-semibold">SHOPPING BAG </h2>
-                <ImCross
-                  onClick={() => setIsCartOpen(false)}
-                  className="text-xl  cursor-pointer"
-                />
-              </div>
-              {/* Cart Heading and Cross go here */}
-              <div className=""></div>
-            </div>
-            {/* Cart Sidebar End */}
-
-            {/* ---------------------------------------------------------------------------- */}
-
-            {/* Three Bar Sidebar Start  */}
-            <div
-              className={`fixed top-0 right-0 w-full h-[695px] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-                isMenuOpen ? "translate-x-0" : "translate-x-full"
-              }`}
-            >
-              {/* Menu Heading and Cross go here */}
-              <div className="p-4 flex justify-between items-center ">
-                <h2 className="text-2xl font-semibold">MENU</h2>
-                <ImCross
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-xl  cursor-pointer"
-                />
-              </div>
-              {/* Menu Heading and Cross go here */}
-            </div>
-            {/* Three Bar Sidebar End  */}
+        {/* User Sidebar Start  */}
+        <div
+          className={`fixed top-0 right-0 w-[470px] h-[695px] px-3 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+            isUserOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* User Heading and Cross go here */}
+          <div className="p-4 flex justify-between items-center ">
+            <h4 className="text-xl font-medium">LOGIN</h4>
+            <GrClose
+              onClick={() => setIsUserOpen(false)}
+              className="text-xl font-bold cursor-pointer"
+            />
           </div>
+          {/* Cart Heading and Cross go here */}
+          <div className=""></div>
+        </div>
+        {/* User Sidebar End  */}
+
+        {/* ------------------------------------------------------------------------- */}
+
+        {/* Cart Sidebar Start  */}
+        <div
+          className={`fixed top-0 right-0 w-[470px] h-[695px] px-3 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+            isCartOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* Cart Heading and Cross go here */}
+          <div className="p-4 flex justify-between items-center ">
+            <h4 className="text-xl font-medium">SHOPPING BAG </h4>
+            <GrClose
+              onClick={() => setIsCartOpen(false)}
+              className="text-xl font-bold cursor-pointer"
+            />
+          </div>
+          {/* Cart Heading and Cross go here */}
+          <div className=""></div>
+        </div>
+        {/* Cart Sidebar End */}
+
+        {/* ---------------------------------------------------------------------------- */}
+
+        {/* Three Bar Sidebar Start  */}
+        <div
+          className={`fixed top-0 right-0 w-full h-[695px] px-3 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* Menu Heading and Cross go here */}
+          <div className="p-4 flex justify-between items-center ">
+            <h4 className="text-xl font-medium">MENU</h4>
+            <GrClose
+              onClick={() => setIsMenuOpen(false)}
+              className="text-xl font-bold cursor-pointer"
+            />
+          </div>
+          {/* Menu Heading and Cross go here */}
+        </div>
+        {/* Three Bar Sidebar End  */}
       </div>
     </>
   );
