@@ -23,7 +23,7 @@ const Banner = () => {
   };
   return (
     <>
-      <div className="mx-10">
+      <div className="mx-5 lg:mx-10">
         <Slider className="" {...settings}>
           {/* Slider One Start */}
             <div className="mb-5">
@@ -31,15 +31,15 @@ const Banner = () => {
               <Flex className={"justify-around items-center"}>
                 <div className="w-[60%]">
                   <Heading
-                    className={"text-[70px] font-medium"}
+                    className={"text-[40px] lg:text-[70px] font-medium"}
                     txt={"The Classics"}
                     as={"h1"}
                   />
-                  <p className="text-base text-mainColor">
+                  <p className="text-sm lg:text-base text-mainColor">
                     An exclusive selection of this season's trends.
                   </p>
                   <Link to={"/shop"}>
-                    <button className="relative px-0 py-2 text-black text-sm font-medium group hover:cursor-pointer mt-5 ">
+                    <button className="relative px-0 py-2 text-black text-xs lg:text-sm font-medium group hover:cursor-pointer mt-5 ">
                       <span className="group-hover:text-black transition-colors duration-300 text-left">
                         DISCOVER NOW
                       </span>
@@ -68,15 +68,15 @@ const Banner = () => {
               <Flex className={"justify-center items-center"}>
                 <div className="w-[60%]">
                   <Heading
-                    className={"text-[70px] font-medium"}
+                    className={"text-[40px] lg:text-[70px] font-medium"}
                     txt={"The Classics"}
                     as={"h1"}
                   />
-                  <p className="text-base text-mainColor">
+                  <p className="ttext-sm lg:text-base text-mainColor">
                     An exclusive selection of this season's trends.
                   </p>
                   <Link to={"/shop"}>
-                    <button className="relative px-0 py-2 text-black text-sm font-medium group hover:cursor-pointer mt-5 ">
+                    <button className="relative px-0 py-2 text-black text-xs lg:text-sm font-medium group hover:cursor-pointer mt-5 ">
                       <span className="group-hover:text-black transition-colors duration-300 text-left">
                         DISCOVER NOW
                       </span>

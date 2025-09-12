@@ -5,7 +5,7 @@ import {
   HiOutlineEye,
   HiOutlineHeart,
 } from "react-icons/hi2";
-const Product = ({
+const HomeProduct = ({
   imgSrc,
   imgAlt,
   badgeText,
@@ -18,21 +18,22 @@ const Product = ({
 }) => {
   return (
     <>
-      <div className="w-[24%] relative group border-2 border-gray-100">
-        <Link to={"/shop"}>
-          <div className="relative h-100 overflow-hidden">
+      <div className="w-[325px] lg:w-[24%] h-130 lg:h-130 relative group border-2 border-gray-200  m-auto lg:m-0">
+        <div className="">
+          <Link to={"/shop"}>
+          <div className="w-[325px] lg:w-full h-100  relative  overflow-hidden">
             {/* Default Image */}
             <img
               src={imgSrc}
               alt={imgAlt}
-              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+              className="absolute inset-0 w-full  h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
             />
 
             {/* Hover Image */}
             <img
               src={imgSrcTwo}
-              alt="Zessi Dress - Alternate View"
-              className=" absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+              alt={imgAlt}
+              className=" absolute inset-0 w-full  h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
             />
           </div>
         </Link>
@@ -68,9 +69,10 @@ const Product = ({
             {price}
           </h4>
         </div>
+        </div>
       </div>
     </>
   );
 };
 
-export default Product;
+export default HomeProduct;

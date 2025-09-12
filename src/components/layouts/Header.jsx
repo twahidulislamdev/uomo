@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <>
       {/* Header Upper Part Start  */}
-      <div className="w-full py-5">
+      <div className="hidden lg:block w-full py-5">
         <Container>
           <Flex className={"justify-between items-center"}>
             <div className="">
@@ -82,33 +82,38 @@ const Header = () => {
           </Flex>
         </Container>
       </div>
-      {/* Header Upper Part End  */}
 
+      {/* Responsive Header Start  */}
+      <div className="lg:hidden">
+
+      </div>
+      {/* Responsive Header End   */}
+
+      {/* Header Upper Part End  */}
+{/* --------------------================================================= */}
       {/* Header Lower Part Start  */}
-      <div className="relative bg-[#F5F5F3] w-full py-4">
+      <div className=" p-5 lg:p-0 relative bg-[#F5F5F3]  lg:w-full py-5 ">
         <Container className={""}>
           <div className="flex justify-between items-center">
-            <div className="flex justify-center items-center gap-x-3">
+            <div className="flex justify-center items-center gap-1 lg:gap-x-3">
               <HiMiniBars3CenterLeft
                 onClick={() => setIsMenuOpen(true)}
                 className=" text-2xl   hover:cursor-pointer"
               />
-              <h6 className="text-base text-neutral-600">Catagories</h6>
             </div>
             <div className="">
               {/* Search part Start  */}
-              <div className="relative flex justify-center items-center mr-3">
+              <div className="relative flex justify-center items-center mx-2 ">
                 <input
-                  className=" py-2 px-5 w-[500px] outline-1 outline-gray-200 bg-[#F5F5F5]"
+                  className=" py-2 px-2 w-[200px] lg:w-[500px] outline-1 outline-gray-300 bg-[#F5F5F5]"
                   type="text"
-                  size={"35"}
-                  placeholder="What are you looking for?"
+                  placeholder="What are you looking?"
                 />
-                <BsSearch className="absolute right-5 text-xl " />
+                <BsSearch className="absolute right-2 lg:right-5 text-xl " />
               </div>
               {/* Search part End  */}
             </div>
-            <div className="flex justify-center items-center *:mr-3 gap-x-5">
+            <div className="flex justify-center items-center mr-0 lg:*:mr-3 gap-x-3 lg:gap-x-5">
               <FaRegHeart className=" text-xl hover:cursor-pointer" />
               <FaRegUser
                 onClick={() => setIsUserOpen(true)}
@@ -124,7 +129,7 @@ const Header = () => {
         {/* --------------------------- -------------------*/}
         {/* User Login/Log out Sidebar Start =>  */}
         <div
-          className={`absolute top-0 right-0 w-[470px] h-[695px] px-3 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          className={`absolute top-0 right-0 w-full lg:w-[470px] h-[695px] px-3 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
             isUserOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -143,7 +148,7 @@ const Header = () => {
 
         {/* Cart Sidebar Start => */}
         <div
-          className={`absolute top-0 right-0 w-[470px] h-[695px] px-3 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          className={`absolute top-0 right-0 w-full lg:w-[470px] h-[695px] px-3 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
             isCartOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -161,7 +166,7 @@ const Header = () => {
 
         {/* Three Bar Sidebar Start =>  */}
         <div
-          className={`absolute top-0 left-0 w-full h-[695px] px-3 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          className={`absolute top-0 left-0 lg-full w-screen h-[695px] px-0 lg:px-3 py-0 lg:py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

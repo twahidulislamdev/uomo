@@ -13,7 +13,6 @@ const ShopCard = ({
   title,
   price,
   productColor,
-
   badgeClassName,
   priceClassName
 }) => {

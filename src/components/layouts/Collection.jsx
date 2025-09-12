@@ -8,7 +8,7 @@ import Heading from "../Heading";
 const Collection = () => {
   return (
     <>
-      <div className="mb-10">
+      <div className="mb-10 hidden">
         <Container>
           <Flex className={"justify-between"}>
             <div data-aos="fade-right" className="w-[49%] h-full space-y-5">

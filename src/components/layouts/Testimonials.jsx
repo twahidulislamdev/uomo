@@ -21,7 +21,7 @@ const Testimonials = () => {
     nextArrow: <TestiNextArrow />,
   };
   return (
-    <div className="pt-15 pb-20">
+    <div className="pt-15 pb-20 hidden">
       <h3 className={`text-center text-4xl font-medium`}>Testimonials</h3>
 
       <Slider {...settings}>
