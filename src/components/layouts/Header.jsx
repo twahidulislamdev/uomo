@@ -23,7 +23,7 @@ const Header = () => {
         <Container>
           <Flex className="justify-between items-center">
             <Image imgSrc={HeaderLogo} imgAlt="Header Logo" />
-            <ul className="flex items-center gap-x-6 xl:gap-x-10">
+            <ul className="flex items-center gap-x-15 xl:gap-x-10">
               {["HOME", "SHOP", "BLOG", "ABOUT", "CONTACT", "PAGES"].map(
                 (item, idx) => (
                   <Link to={item === "SHOP" ? "/shop" : "/"} key={idx}>
@@ -82,7 +82,7 @@ const Header = () => {
             <div className="flex-1 mx-3 lg:mx-8 flex justify-center items-center">
               <div className="flex justify-center items-center ">
                 <input
-                  className="relative w-full md:w-[300px]  lg:w-[500px] py-2 px-3 rounded-md border border-gray-300 outline-none bg-[#F5F5F5] text-sm"
+                  className="relative w-full md:w-[300px] lg:w-[500px] py-2 px-3 rounded-md border border-gray-300 outline-1 outline-gray-300 bg-[#F5F5F5] text-sm"
                   type="text"
                   placeholder="What are you looking?"
                 />
@@ -90,7 +90,7 @@ const Header = () => {
             </div>
 
             {/* Icons */}
-            <div className="flex items-center gap-x-3 lg:gap-x-5">
+            <div className="flex items-center gap-x-3 lg:gap-x-8">
               <FaRegHeart className="text-xl cursor-pointer" />
               <FaRegUser
                 onClick={() => setIsUserOpen(true)}
@@ -106,7 +106,7 @@ const Header = () => {
 
         {/* User Sidebar */}
         {isUserOpen && (
-          <div className="fixed top-0 right-0  w-full  h-screen px-0 lg:px-4 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
+          <div className="fixed top-0 right-0 m-auto lg:m-0 w-[98%] lg:w-[500px]  h-screen px-5 lg:px-4 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">LOGIN</h4>
               <GrClose
@@ -119,7 +119,7 @@ const Header = () => {
 
         {/* Cart Sidebar */}
         {isCartOpen && (
-          <div className="fixed top-0 right-0 w-full h-screen px-0 lg:px-4 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
+          <div className="fixed top-0 right-0 m-auto lg:m-0 w-[98%] lg:w-[500px] h-screen px-5 lg:px-4 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">SHOPPING BAG</h4>
               <GrClose
@@ -132,7 +132,7 @@ const Header = () => {
 
         {/* Category Sidebar */}
         {isCategoryOpen && (
-          <div className="fixed top-0 left-0 w-full  h-screen px-0 lg:px-4  py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
+          <div className="fixed top-0 left-0 m-auto lg:m-0 w-full   h-screen px-5 lg:px-4  py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">MENU</h4>
               <GrClose

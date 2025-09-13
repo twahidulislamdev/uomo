@@ -47,7 +47,7 @@ const Banner = () => {
                     An exclusive selection of this season's trends.
                   </p>
                   <Link to="/shop">
-                    <button className="relative mt-5 text-sm sm:text-base font-medium group">
+                    <button className="relative mt-5 text-sm sm:text-base font-medium pb-2 group">
                       <span className="group-hover:text-black transition-colors duration-300">
                         DISCOVER NOW
                       </span>
