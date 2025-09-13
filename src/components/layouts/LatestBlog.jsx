@@ -21,7 +21,7 @@ const LatestBlog = () => {
   };
 
   return (
-    <div className="py-[60px] bg-[#F3EDDF] hidden">
+    <div className="py-[60px] bg-[#F3EDDF] hidden lg:block">
       <Container>
         <h3 className="text-center text-3xl mb-10">Latest in Blog</h3>
         <Slider {...settings}>

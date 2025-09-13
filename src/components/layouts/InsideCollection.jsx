@@ -28,7 +28,7 @@ const InsideCollection = () => {
   };
   return (
     <>
-      <div className="bg-[#F8F8F8] py-15 mb-10 hidden">
+      <div className="bg-[#F8F8F8] py-15 mb-10 hidden lg:block">
         <Container>
           <h3 className="text-[35px] text-center">The Inside Collection</h3>
           <div className="mt-15 ">

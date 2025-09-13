@@ -21,7 +21,7 @@ import { BiLogoPaypal } from "react-icons/bi";
 
 const Footer = () => {
   return (
-    <div className="py-15  bg-[#F5F5F3] hidden">
+    <div className="py-15  bg-[#F5F5F3] hidden lg:block">
       <Container>
         <Flex className={" justify-between "}>
           <div className="w-[30%] m-auto">

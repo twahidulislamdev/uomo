@@ -31,7 +31,7 @@ const LimitedEdition = () => {
   };
   return (
     <>
-      <div className="bg-black pt-15 pb-20 hidden">
+      <div className="bg-black pt-15 pb-20 hidden lg:block">
         <Container>
           <h3 className="text-[35px] text-white text-center">
             Limited Edition

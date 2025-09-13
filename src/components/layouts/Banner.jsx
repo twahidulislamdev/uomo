@@ -23,13 +23,13 @@ const Banner = () => {
   };
   return (
     <>
-      <div className="mx-5 lg:mx-10">
+      <div className="w-[97%] lg:w-[90%] m-auto px-3 lg:mx-10 ">
         <Slider className="" {...settings}>
           {/* Slider One Start */}
-            <div className="mb-5">
-              <Container >
+          <div className="mb-5">
+            <Container>
               <Flex className={"justify-around items-center"}>
-                <div className="w-[60%]">
+                <div className="w-[58%] lg:w-[60%]">
                   <Heading
                     className={"text-[40px] lg:text-[70px] font-medium"}
                     txt={"The Classics"}
@@ -51,7 +51,7 @@ const Banner = () => {
                     </button>
                   </Link>
                 </div>
-                <div className="w-[40%]">
+                <div className="w-[38%] lg:w-[40%]">
                   <Image
                     className={""}
                     imgSrc={SliderOne}
@@ -60,13 +60,13 @@ const Banner = () => {
                 </div>
               </Flex>
             </Container>
-            </div>
+          </div>
           {/* Slider one End */}
           {/* Slider Two Start */}
           <div className="mb-5">
-              <Container className={""}>
+            <Container className={""}>
               <Flex className={"justify-center items-center"}>
-                <div className="w-[60%]">
+                <div className="w-[58%] lg:w-[60%]">
                   <Heading
                     className={"text-[40px] lg:text-[70px] font-medium"}
                     txt={"The Classics"}
@@ -88,7 +88,7 @@ const Banner = () => {
                     </button>
                   </Link>
                 </div>
-                <div className="w-[40%]">
+                <div className="w-[38%] lg:w-[40%]">
                   <Image
                     className={""}
                     imgSrc={SliderTwo}
@@ -97,45 +97,7 @@ const Banner = () => {
                 </div>
               </Flex>
             </Container>
-            </div>
-          {/* Slider Two End */}
-          {/* Slider Three Start */}
-          {/* <div className="">
-              <Container className={""}>
-              <Flex className={"justify-between items-center"}>
-                <div className="w-[60%]">
-                  <Heading
-                    className={"text-[70px] font-medium"}
-                    txt={"The Classics"}
-                    as={"h1"}
-                  />
-                  <p className="text-base text-mainColor">
-                    An exclusive selection of this season's trends.
-                  </p>
-                  <Link to={"/shop"}>
-                    <button className="relative px-0 py-2 text-black text-sm font-medium group hover:cursor-pointer mt-5 ">
-                      <span className="group-hover:text-black transition-colors duration-300 text-left">
-                        DISCOVER NOW
-                      </span>
-                      <span
-                        className="absolute left-0 bottom-0  h-0.5 bg-black transform  
-                      w-1/3 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
-                      transition-all duration-300 ease-in-out"
-                      ></span>
-                    </button>
-                  </Link>
-                </div>
-                <div className="w-[40%]">
-                  <Image
-                    className={"h-full w-full"}
-                    imgSrc={SliderThree}
-                    imgAlt={"Fashion item"}
-                  />
-                </div>
-              </Flex>
-            </Container>
-            </div> */}
-          {/* Slider Three End */}
+          </div>
         </Slider>
       </div>
     </>
