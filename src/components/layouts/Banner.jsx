@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const Banner = () => {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 1000,
@@ -21,86 +21,55 @@ const Banner = () => {
     autoplay: true,
     autoplaySpeed: 3500,
   };
+
+  // Slides data (avoids repeating code)
+  const slides = [
+    { id: 1, img: SliderOne, title: "The Classics" },
+    { id: 2, img: SliderTwo, title: "New Arrivals" },
+    { id: 3, img: SliderThree, title: "Trending Now" },
+  ];
+
   return (
-    <>
-      <div className="w-[97%] lg:w-[90%] m-auto px-3 lg:mx-10 ">
-        <Slider className="" {...settings}>
-          {/* Slider One Start */}
-          <div className="mb-5">
+    <div className="w-full px-3 lg:px-10">
+      <Slider {...settings}>
+        {slides.map((slide) => (
+          <div key={slide.id} className="mb-5">
             <Container>
-              <Flex className={"justify-around items-center"}>
-                <div className="w-[58%] lg:w-[60%]">
+              <Flex className="flex-col-reverse lg:flex-row items-center justify-between gap-6">
+                {/* Text Section */}
+                <div className="w-full lg:w-1/2 text-center lg:text-left">
                   <Heading
-                    className={"text-[40px] lg:text-[70px] font-medium"}
-                    txt={"The Classics"}
-                    as={"h1"}
+                    className="text-3xl sm:text-5xl lg:text-7xl font-medium"
+                    txt={slide.title}
+                    as="h1"
                   />
-                  <p className="text-sm lg:text-base text-mainColor">
+                  <p className="mt-2 text-sm sm:text-base text-mainColor">
                     An exclusive selection of this season's trends.
                   </p>
-                  <Link to={"/shop"}>
-                    <button className="relative px-0 py-2 text-black text-xs lg:text-sm font-medium group hover:cursor-pointer mt-5 ">
-                      <span className="group-hover:text-black transition-colors duration-300 text-left">
+                  <Link to="/shop">
+                    <button className="relative mt-5 text-sm sm:text-base font-medium group">
+                      <span className="group-hover:text-black transition-colors duration-300">
                         DISCOVER NOW
                       </span>
-                      <span
-                        className="absolute left-0 bottom-0  h-0.5 bg-black transform  
-                      w-1/3 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
-                      transition-all duration-300 ease-in-out"
-                      ></span>
+                      <span className="absolute left-0 bottom-0 h-0.5 bg-black w-1/3 group-hover:w-full transition-all duration-300 ease-in-out"></span>
                     </button>
                   </Link>
                 </div>
-                <div className="w-[38%] lg:w-[40%]">
+
+                {/* Image Section */}
+                <div className="w-[95%] lg:w-1/2 flex justify-center">
                   <Image
-                    className={""}
-                    imgSrc={SliderOne}
-                    imgAlt={"Fashion item"}
+                    className="w-3/4 sm:w-2/3 lg:w-full max-w-[500px]"
+                    imgSrc={slide.img}
+                    imgAlt="Fashion item"
                   />
                 </div>
               </Flex>
             </Container>
           </div>
-          {/* Slider one End */}
-          {/* Slider Two Start */}
-          <div className="mb-5">
-            <Container className={""}>
-              <Flex className={"justify-center items-center"}>
-                <div className="w-[58%] lg:w-[60%]">
-                  <Heading
-                    className={"text-[40px] lg:text-[70px] font-medium"}
-                    txt={"The Classics"}
-                    as={"h1"}
-                  />
-                  <p className="ttext-sm lg:text-base text-mainColor">
-                    An exclusive selection of this season's trends.
-                  </p>
-                  <Link to={"/shop"}>
-                    <button className="relative px-0 py-2 text-black text-xs lg:text-sm font-medium group hover:cursor-pointer mt-5 ">
-                      <span className="group-hover:text-black transition-colors duration-300 text-left">
-                        DISCOVER NOW
-                      </span>
-                      <span
-                        className="absolute left-0 bottom-0  h-0.5 bg-black transform  
-                      w-1/3 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
-                      transition-all duration-300 ease-in-out"
-                      ></span>
-                    </button>
-                  </Link>
-                </div>
-                <div className="w-[38%] lg:w-[40%]">
-                  <Image
-                    className={""}
-                    imgSrc={SliderTwo}
-                    imgAlt={"Fashion item"}
-                  />
-                </div>
-              </Flex>
-            </Container>
-          </div>
-        </Slider>
-      </div>
-    </>
+        ))}
+      </Slider>
+    </div>
   );
 };
 

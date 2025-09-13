@@ -45,6 +45,7 @@ const Trending = () => {
       />
     );
   }
+
   var settings = {
     dots: true,
     infinite: false,
@@ -54,19 +55,17 @@ const Trending = () => {
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 2500,
-
     responsive: [
-      // {
-      //   breakpoint: 1024,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     slidesToScroll: 3,
-      //     infinite: true,
-      //     dots: true,
-      //   },
-      // },
       {
-        breakpoint: 786,
+        breakpoint: 1024, // tablets
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768, // large phones
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -74,188 +73,157 @@ const Trending = () => {
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 640, // small phones
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
     ],
   };
+
   return (
-    <>
-      <div className="py-10 lg:py-15">
-        <Container>
-          <div className="">
-            <h3 className="text-[25px] lg:text-[35px] text-center">Trending</h3>
-            <ul className="space-x-5 lg:space-x-10 text-center mt-5">
-              <li className="relative group px-2 py-2 inline-block text-base font-medium text-seconderyColor hover:text-mainColor hover:cursor-pointer">
-                ALL
+    <div className="w-full px-3 md:px-6 lg:px-0 py-10 lg:py-16">
+      <Container>
+        {/* Heading */}
+        <div className="text-center">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+            Trending
+          </h3>
+          <ul className="flex flex-wrap justify-center gap-4 md:gap-8 mt-5">
+            {["ALL", "WOMEN", "MAN", "KIDS"].map((item, idx) => (
+              <li
+                key={idx}
+                className="relative group px-2 py-1 text-sm md:text-base font-medium text-seconderyColor hover:text-mainColor cursor-pointer"
+              >
+                {item}
                 <span
-                  className="absolute left-0 bottom-0  h-0.5 bg-black transform  
-                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
-                      transition-all duration-300 ease-in-out"
+                  className="absolute left-0 bottom-0 h-0.5 bg-black w-0 
+                  group-hover:w-full transition-all duration-300 ease-in-out"
                 ></span>
               </li>
-              <li className="relative px-2 py-2 group inline-block text-base font-medium text-seconderyColor hover:text-mainColor hover:cursor-pointer">
-                WOMEN
-                <span
-                  className="absolute left-0 bottom-0  h-0.5 bg-black transform  
-                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
-                      transition-all duration-300 ease-in-out"
-                ></span>
-              </li>
-              <li className="relative group px-2 py-2 inline-block text-base font-medium text-seconderyColor hover:text-mainColor hover:cursor-pointer">
-                MAN
-                <span
-                  className="absolute left-0 bottom-0  h-0.5 bg-black transform  
-                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
-                      transition-all duration-300 ease-in-out"
-                ></span>
-              </li>
-              <li className="relative group px-2 py-2 inline-block text-base font-medium text-seconderyColor hover:text-mainColor hover:cursor-pointer">
-                KIDS
-                <span
-                  className="absolute left-0 bottom-0  h-0.5 bg-black transform  
-                      w-0 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
-                      transition-all duration-300 ease-in-out"
-                ></span>
-              </li>
-            </ul>
-          </div>
-          {/* Product Part Start  */}
+            ))}
+          </ul>
+        </div>
 
-          <div className={" flex-wrap mt-10 ml-5 md:ml-0 lg:ml-0 "}>
-            <Slider className="pb-5" {...settings}>
-              <div>
-                <HomeProduct
-                  className={""}
-                  imgSrc={ProductOne}
-                  imgAlt={"Arive One"}
-                  imgSrcTwo={ProductOneSide}
-                  badgeText={"New"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"Gray"}
-                  badgeClassName={"bg-white"}
-                />
-              </div>
-              <div className="">
-                <HomeProduct
-                  className={""}
-                  imgSrc={ProductTwo}
-                  imgAlt={"Arive Two"}
-                  imgSrcTwo={ProductTwoSide}
-                  badgeText={"10%"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"White"}
-                  badgeClassName={"bg-green-300"}
-                />
-              </div>
-              <div className="">
-                <HomeProduct
-                  className={""}
-                  imgSrc={ProductThree}
-                  imgAlt={"Arive Three"}
-                  badgeText={"New"}
-                  imgSrcTwo={ProductThreeSide}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"Black"}
-                  badgeClassName={"bg-white"}
-                />
-              </div>
-              <div className="">
-                <HomeProduct
-                  className={""}
-                  imgSrc={ProductFour}
-                  imgAlt={"Arive Four"}
-                  imgSrcTwo={ProductFourSide}
-                  badgeText={"10%"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"White"}
-                  badgeClassName={"bg-green-300"}
-                />
-              </div>
-              <div className="">
-                <HomeProduct
-                  className={""}
-                  imgSrc={ProductFive}
-                  imgAlt={"Arive Five"}
-                  imgSrcTwo={ProductFiveSide}
-                  badgeText={"New"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"Black"}
-                  badgeClassName={"bg-white"}
-                />
-              </div>
-              <div className="">
-                <HomeProduct
-                  className={""}
-                  imgSrc={ProductSix}
-                  imgAlt={"Arive Six"}
-                  imgSrcTwo={ProductSixSide}
-                  badgeText={"10%"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"White"}
-                  badgeClassName={"bg-green-300"}
-                />
-              </div>
-              <div className="">
-                <HomeProduct
-                  className={""}
-                  imgSrc={ProductSeven}
-                  imgAlt={"Arive Seven"}
-                  imgSrcTwo={ProductSevenSide}
-                  badgeText={"New"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"White"}
-                  badgeClassName={"bg-white"}
-                />
-              </div>
-              <div className="">
-                <HomeProduct
-                  className={""}
-                  imgSrc={ProductEight}
-                  imgAlt={"Arive Eight"}
-                  imgSrcTwo={ProductEightSide}
-                  badgeText={"10%"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"Black"}
-                  badgeClassName={"bg-green-300"}
-                />
-              </div>
-            </Slider>
-          </div>
+        {/* Products Slider */}
+        <div className="mt-10">
+          <Slider className="pb-5" {...settings}>
+            <div>
+              <HomeProduct
+                imgSrc={ProductOne}
+                imgAlt="Arive One"
+                imgSrcTwo={ProductOneSide}
+                badgeText="New"
+                title="Basic Crew Neck Tee"
+                price="$44.00"
+                productColor="Gray"
+                badgeClassName="bg-white"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrc={ProductTwo}
+                imgAlt="Arive Two"
+                imgSrcTwo={ProductTwoSide}
+                badgeText="10%"
+                title="Basic Crew Neck Tee"
+                price="$44.00"
+                productColor="White"
+                badgeClassName="bg-green-300"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrc={ProductThree}
+                imgAlt="Arive Three"
+                imgSrcTwo={ProductThreeSide}
+                badgeText="New"
+                title="Basic Crew Neck Tee"
+                price="$44.00"
+                productColor="Black"
+                badgeClassName="bg-white"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrc={ProductFour}
+                imgAlt="Arive Four"
+                imgSrcTwo={ProductFourSide}
+                badgeText="10%"
+                title="Basic Crew Neck Tee"
+                price="$44.00"
+                productColor="White"
+                badgeClassName="bg-green-300"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrc={ProductFive}
+                imgAlt="Arive Five"
+                imgSrcTwo={ProductFiveSide}
+                badgeText="New"
+                title="Basic Crew Neck Tee"
+                price="$44.00"
+                productColor="Black"
+                badgeClassName="bg-white"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrc={ProductSix}
+                imgAlt="Arive Six"
+                imgSrcTwo={ProductSixSide}
+                badgeText="10%"
+                title="Basic Crew Neck Tee"
+                price="$44.00"
+                productColor="White"
+                badgeClassName="bg-green-300"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrc={ProductSeven}
+                imgAlt="Arive Seven"
+                imgSrcTwo={ProductSevenSide}
+                badgeText="New"
+                title="Basic Crew Neck Tee"
+                price="$44.00"
+                productColor="White"
+                badgeClassName="bg-white"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrc={ProductEight}
+                imgAlt="Arive Eight"
+                imgSrcTwo={ProductEightSide}
+                badgeText="10%"
+                title="Basic Crew Neck Tee"
+                price="$44.00"
+                productColor="Black"
+                badgeClassName="bg-green-300"
+              />
+            </div>
+          </Slider>
+        </div>
 
-          {/* Product part End  */}
-          {/* See More Btn Satrt  */}
-          <div className="mt-5">
-            <Flex className={"justify-center"}>
-              <Link to={"/shop"}>
-                <button className="relative px-0 py-2 text-black text-xs lg:text-sm font-medium group hover:cursor-pointer mt-5 ">
-                  <span className="group-hover:text-black transition-colors duration-300 text-left">
-                    SEE MORE
-                  </span>
-                  <span
-                    className="absolute left-0 bottom-0  h-0.5 bg-black transform  
-                      w-1/3 group-hover:w-full group-hover:left-0 group-hover:translate-x-0 
-                      transition-all duration-300 ease-in-out"
-                  ></span>
-                </button>
-              </Link>
-            </Flex>
-          </div>
-          {/* See More Btn End  */}
-        </Container>
-      </div>
-    </>
+        {/* See More Button */}
+        <div className="flex justify-center mt-6">
+          <Link to="/shop">
+            <button className="relative px-0 py-2 text-black text-sm md:text-base font-medium group cursor-pointer">
+              <span className="group-hover:text-black transition-colors duration-300">
+                SEE MORE
+              </span>
+              <span
+                className="absolute left-0 bottom-0 h-0.5 bg-black 
+                w-1/3 group-hover:w-full transition-all duration-300 ease-in-out"
+              ></span>
+            </button>
+          </Link>
+        </div>
+      </Container>
+    </div>
   );
 };
 
