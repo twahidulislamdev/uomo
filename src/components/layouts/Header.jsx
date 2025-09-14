@@ -106,12 +106,12 @@ const Header = () => {
 
         {/* User Sidebar */}
         {isUserOpen && (
-          <div className="fixed top-0 right-0 m-auto lg:m-0 w-[98%] lg:w-[500px]  h-screen px-5 lg:px-4 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
+          <div className="fixed top-0 right-0 m-auto lg:m-0 w-[98%] lg:w-[500px]  h-screen px-10 lg:px-4 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">LOGIN</h4>
               <GrClose
                 onClick={() => setIsUserOpen(false)}
-                className="text-xl cursor-pointer"
+                className="text-xl cursor-pointer mr-3 lg:mr-0"
               />
             </div>
           </div>
@@ -119,12 +119,12 @@ const Header = () => {
 
         {/* Cart Sidebar */}
         {isCartOpen && (
-          <div className="fixed top-0 right-0 m-auto lg:m-0 w-[98%] lg:w-[500px] h-screen px-5 lg:px-4 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
+          <div className="fixed top-0 right-0 m-auto lg:m-0 w-[98%] lg:w-[500px] h-screen px-10 lg:px-4 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">SHOPPING BAG</h4>
               <GrClose
                 onClick={() => setIsCartOpen(false)}
-                className="text-xl cursor-pointer"
+                className="text-xl cursor-pointer mr-3 lg:mr-0"
               />
             </div>
           </div>
@@ -132,12 +132,12 @@ const Header = () => {
 
         {/* Category Sidebar */}
         {isCategoryOpen && (
-          <div className="fixed top-0 left-0 m-auto lg:m-0 w-full   h-screen px-5 lg:px-4  py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
+          <div className="fixed top-0 left-0 m-auto lg:m-0 w-full h-screen px-10 lg:px-4  py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">MENU</h4>
               <GrClose
                 onClick={() => setIsCategoryOpen(false)}
-                className="text-xl cursor-pointer"
+                className="text-xl cursor-pointer mr-3 lg:mr-0"
               />
             </div>
           </div>
