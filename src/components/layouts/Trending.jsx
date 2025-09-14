@@ -22,32 +22,33 @@ import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import TestiPrevArrow from "../TestiPrevArrow";
+import TestiNextArrow from "../TestiNextArrow";
 
 const Trending = () => {
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block" }}
-        onClick={onClick}
-      />
-    );
-  }
+  // function SampleNextArrow(props) {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{ ...style, display: "block" }}
+  //       onClick={onClick}
+  //     />
+  //   );
+  // }
 
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block" }}
-        onClick={onClick}
-      />
-    );
-  }
+  // function SamplePrevArrow(props) {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{ ...style, display: "block" }}
+  //       onClick={onClick}
+  //     />
+  //   );
+  // }
 
   var settings = {
-    dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -55,6 +56,8 @@ const Trending = () => {
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 2500,
+    prevArrow: <TestiPrevArrow />,
+    nextArrow: <TestiNextArrow />,
     responsive: [
       {
         breakpoint: 1024, // tablets

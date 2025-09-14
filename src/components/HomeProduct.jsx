@@ -18,10 +18,10 @@ const HomeProduct = ({
 }) => {
   return (
     <>
-      <div className="relative w-[310px]  h-130 lg:h-130 group border-2 border-gray-200 m-auto lg:m-0">
+      <div className="relative w-[320px]  h-130 lg:h-130 group border-2 border-gray-200 m-auto lg:m-0">
         <div className="">
           <Link to={"/shop"}>
-            <div className="relative w-[310px]  h-100  overflow-hidden">
+            <div className="relative w-[320px]  h-100  overflow-hidden">
               {/* Default Image */}
               <img
                 src={imgSrc}

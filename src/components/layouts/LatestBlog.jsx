@@ -12,18 +12,42 @@ const LatestBlog = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
+    initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 3500,
-    arrows: false,
+    autoplaySpeed: 2500,
+    responsive: [
+      {
+        breakpoint: 1024, // tablets
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 768, // large phones
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 640, // small phones
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
-
   return (
-    <div className="py-[60px] bg-[#F3EDDF] hidden lg:block">
+    <div className="py-[60px] bg-[#F3EDDF] px-3 lg:px-0 lg:block">
       <Container>
-        <h3 className="text-center text-3xl mb-10">Latest in Blog</h3>
+        <h3 className="text-center text-4xl font-medium mb-10">Latest in Blog</h3>
         <Slider {...settings}>
           <div>
             <LatestBlogCard

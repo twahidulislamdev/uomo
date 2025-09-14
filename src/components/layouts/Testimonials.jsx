@@ -10,22 +10,20 @@ import TestiNextArrow from "../TestiNextArrow";
 
 const Testimonials = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 5000,
-    prevArrow: <TestiPrevArrow />,
-    nextArrow: <TestiNextArrow />,
   };
   return (
-    <div className="pt-15 pb-20 hidden lg:block">
+    <div className="pt-15 pb-20  lg:block">
       <h3 className={`text-center text-4xl font-medium`}>Testimonials</h3>
 
-      <Slider {...settings}>
-        <div className="">
+      <Slider className="pb-10" {...settings}>
+        <div>
           <TestimoniCard
             TestiHeading={"Testimonials"}
             TestiParagraph={
@@ -36,7 +34,7 @@ const Testimonials = () => {
             imgAlt={"Testimoni clint Image"}
           />
         </div>
-        <div className="">
+        <div>
           <TestimoniCard
             TestiHeading={"Testimonials"}
             TestiParagraph={
@@ -47,7 +45,7 @@ const Testimonials = () => {
             imgAlt={"Testimoni clint Image"}
           />
         </div>
-        <div className="">
+        <div>
           <TestimoniCard
             TestiHeading={"Testimonials"}
             TestiParagraph={

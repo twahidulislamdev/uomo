@@ -19,21 +19,46 @@ import TestiNextArrow from "../TestiNextArrow";
 
 const LimitedEdition = () => {
   const settings = {
-    dots: false,
     infinite: true,
+    speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
+    initialSlide: 0,
     autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2500,
     prevArrow: <TestiPrevArrow />,
     nextArrow: <TestiNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024, // tablets
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 768, // large phones
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 640, // small phones
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <>
-      <div className="bg-black pt-15 pb-20 hidden lg:block">
+      <div className="bg-black pt-10 lg:pt-15 pb-20 flex lg:block  px-3 lg:px-0">
         <Container>
-          <h3 className="text-[35px] text-white text-center">
+          <h3 className="text-center text-4xl font-medium text-white">
             Limited Edition
           </h3>
           <div className="mt-10">

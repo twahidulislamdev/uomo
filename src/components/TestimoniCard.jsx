@@ -4,14 +4,14 @@ import Container from "./Container";
 const TestimoniCard = ({ TestiParagraph, TestiDetails, imgSrc, imgAlt }) => {
   return (
     <>
-      <div className="">
+      <div className="px-3 lg:px-0 ">
         <Container>
           <p
-            className={`text-center w-3xl m-auto text-lg text-mainColor leading-8 pt-10 pb-6 `}
+            className={`w-5/6 lg:max-w-3xl text-sm lg:text-lg m-auto text-center text-mainColor leading-8 pt-10 pb-6`}
           >
             {TestiParagraph}
           </p>
-          <p className={`text-center text-base  text-seconderyColor `}>
+          <p className={`text-center text-base text-seconderyColor`}>
             {TestiDetails}
           </p>
           <img
