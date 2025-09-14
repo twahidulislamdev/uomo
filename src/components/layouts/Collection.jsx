@@ -8,7 +8,7 @@ import Heading from "../Heading";
 const Collection = () => {
   return (
     <>
-      <div className="mb-10  lg:block">
+      <div className="w-[96%] lg:w-full m-auto flex justify-center lg:m-0 mb-10 ">
         <Container>
           <Flex className={"justify-between flex-wrap lg:no-wrap lg:gap-x-5 gap-y-5"}>
             <div
@@ -57,7 +57,7 @@ const Collection = () => {
               </div>
               {/* Left Card Two End  */}
             </div>
-            <div className="w-[95%] lg:w-[49%] m-auto lg:m-0 h-full space-y-5">
+            <div className="w-[96%] lg:w-[49%] m-auto lg:m-0 h-full space-y-5">
               {/* Right Card Two Start  */}
               <div className="w-full h-[270px] bg-[url(/src/assets/collectionTwo.jpg)] bg-cover bg-center bg-no-repeat relative">
                 <div className="p-5 absolute left-5 bottom-5 ">

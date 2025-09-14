@@ -86,7 +86,7 @@ const Trending = () => {
   };
 
   return (
-    <div className="w-full px-3 md:px-6 lg:px-0 py-10 lg:py-16">
+    <div className="w-[96%] m-auto flex justify-center  px-0 lg:px-0 py-10 lg:py-16">
       <Container>
         {/* Heading */}
         <div className="text-center">

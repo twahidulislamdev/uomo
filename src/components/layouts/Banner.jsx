@@ -26,11 +26,11 @@ const Banner = () => {
   const slides = [
     { id: 1, img: SliderOne, title: "The Classics" },
     { id: 2, img: SliderTwo, title: "New Arrivals" },
-    { id: 3, img: SliderThree, title: "Trending Now" },
+    // { id: 3, img: SliderThree, title: "Trending Now" },
   ];
 
   return (
-    <div className="w-full px-3 lg:px-10">
+    <div className="w-[95%] m-auto  lg:px-10">
       <Slider {...settings}>
         {slides.map((slide) => (
           <div key={slide.id} className="mb-5">
@@ -57,9 +57,9 @@ const Banner = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="w-[95%] lg:w-1/2 flex justify-center">
+                <div className="w-[70%] lg:w-1/2 flex justify-center">
                   <Image
-                    className="w-3/4 sm:w-2/3 lg:w-full max-w-[500px]"
+                    className="w-3/4  lg:w-full max-w-[400px]"
                     imgSrc={slide.img}
                     imgAlt="Fashion item"
                   />

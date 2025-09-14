@@ -84,11 +84,11 @@ const Footer = () => {
           {/* Subscribe */}
           <div className="w-full lg:w-[30%] text-center lg:text-left">
             <Heading className="text-lg font-medium" txt={"Subscribe"} as={"h4"} />
-            <p className="mt-6 lg:mt-10 text-sm px-5 lg:px-0">
+            <p className="w-3/4 lg:w-auto m-auto lg:m-0  mt-6 lg:mt-10 text-sm px-5 lg:px-0">
               Be the first to get the latest news about trends, promotions, and
               much more!
             </p>
-            <div className="bg-white px-3 lg:px-5 py-3 mt-5 flex items-center w-full max-w-[350px] mx-auto lg:mx-0 shadow">
+            <div className="bg-white px-3 lg:px-5 py-3 mt-5 flex items-center w-[300px] lg:max-w-[350px] mx-auto lg:mx-0 shadow">
               <input
                 type="email"
                 placeholder="Your email address"

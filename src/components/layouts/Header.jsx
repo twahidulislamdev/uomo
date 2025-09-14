@@ -40,7 +40,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Header */}
-      <div className="w-[98%] lg:w-full m-auto lg:m-0 px-3 py-4 lg:hidden bg-white shadow-sm">
+      <div className="w-[96%] lg:w-full m-auto flex justify-center items-center lg:m-0  py-4 lg:hidden bg-white shadow-sm">
         <Container>
           <Flex className="justify-between items-center">
             <Image imgSrc={HeaderLogo} imgAlt="Header Logo" />
@@ -69,7 +69,7 @@ const Header = () => {
       </div>
 
       {/* Header Lower Part */}
-      <div className="w-[98%] lg:w-full m-auto lg:m-0 px-3 lg:px-0 py-4 bg-[#F5F5F3] relative">
+      <div className="w-[96%] lg:w-full m-auto lg:m-0 flex justify-center  lg:px-0 py-4 bg-[#F5F5F3] relative">
         <Container>
           <div className="flex justify-between items-center">
             {/* Category Icon */}
