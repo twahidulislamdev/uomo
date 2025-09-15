@@ -7,7 +7,7 @@ const TestimoniCard = ({ TestiParagraph, TestiDetails, imgSrc, imgAlt }) => {
       <div className="px-3 lg:px-0 ">
         <Container>
           <p
-            className={`w-5/6 lg:max-w-3xl text-sm lg:text-lg m-auto text-center text-mainColor leading-8 pt-10 pb-6`}
+            className={`w-5/6 lg:max-w-3xl text-sm lg:text-lg m-auto text-center text-mainColor leading-8 py-5`}
           >
             {TestiParagraph}
           </p>
