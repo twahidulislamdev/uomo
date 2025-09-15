@@ -49,15 +49,16 @@ const Trending = () => {
   // }
 
   var settings = {
-    infinite: false,
+    dots: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 2500,
-    prevArrow: <TestiPrevArrow />,
-    nextArrow: <TestiNextArrow />,
+    // prevArrow: <TestiPrevArrow />,
+    // nextArrow: <TestiNextArrow />,
     responsive: [
       {
         breakpoint: 1024, // tablets

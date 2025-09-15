@@ -25,6 +25,7 @@ import TestiNextArrow from "../TestiNextArrow";
 
 const InsideCollection = () => {
   const settings = {
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -32,8 +33,8 @@ const InsideCollection = () => {
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 2500,
-    prevArrow: <TestiPrevArrow />,
-    nextArrow: <TestiNextArrow />,
+    // prevArrow: <TestiPrevArrow />,
+    // nextArrow: <TestiNextArrow />,
     responsive: [
       {
         breakpoint: 1024, // tablets
