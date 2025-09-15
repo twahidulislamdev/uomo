@@ -16,11 +16,11 @@ const Collection = () => {
               className="w-[96%] lg:w-[49%] m-auto lg:m-0 h-full space-y-5"
             >
               {/* Left Card One Start  */}
-              <div className="w-full h-[430px] bg-[url(/src/assets/collectionOne.jpg)] bg-cover bg-center bg-no-repeat relative">
+              <div className="w-full h-[330px] lg:h-[430px] bg-[url(/src/assets/collectionOne.jpg)] bg-cover bg-center bg-no-repeat relative">
                 <div className="p-5 absolute left-5 bottom-5 ">
                   <p className="text-sm text-mainColor">Basic Collection</p>
                   <Heading
-                    className={"text-3xl font-medium pt-2"}
+                    className={"text-xl lg:text-3xl font-medium pt-2"}
                     txt={"New Arrivals"}
                     as={"h3"}
                   />
@@ -37,11 +37,11 @@ const Collection = () => {
               {/* Left Card One End  */}
 
               {/* Left Card Two Start  */}
-              <div className="w-full h-[270px] bg-[url(/src/assets/collectionThree.jpg)] bg-cover bg-center bg-no-repeat relative">
+              <div className="w-full h-[200px] lg:h-[270px] bg-[url(/src/assets/collectionThree.jpg)] bg-cover bg-center bg-no-repeat relative">
                 <div className="p-5 absolute left-5 bottom-5 ">
                   <p className="text-sm text-mainColor">Shop Casual</p>
                   <Heading
-                    className={"text-3xl font-medium pt-2"}
+                    className={"text-xl lg:text-3xl font-medium pt-2"}
                     txt={"Free Shipping"}
                     as={"h3"}
                   />
@@ -59,11 +59,11 @@ const Collection = () => {
             </div>
             <div className="w-[96%] lg:w-[49%] m-auto lg:m-0 h-full space-y-5">
               {/* Right Card Two Start  */}
-              <div className="w-full h-[270px] bg-[url(/src/assets/collectionTwo.jpg)] bg-cover bg-center bg-no-repeat relative">
+              <div className="w-full h-[200px] lg:h-[270px] bg-[url(/src/assets/collectionTwo.jpg)] bg-cover bg-center bg-no-repeat relative">
                 <div className="p-5 absolute left-5 bottom-5 ">
                   <p className="text-sm text-mainColor">Want and Need</p>
                   <Heading
-                    className={"text-3xl font-medium pt-2"}
+                    className={"text-xl lg:text-3xl font-medium pt-2"}
                     txt={"The Everygirl Wears"}
                     as={"h3"}
                   />
@@ -79,11 +79,11 @@ const Collection = () => {
               </div>
               {/* Right Card Two End  */}
               {/* Right Card One Start  */}
-              <div className="w-full h-[430px] bg-[url(/src/assets/collectionFour.jpg)] bg-cover bg-center bg-no-repeat relative">
+              <div className="w-full h-[330px] lg:h-[430px]  bg-[url(/src/assets/collectionFour.jpg)] bg-cover bg-center bg-no-repeat relative">
                 <div className="p-5 absolute left-5 bottom-5 ">
                   <p className="text-sm text-mainColor">Sale off This week</p>
                   <Heading
-                    className={"text-3xl font-medium pt-2"}
+                    className={"text-xl lg:text-3xl font-medium pt-2"}
                     txt={"Running Shoes"}
                     as={"h3"}
                   />
