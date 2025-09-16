@@ -10,7 +10,7 @@ import { HiOutlineShoppingBag, HiMiniBars3CenterLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
 import ProductOne from "../../assets/productOne.jpg";
-import { HiPlusSmall, HiMinusSmall  } from "react-icons/hi2";
+import { HiPlusSmall, HiMinusSmall } from "react-icons/hi2";
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -43,7 +43,7 @@ const Header = () => {
         </Container>
       </div>
       {/* Mobile Header */}
-      <div className="w-[96%] lg:w-full m-auto flex justify-center items-center lg:m-0  py-4 lg:hidden bg-white shadow-sm overflow-hidden">
+      <div className="w-full lg:w-full flex justify-center items-center m-auto lg:m-0 py-4 px-3 lg:px-0 lg:hidden bg-white shadow-sm overflow-hidden">
         <Container>
           <Flex className="justify-between items-center">
             <Link to={"/"}>
@@ -83,7 +83,7 @@ const Header = () => {
         </Container>
       </div>
       {/* Header Lower Part */}
-      <div className="w-[96%] lg:w-full m-auto  flex justify-center  lg:px-0 py-4 bg-[#F5F5F3] overflow-hidden">
+      <div className="w-full flex justify-center m-auto lg:m-0 px-3 lg:px-0 py-4 bg-[#F5F5F3] overflow-hidden">
         <Container>
           <div className="flex justify-between items-center">
             {/* Category Icon */}
@@ -143,24 +143,36 @@ const Header = () => {
             {/* AddToCart Single Product Start  */}
             <div className="flex justify-between bg-neutral-100  ">
               <div className="flex gap-x-5 lg:gap-x-7 ">
-                <Image className={"w-170px h-[150px]" } imgSrc={ProductOne} imgAlt={""} />
-              <div className="">
-                <h4 className="text-xl font-normal text-mainColor pt-2">Zessi Dresses</h4>
-                <h5 className="text-md text-[#767676] pt-2">Color: </h5>
-                <h6 className="text-md text-[#767676] pt-2">Size: L</h6>
-                <div className="flex justify-between items-center">
-                  <div className="flex justify-center items-center gap-x-5 mt-2 ">
-                  <span className="text-xl text-[#767676]"> <HiMinusSmall/> </span>
-                  <p className="text-xl text-[#767676]">0</p>
-                  <span className="text-xl text-[#767676]"><HiPlusSmall/></span>
+                <Image
+                  className={"w-170px h-[150px]"}
+                  imgSrc={ProductOne}
+                  imgAlt={""}
+                />
+                <div className="">
+                  <h4 className="text-xl font-normal text-mainColor pt-2">
+                    Zessi Dresses
+                  </h4>
+                  <h5 className="text-md text-[#767676] pt-2">Color: </h5>
+                  <h6 className="text-md text-[#767676] pt-2">Size: L</h6>
+                  <div className="flex justify-between items-center">
+                    <div className="flex justify-center items-center gap-x-5 mt-2 ">
+                      <span className="text-xl text-[#767676]">
+                        {" "}
+                        <HiMinusSmall />{" "}
+                      </span>
+                      <p className="text-xl text-[#767676]">0</p>
+                      <span className="text-xl text-[#767676]">
+                        <HiPlusSmall />
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                </div>
-              </div>
               </div>
               <div className="space-y-20 ">
-                <p className="text-sm pt-4 pr-5"><GrClose/></p>
+                <p className="text-sm pt-4 pr-5">
+                  <GrClose />
+                </p>
                 <p className="text-xl pr-5">99</p>
-                
               </div>
             </div>
             {/* AddToCart Single Product End  */}
