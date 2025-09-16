@@ -7,7 +7,7 @@ const ShopProductCatagories = () => {
   return (
     <div className="">
       <Flex className={"justify-between items-center mb-5"}>
-        <h4 className="text-lg font-semibold text-mainColor">
+        <h4 className="text-md text-mainColor">
           PRODUCT CATEGORIES
         </h4>
         <IoIosArrowUp

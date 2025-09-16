@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { IoChevronUp } from "react-icons/io5";
 
 const DefaultSorting = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,22 +8,23 @@ const DefaultSorting = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleItemClick = (item) => {
-    console.log(`Clicked: ${item}`);
+  const handleItemClick = () => {
+    // console.log(`Clicked: ${item}`);
     setIsOpen(false);
   };
+
   return (
     <>
-      <div className="flex items-center justify-center overflow-hidden">
-        <div className="relative">
+      <div className="flex items-center justify-center lg:outline-none">
+        <div className="relative  text-center">
           {/* Dropdown Button */}
           <button
             onClick={toggleDropdown}
-            className="inline-flex items-center justify-center w-48 px-4 focus:outline-none focus:ring-offset-2 text-sm font-medium text-mainColor  transition-colors duration-250"
+            className="inline-flex justify-center items-center text-lg font-medium gap-x-3 px-5 py-2 mr-3 lg:mr-0  border-1  lg:border-0 border-neutral-400 focus:outline-none focus:ring-offset-2  text-mainColor transition-colors duration-250"
           >
-            DEFAULT SORTING
-            <ChevronDown
-              className={`ml-2 h-5 w-5 text-  text-mainColor transition-transform duration-200 cursor-pointer ${
+            FEATURED
+            <IoChevronUp
+              className={`text-2xl text-mainColor transition-transform duration-200 cursor-pointer ${
                 isOpen ? "rotate-180" : "rotate-0"
               }`}
             />
@@ -31,7 +32,7 @@ const DefaultSorting = () => {
 
           {/* Dropdown Menu */}
           {isOpen && (
-            <div className="absolute right-0 z-10 mt-2 w-45 origin-top-right  divide-y  rounded-md    ring-opacity-5 focus:outline-none shadow-2xl bg-white">
+            <div className="absolute right-0 z-15 mt-2 w-45 origin-top-right divide-y rounded-md ring-opacity-5 focus:outline-none shadow-2xl bg-white">
               <div className="py-1">
                 <button
                   className="flex items-center w-full px-4 py-2 text-sm hover:text-gray-900 transition-colors duration-150 hover:bg-gray-200"
@@ -47,15 +48,15 @@ const DefaultSorting = () => {
                 </button>
                 <button
                   onClick={() => handleItemClick("Notifications")}
-                  className="flex items-center w-full px-4 py-2 text-sm   hover:text-gray-900 transition-colors duration-150 hover:bg-gray-200"
+                  className="flex items-center w-full px-4 py-2 text-sm hover:text-gray-900 transition-colors duration-150 hover:bg-gray-200"
                 >
                   DATE, OLD TO NEW
                 </button>
                 <button
                   onClick={() => handleItemClick("Notifications")}
-                  className="flex items-center w-full px-4 py-2 text-sm   hover:text-gray-900 transition-colors duration-150 hover:bg-gray-200"
+                  className="flex items-center w-full px-4 py-2 text-sm hover:text-gray-900 transition-colors duration-150 hover:bg-gray-200"
                 >
-                  DATE, MEW TO OLD
+                  DATE, NEW TO OLD
                 </button>
               </div>
             </div>

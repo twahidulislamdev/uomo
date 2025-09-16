@@ -25,7 +25,7 @@ const ShopProducts = ({
   }
   return (
      <>
-      <div className="w-[46%] lg:w-[32%] m-auto lg:m-0 relative group border-2 border-gray-100">
+      <div className="w-[48%] lg:w-[32%] m-auto lg:m-0 relative group border-2 border-gray-100 overflow-hidden">
         <Link to={"/shop"}>
         <div className="relative h-100 overflow-hidden">
           {/* Default Image */}
