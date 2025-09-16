@@ -30,7 +30,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="w-[95%] m-auto  lg:px-10">
+    <div className="w-[96%] m-auto  lg:px-10">
       <Slider {...settings}>
         {slides.map((slide) => (
           <div key={slide.id} className="mb-5">
@@ -39,11 +39,11 @@ const Banner = () => {
                 {/* Text Section */}
                 <div className="w-full lg:w-1/2 text-center lg:text-left">
                   <Heading
-                    className="text-3xl sm:text-5xl lg:text-7xl font-medium"
+                    className="text-3xl lg:text-7xl font-medium"
                     txt={slide.title}
                     as="h1"
                   />
-                  <p className="mt-2 text-sm sm:text-base text-mainColor">
+                  <p className="mt-2 text-sm  text-mainColor">
                     An exclusive selection of this season's trends.
                   </p>
                   <Link to="/shop">
@@ -59,7 +59,7 @@ const Banner = () => {
                 {/* Image Section */}
                 <div className="w-[70%] lg:w-1/2 flex justify-center">
                   <Image
-                    className="w-3/4  lg:w-full max-w-[400px]"
+                    className="w-3/4  lg:w-full max-w-[500px]"
                     imgSrc={slide.img}
                     imgAlt="Fashion item"
                   />

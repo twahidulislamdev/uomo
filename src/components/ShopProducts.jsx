@@ -5,8 +5,11 @@ import {
   HiOutlineEye,
   HiOutlineHeart,
 } from "react-icons/hi2";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/addToCartSlice";
 
-const ShopCard = ({
+
+const ShopProducts = ({
   imgSrc,
   imgAlt,
   badgeText,
@@ -16,9 +19,13 @@ const ShopCard = ({
   badgeClassName,
   priceClassName
 }) => {
+  let dispatch = useDispatch()
+  const handleAddToCart = ()=>{
+    dispatch(addToCart("Ami achi"))
+  }
   return (
      <>
-      <div className="w-[32%] relative group border-2 border-gray-100">
+      <div className="w-[46%] lg:w-[32%] m-auto lg:m-0 relative group border-2 border-gray-100">
         <Link to={"/shop"}>
         <div className="relative h-100 overflow-hidden">
           {/* Default Image */}
@@ -45,7 +52,7 @@ const ShopCard = ({
         <div className=" p-7.5 space-y-3 absolute bottom-30 left-0 w-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
           <Flex className={"justify-center space-x-5"}>
             <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
-              <HiOutlineShoppingBag className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+              <HiOutlineShoppingBag onClick={handleAddToCart} className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
             <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200">
               <HiOutlineEye className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
@@ -67,4 +74,4 @@ const ShopCard = ({
   )
 }
 
-export default ShopCard
+export default ShopProducts;

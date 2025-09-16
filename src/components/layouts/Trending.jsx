@@ -63,8 +63,8 @@ const Trending = () => {
       {
         breakpoint: 1024, // tablets
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           dots: true,
         },
       },
@@ -119,8 +119,8 @@ const Trending = () => {
                 imgAlt="Arive One"
                 imgSrcTwo={ProductOneSide}
                 badgeText="New"
-                title="Basic Crew Neck Tee"
-                price="$44.00"
+                title="Cropped Faux Leather Jacket"
+                price="$29.00"
                 productColor="Gray"
                 badgeClassName="bg-white"
               />
@@ -131,8 +131,8 @@ const Trending = () => {
                 imgAlt="Arive Two"
                 imgSrcTwo={ProductTwoSide}
                 badgeText="10%"
-                title="Basic Crew Neck Tee"
-                price="$44.00"
+                title="Calvin Shorts"
+                price="$62.00"
                 productColor="White"
                 badgeClassName="bg-green-300"
               />
@@ -143,8 +143,8 @@ const Trending = () => {
                 imgAlt="Arive Three"
                 imgSrcTwo={ProductThreeSide}
                 badgeText="New"
-                title="Basic Crew Neck Tee"
-                price="$44.00"
+                title="Kirby T-Shirt"
+                price="$17.00"
                 productColor="Black"
                 badgeClassName="bg-white"
               />
@@ -155,8 +155,8 @@ const Trending = () => {
                 imgAlt="Arive Four"
                 imgSrcTwo={ProductFourSide}
                 badgeText="10%"
-                title="Basic Crew Neck Tee"
-                price="$44.00"
+                title="Cableknit Shawl"
+                price="$99.00"
                 productColor="White"
                 badgeClassName="bg-green-300"
               />
@@ -167,8 +167,8 @@ const Trending = () => {
                 imgAlt="Arive Five"
                 imgSrcTwo={ProductFiveSide}
                 badgeText="New"
-                title="Basic Crew Neck Tee"
-                price="$44.00"
+                title="Colorful Jacket"
+                price="$29.00"
                 productColor="Black"
                 badgeClassName="bg-white"
               />
@@ -179,8 +179,8 @@ const Trending = () => {
                 imgAlt="Arive Six"
                 imgSrcTwo={ProductSixSide}
                 badgeText="10%"
-                title="Basic Crew Neck Tee"
-                price="$44.00"
+                title="Shirt In Botanical Cheetah Print"
+                price="$52.00"
                 productColor="White"
                 badgeClassName="bg-green-300"
               />
@@ -191,8 +191,8 @@ const Trending = () => {
                 imgAlt="Arive Seven"
                 imgSrcTwo={ProductSevenSide}
                 badgeText="New"
-                title="Basic Crew Neck Tee"
-                price="$44.00"
+                title="Cotton Jersey T-Shirt"
+                price="$17.00"
                 productColor="White"
                 badgeClassName="bg-white"
               />
@@ -203,8 +203,8 @@ const Trending = () => {
                 imgAlt="Arive Eight"
                 imgSrcTwo={ProductEightSide}
                 badgeText="10%"
-                title="Basic Crew Neck Tee"
-                price="$44.00"
+                title="Zessi Dresses"
+                price="$49.00"
                 productColor="Black"
                 badgeClassName="bg-green-300"
               />

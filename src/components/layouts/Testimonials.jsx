@@ -20,7 +20,7 @@ const Testimonials = () => {
   };
   return (
     <div className="my-10 lg:my-15 ">
-      <h3 className={`text-center text-4xl font-medium`}>Testimonials</h3>
+      <h3 className={`w-[98%] m-auto text-center text-4xl font-medium`}>Testimonials</h3>
 
       <Slider className="pb-10" {...settings}>
         <div>
