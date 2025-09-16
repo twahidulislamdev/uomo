@@ -30,7 +30,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="w-[96%] m-auto  lg:px-10">
+    <div className="w-[96%] m-auto  lg:px-10 overflow-hidden">
       <Slider {...settings}>
         {slides.map((slide) => (
           <div key={slide.id} className="mb-5">

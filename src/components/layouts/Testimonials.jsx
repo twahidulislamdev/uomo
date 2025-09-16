@@ -19,7 +19,7 @@ const Testimonials = () => {
     autoplaySpeed: 5000,
   };
   return (
-    <div className="my-10 lg:my-15 ">
+    <div className="my-10 lg:my-15 overflow-hidden ">
       <h3 className={`w-[98%] m-auto text-center text-4xl font-medium`}>Testimonials</h3>
 
       <Slider className="pb-10" {...settings}>

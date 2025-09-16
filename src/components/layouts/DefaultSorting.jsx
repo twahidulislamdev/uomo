@@ -14,7 +14,7 @@ const DefaultSorting = () => {
   };
   return (
     <>
-      <div className="flex items-center justify-center ">
+      <div className="flex items-center justify-center overflow-hidden">
         <div className="relative">
           {/* Dropdown Button */}
           <button

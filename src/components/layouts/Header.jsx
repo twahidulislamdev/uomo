@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <>
       {/* Desktop Header */}
-      <div className="hidden lg:block w-full m-auto py-5">
+      <div className="hidden lg:block w-full m-auto py-5 overflow-hidden">
         <Container>
           <Flex className="justify-between items-center">
             <Link to={"/"}>
@@ -43,7 +43,7 @@ const Header = () => {
         </Container>
       </div>
       {/* Mobile Header */}
-      <div className="w-[96%] lg:w-full m-auto flex justify-center items-center lg:m-0  py-4 lg:hidden bg-white shadow-sm">
+      <div className="w-[96%] lg:w-full m-auto flex justify-center items-center lg:m-0  py-4 lg:hidden bg-white shadow-sm overflow-hidden">
         <Container>
           <Flex className="justify-between items-center">
             <Link to={"/"}>
@@ -83,7 +83,7 @@ const Header = () => {
         </Container>
       </div>
       {/* Header Lower Part */}
-      <div className="w-[96%] lg:w-full m-auto  flex justify-center  lg:px-0 py-4 bg-[#F5F5F3] ">
+      <div className="w-[96%] lg:w-full m-auto  flex justify-center  lg:px-0 py-4 bg-[#F5F5F3] overflow-hidden">
         <Container>
           <div className="flex justify-between items-center">
             {/* Category Icon */}

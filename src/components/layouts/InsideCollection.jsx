@@ -63,7 +63,7 @@ const InsideCollection = () => {
   };
   return (
     <>
-      <div className="bg-[#F8F8F8] py-5 lg:py-15 mb-10  lg:block">
+      <div className="bg-[#F8F8F8] py-5 lg:py-15 mb-10  lg:block overflow-hidden">
         <Container>
           <h3 className="text-center text-4xl font-medium">
             The Inside Collection

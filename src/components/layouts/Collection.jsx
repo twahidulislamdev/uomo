@@ -8,7 +8,7 @@ import Heading from "../Heading";
 const Collection = () => {
   return (
     <>
-      <div className="w-[96%] lg:w-full m-auto flex justify-center lg:m-0 mb-10 ">
+      <div className="w-[96%] lg:w-full m-auto flex justify-center lg:m-0 mb-10 overflow-hidden">
         <Container>
           <Flex className={"justify-between flex-wrap lg:no-wrap lg:gap-x-5 gap-y-5"}>
             <div
