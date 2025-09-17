@@ -3,7 +3,10 @@ import "./App.css";
 import RootLayout from "./components/layouts/RootLayout";
 import Home from "./components/pages/Home";
 import Shop from "./components/pages/Shop";
-import Collect from "./components/pages/Collect";
+import Blog from "./components/pages/Blog";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Pages from "./components/pages/Pages";
 
 function App() {
   return (
@@ -13,7 +16,10 @@ function App() {
           <Route path="/" element={<RootLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop/>} />
-            <Route path="/collect" element={<Collect/>} />
+            <Route path="/blog" element={<Blog/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/contact" element={<Contact/>} />
+            <Route path="/pages" element={<Pages/>} />
           </Route>
         </Routes>
       </BrowserRouter>

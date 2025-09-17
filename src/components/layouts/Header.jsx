@@ -3,7 +3,6 @@ import Container from "../Container";
 import Flex from "../Flex";
 import Image from "../Image";
 import HeaderLogo from "../../assets/headerLogo.png";
-import { BsSearch } from "react-icons/bs";
 import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { HiOutlineShoppingBag, HiMiniBars3CenterLeft } from "react-icons/hi2";
@@ -18,9 +17,18 @@ const Header = () => {
   const [isUserOpen, setIsUserOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const menuItems = [
+    { name: "HOME", path: "/" },
+    { name: "SHOP", path: "/shop" },
+    { name: "BLOG", path: "/blog" },
+    { name: "ABOUT", path: "/about" },
+    { name: "CONTACT", path: "/contact" },
+    { name: "PAGES", path: "/pages" },
+  ];
+
   return (
     <>
-      {/* Desktop Header */}
+      {/* Desktop Header start */}
       <div className="hidden lg:block w-full m-auto py-5 overflow-hidden">
         <Container>
           <Flex className="justify-between items-center">
@@ -28,29 +36,28 @@ const Header = () => {
               <Image imgSrc={HeaderLogo} imgAlt="Header Logo" />
             </Link>
             <ul className="flex items-center gap-x-15 xl:gap-x-10">
-              {["HOME", "SHOP", "BLOG", "ABOUT", "CONTACT", "PAGES"].map(
-                (item, idx) => (
-                  <Link to={item === "SHOP" ? "/shop" : "/"} key={idx}>
-                    <li className="relative list-none py-2 text-sm text-black font-medium group cursor-pointer transition-all ease-in-out">
-                      {item}
-                      <span className="absolute left-0 bottom-0 h-0.5 bg-black w-0 group-hover:w-full transition-all duration-300"></span>
-                    </li>
-                  </Link>
-                )
-              )}
+              {menuItems.map((item, idx) => (
+                <Link to={item.path} key={idx}>
+                  <li className="relative list-none py-2 text-sm text-black font-medium group cursor-pointer transition-all ease-in-out">
+                    {item.name}
+                    <span className="absolute left-0 bottom-0 h-0.5 bg-black w-0 group-hover:w-full transition-all duration-300"></span>
+                  </li>
+                </Link>
+              ))}
             </ul>
           </Flex>
         </Container>
       </div>
-      {/* Mobile Header */}
-      <div className="w-full lg:w-full flex justify-center items-center m-auto lg:m-0 py-4 px-3 lg:px-0 lg:hidden bg-white shadow-sm overflow-hidden">
+      {/* Desktop Header End */}
+
+      {/* Mobile Header start */}
+      <div className="w-full flex justify-center items-center m-auto py-4 px-3 lg:hidden bg-white shadow-sm overflow-hidden">
         <Container>
           <Flex className="justify-between items-center">
             <Link to={"/"}>
               <Image imgSrc={HeaderLogo} imgAlt="Header Logo" />
             </Link>
 
-            {/* Show FaBars when menu is closed, FaTimes when open */}
             {isMenuOpen ? (
               <FaTimes
                 onClick={() => setIsMenuOpen(false)}
@@ -67,23 +74,27 @@ const Header = () => {
           {isMenuOpen && (
             <div className="w-full mt-4 bg-gray-100 rounded-md shadow-sm">
               <ul className="text-center py-3 space-y-2">
-                {["HOME", "SHOP", "BLOG", "ABOUT", "CONTACT", "PAGES"].map(
-                  (item, idx) => (
-                    <Link to={item === "SHOP" ? "/shop" : "/"} key={idx}>
-                      <li className="relative list-none py-2 text-sm font-medium text-black group cursor-pointer">
-                        {item}
-                        <span className="absolute left-0 bottom-0 h-0.5 bg-black w-0 group-hover:w-full transition-all duration-300"></span>
-                      </li>
-                    </Link>
-                  )
-                )}
+                {menuItems.map((item, idx) => (
+                  <Link
+                    to={item.path}
+                    key={idx}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <li className="relative list-none py-2 text-sm font-medium text-black group cursor-pointer">
+                      {item.name}
+                      <span className="absolute left-0 bottom-0 h-0.5 bg-black w-0 group-hover:w-full transition-all duration-300"></span>
+                    </li>
+                  </Link>
+                ))}
               </ul>
             </div>
           )}
         </Container>
       </div>
-      {/* Header Lower Part */}
-      <div className="w-full flex justify-center m-auto lg:m-0 px-3 lg:px-0 py-4 bg-[#F5F5F3] overflow-hidden">
+      {/* Mobile Header End */}
+
+      {/* Header Lower Part Start */}
+      <div className="w-full flex justify-center m-auto px-3 py-4 bg-[#F5F5F3] overflow-hidden">
         <Container>
           <div className="flex justify-between items-center">
             {/* Category Icon */}
@@ -93,13 +104,11 @@ const Header = () => {
             />
             {/* Search */}
             <div className="flex-1 mx-3 lg:mx-8 flex justify-center items-center">
-              <div className="flex justify-center items-center ">
-                <input
-                  className="relative w-full md:w-[300px] lg:w-[500px] py-2 px-3 rounded-md border border-gray-300 outline-1 outline-gray-300 bg-[#F5F5F5] text-sm"
-                  type="text"
-                  placeholder="What are you looking?"
-                />
-              </div>
+              <input
+                className="w-[200px] lg:w-[500px] py-2 px-3 rounded-md border border-gray-300 outline-1 outline-gray-300 bg-[#F5F5F5] text-sm"
+                type="text"
+                placeholder="What are you looking?"
+              />
             </div>
 
             {/* Icons */}
@@ -119,7 +128,7 @@ const Header = () => {
 
         {/* User Sidebar */}
         {isUserOpen && (
-          <div className="fixed top-0 right-0 m-auto lg:m-0 w-[98%] lg:w-[500px]  h-screen px-10 lg:px-4 py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
+          <div className="fixed top-0 right-0 w-[98%] lg:w-[500px] h-screen px-10 lg:px-4 py-5 bg-white shadow-lg z-50">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">LOGIN</h4>
               <GrClose
@@ -132,7 +141,7 @@ const Header = () => {
 
         {/* Cart Sidebar */}
         {isCartOpen && (
-          <div className="fixed top-0 right-0 m-auto lg:m-0 w-full lg:w-[500px] h-screen px-5 lg:px-5 py-10 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0 ">
+          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-screen px-5 py-10 bg-white shadow-lg z-50">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">SHOPPING BAG</h4>
               <GrClose
@@ -140,25 +149,24 @@ const Header = () => {
                 className="text-xl cursor-pointer mr-3 lg:mr-0"
               />
             </div>
-            {/* AddToCart Single Product Start  */}
-            <div className="flex justify-between bg-neutral-100  ">
-              <div className="flex gap-x-5 lg:gap-x-7 ">
+            {/* AddToCart Single Product start */}
+            <div className="flex justify-between bg-neutral-100">
+              <div className="flex gap-x-5 lg:gap-x-7">
                 <Image
                   className={"w-170px h-[150px]"}
                   imgSrc={ProductOne}
                   imgAlt={""}
                 />
-                <div className="">
+                <div>
                   <h4 className="text-xl font-normal text-mainColor pt-2">
                     Zessi Dresses
                   </h4>
                   <h5 className="text-md text-[#767676] pt-2">Color: </h5>
                   <h6 className="text-md text-[#767676] pt-2">Size: L</h6>
                   <div className="flex justify-between items-center">
-                    <div className="flex justify-center items-center gap-x-5 mt-2 ">
+                    <div className="flex justify-center items-center gap-x-5 mt-2">
                       <span className="text-xl text-[#767676]">
-                        {" "}
-                        <HiMinusSmall />{" "}
+                        <HiMinusSmall />
                       </span>
                       <p className="text-xl text-[#767676]">0</p>
                       <span className="text-xl text-[#767676]">
@@ -168,20 +176,20 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className="space-y-20 ">
+              <div className="space-y-20">
                 <p className="text-sm pt-4 pr-5">
                   <GrClose />
                 </p>
                 <p className="text-xl pr-5">99</p>
               </div>
             </div>
-            {/* AddToCart Single Product End  */}
+            {/* AddToCart Single Product End */}
           </div>
         )}
 
         {/* Category Sidebar */}
         {isCategoryOpen && (
-          <div className="fixed top-0 left-0 m-auto lg:m-0 w-full h-screen px-10 lg:px-4  py-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 translate-x-0">
+          <div className="fixed top-0 left-0 w-full h-screen px-10 lg:px-4 py-5 bg-white shadow-lg z-50">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">MENU</h4>
               <GrClose
@@ -192,6 +200,7 @@ const Header = () => {
           </div>
         )}
       </div>
+      {/* Header Lower Part End */}
     </>
   );
 };

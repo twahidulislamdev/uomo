@@ -44,11 +44,11 @@ const Shop = () => {
           <h3 className="text-2xl lg:text-7xl font-bold text-center text-mainColor">
             THE SHOP
           </h3>
-          <ul className="flex justify-center  gap-x lg:gap-x-15 text-center py-3 space-y-2 ">
+          <ul className="flex justify-center  gap-x-5 lg:gap-x-15 text-center py-3 space-y-2 flex-wrap ">
             {["MAN", "WOMEN", "JACKRTS", "HOODIES", "TROUSERS", "SHOSE"].map(
               (item, idx) => (
                 <Link to={item === "SHOP" ? "/shop" : "/"} key={idx}>
-                  <li className="relative list-none px-2 py-2 text-sm font-medium text-black group cursor-pointer">
+                  <li className="relative list-none w-[15%] px-2 py-2 text-sm font-medium text-black group cursor-pointer">
                     {item}
                     {/* <span className="absolute left-0 bottom-0  h-0.5 bg-black w-0 group-hover:w-full transition-all duration-300"></span> */}
                   </li>
