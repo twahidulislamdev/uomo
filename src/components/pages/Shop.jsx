@@ -77,7 +77,7 @@ const Shop = () => {
                   onClick={() => setIsFilters(false)}
                   className="text-xl font-bold text-black"
                 >
-                  <GrClose/>
+                  <GrClose />
                 </button>
               </div>
 
@@ -146,83 +146,83 @@ const Shop = () => {
                 <Flex className="justify-between flex-wrap gap-y-10">
                   <ShopProducts
                     imgSrc={ProductOne}
-                    imgAlt="Arive One"
-                    badgeText="New"
-                    title="Basic Crew Neck Tee"
-                    price="$44.00"
-                    productColor="Gray"
+                    imgAlt={"Arive One"}
+                    badgeText={"New"}
+                    title={"Cropped Faux Leather Jacket"}
+                    price={29.0}
+                    productColor={"Gray"}
                     badgeClassName="bg-white"
                   />
                   <ShopProducts
                     imgSrc={ProductTwo}
                     imgAlt="Arive Two"
-                    badgeText="10%"
-                    title="Basic Crew Neck Tee"
-                    price="$44.00"
-                    productColor="White"
+                    badgeText={"10%"}
+                    title={"Calvin Shorts"}
+                    price={62.0}
+                    productColor={"White"}
                     badgeClassName="bg-green-300"
                   />
                   <ShopProducts
                     imgSrc={ProductThree}
                     imgAlt="Arive Three"
-                    badgeText="New"
-                    title="Basic Crew Neck Tee"
-                    price="$44.00"
-                    productColor="Black"
+                    badgeText={"New"}
+                    title={"Kirby T-Shirt"}
+                    price={17.0}
+                    productColor={"Black"}
                     badgeClassName="bg-white"
                   />
                   <ShopProducts
                     imgSrc={ProductFour}
                     imgAlt="Arive Four"
-                    badgeText="10%"
-                    title="Basic Crew Neck Tee"
-                    price="$44.00"
-                    productColor="White"
+                    badgeText={"10%"}
+                    title={"Cableknit Shawl"}
+                    price={99.0}
+                    productColor={"White"}
                     badgeClassName="bg-green-300"
                   />
                   <ShopProducts
                     imgSrc={ProductFive}
                     imgAlt="Arive Five"
-                    badgeText="New"
-                    title="Basic Crew Neck Tee"
-                    price="$44.00"
-                    productColor="Black"
+                    badgeText={"New"}
+                    title={"Colorful Jacket"}
+                    price={29.0}
+                    productColor={"Black"}
                     badgeClassName="bg-white"
                   />
                   <ShopProducts
                     imgSrc={ProductSix}
                     imgAlt="Arive Six"
-                    badgeText="10%"
-                    title="Basic Crew Neck Tee"
-                    price="$44.00"
-                    productColor="White"
+                    badgeText={"10%"}
+                    title={"Shirt In Botanical Cheetah Print"}
+                    price={52.0}
+                    productColor={"White"}
                     badgeClassName="bg-green-300"
                   />
                   <ShopProducts
                     imgSrc={ProductSeven}
                     imgAlt="Arive Seven"
-                    badgeText="New"
-                    title="Basic Crew Neck Tee"
-                    price="$44.00"
-                    productColor="White"
+                    badgeText={"New"}
+                    title={"Cotton Jersey T-Shirt"}
+                    price={17.0}
+                    productColor={"White"}
                     badgeClassName="bg-white"
                   />
                   <ShopProducts
                     imgSrc={ProductEight}
                     imgAlt="Arive Eight"
-                    badgeText="10%"
-                    title="Basic Crew Neck Tee"
-                    price="$44.00"
-                    productColor="Black"
+                    badgeText={"10%"}
+                    title={"Zessi Dresses"}
+                    price={49.0}
+                    productColor={"Black"}
                     badgeClassName="bg-green-300"
                   />
                   <ShopProducts
                     imgSrc={ProductFifteen}
                     imgAlt="Arive Eight"
-                    badgeText="10%"
-                    title="Basic Crew Neck Tee"
-                    price="$44.00"
-                    productColor="Black"
+                    badgeText={"10%"}
+                    title={"Basic Crew Neck Tee"}
+                    price={44.00}
+                    productColor={"Black"}
                     badgeClassName="bg-green-300"
                   />
                 </Flex>

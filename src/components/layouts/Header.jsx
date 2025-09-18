@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../Container";
 import Flex from "../Flex";
 import Image from "../Image";
@@ -39,6 +39,13 @@ const Header = () => {
   let handleDecerment = (item) => {
     dispatch(decrement(item));
   };
+  useEffect(() => {
+    if (isCartOpen || isUserOpen || isCategoryOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isCartOpen, isUserOpen, isCategoryOpen]);
 
   return (
     <>
@@ -155,18 +162,18 @@ const Header = () => {
 
         {/* Cart Sidebar */}
         {isCartOpen && (
-          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-screen px-3 py-10 bg-white shadow-lg z-50">
+          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-screen px-3 py-10 bg-white shadow-lg z-50 overflow-y-auto">
             <div className="flex justify-between items-center mb-5">
-              <h4 className="text-lg font-medium">SHOPPING BAG</h4>
+              <h4 className="text-xl font-medium">SHOPPING BAG</h4>
               <GrClose
                 onClick={() => setIsCartOpen(false)}
-                className="text-xl cursor-pointer mr-3 lg:mr-0"
+                className="text-xl font-bold cursor-pointer mr-3 lg:mr-0"
               />
             </div>
             {/* AddToCart Single Product start */}
             {data.map((item) => (
               <div className="flex justify-between bg-neutral-100 mb-5">
-                <div className="flex gap-x-5 lg:gap-x-7">
+                <div className="flex justify-center gap-x-5 lg:gap-x-7">
                   <Image
                     className={"w-170px h-[150px]"}
                     imgSrc={item.img}
@@ -180,33 +187,35 @@ const Header = () => {
                       Color:{item.color}{" "}
                     </h5>
                     <h6 className="text-md text-[#767676] pt-2">Size: </h6>
-                    <div className="flex justify-between items-center">
-                      <div className="flex justify-center items-center gap-x-5 mt-2">
-                        <span className="text-xl text-[#767676]">
-                          <HiMinusSmall onClick={handleDecerment} />
-                        </span>
-                        <p className="text-xl text-[#767676]">
-                          {item.quantity}
-                        </p>
-                        <span className="text-xl text-[#767676]">
-                          <HiPlusSmall onClick={handleIncerment} />
-                        </span>
-                      </div>
+                    {/* Increment Decrement start */}
+                    <div className="flex justify-start items-center gap-x-5 mt-2">
+                      <span className="text-xl text-[#767676]">
+                        <HiMinusSmall onClick={() => handleDecerment(item)} />
+                      </span>
+                      <p className="text-xl text-[#767676]">{item.quantity}</p>
+                      <span className="text-xl text-[#767676]">
+                        <HiPlusSmall onClick={() => handleIncerment(item)} />
+                      </span>
                     </div>
+                    {/* Increment Decrement End */}
                   </div>
                 </div>
+                {/* Price And Cross part start  */}
                 <div className="relative space-y-20">
-                  <p className="absolute top-0 right-3 text-sm pt-4 ">
+                  <p className="absolute top-0 right-3 text-sm pt-4 cursor-pointer">
                     <GrClose />
                   </p>
                   <p className="text-xl absolute bottom-2 right-3 ">
-                    {item.price}
+                    {item.price * item.quantity}
                   </p>
                 </div>
+                {/* Price And Cross part End  */}
               </div>
             ))}
-
             {/* AddToCart Single Product End */}
+            <div className="">
+              
+            </div>
           </div>
         )}
 
