@@ -3,13 +3,18 @@ import Container from "../Container";
 import Flex from "../Flex";
 import Image from "../Image";
 import HeaderLogo from "../../assets/headerLogo.png";
-import { FaRegUser, FaRegHeart } from "react-icons/fa";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { HiOutlineShoppingBag, HiMiniBars3CenterLeft } from "react-icons/hi2";
+import { FaRegUser, FaRegHeart, FaBars, FaTimes } from "react-icons/fa";
+import {
+  HiOutlineShoppingBag,
+  HiMiniBars3CenterLeft,
+  HiPlusSmall,
+  HiMinusSmall,
+} from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
 import ProductOne from "../../assets/productOne.jpg";
-import { HiPlusSmall, HiMinusSmall } from "react-icons/hi2";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment } from "../../features/addToCartSlice";
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -25,6 +30,15 @@ const Header = () => {
     { name: "CONTACT", path: "/contact" },
     { name: "PAGES", path: "/pages" },
   ];
+
+  let data = useSelector((state) => state.addtocart.value);
+  let dispatch = useDispatch();
+  let handleIncerment = (item) => {
+    dispatch(increment(item));
+  };
+  let handleDecerment = (item) => {
+    dispatch(decrement(item));
+  };
 
   return (
     <>
@@ -141,7 +155,7 @@ const Header = () => {
 
         {/* Cart Sidebar */}
         {isCartOpen && (
-          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-screen px-5 py-10 bg-white shadow-lg z-50">
+          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-screen px-3 py-10 bg-white shadow-lg z-50">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">SHOPPING BAG</h4>
               <GrClose
@@ -150,39 +164,48 @@ const Header = () => {
               />
             </div>
             {/* AddToCart Single Product start */}
-            <div className="flex justify-between bg-neutral-100">
-              <div className="flex gap-x-5 lg:gap-x-7">
-                <Image
-                  className={"w-170px h-[150px]"}
-                  imgSrc={ProductOne}
-                  imgAlt={""}
-                />
-                <div>
-                  <h4 className="text-xl font-normal text-mainColor pt-2">
-                    Zessi Dresses
-                  </h4>
-                  <h5 className="text-md text-[#767676] pt-2">Color: </h5>
-                  <h6 className="text-md text-[#767676] pt-2">Size: L</h6>
-                  <div className="flex justify-between items-center">
-                    <div className="flex justify-center items-center gap-x-5 mt-2">
-                      <span className="text-xl text-[#767676]">
-                        <HiMinusSmall />
-                      </span>
-                      <p className="text-xl text-[#767676]">0</p>
-                      <span className="text-xl text-[#767676]">
-                        <HiPlusSmall />
-                      </span>
+            {data.map((item) => (
+              <div className="flex justify-between bg-neutral-100 mb-5">
+                <div className="flex gap-x-5 lg:gap-x-7">
+                  <Image
+                    className={"w-170px h-[150px]"}
+                    imgSrc={item.img}
+                    imgAlt={""}
+                  />
+                  <div>
+                    <h4 className="text-xl font-normal text-mainColor pt-2">
+                      {item.title}
+                    </h4>
+                    <h5 className="text-md text-[#767676] pt-2">
+                      Color:{item.color}{" "}
+                    </h5>
+                    <h6 className="text-md text-[#767676] pt-2">Size: </h6>
+                    <div className="flex justify-between items-center">
+                      <div className="flex justify-center items-center gap-x-5 mt-2">
+                        <span className="text-xl text-[#767676]">
+                          <HiMinusSmall onClick={handleDecerment} />
+                        </span>
+                        <p className="text-xl text-[#767676]">
+                          {item.quantity}
+                        </p>
+                        <span className="text-xl text-[#767676]">
+                          <HiPlusSmall onClick={handleIncerment} />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div className="relative space-y-20">
+                  <p className="absolute top-0 right-3 text-sm pt-4 ">
+                    <GrClose />
+                  </p>
+                  <p className="text-xl absolute bottom-2 right-3 ">
+                    {item.price}
+                  </p>
+                </div>
               </div>
-              <div className="space-y-20">
-                <p className="text-sm pt-4 pr-5">
-                  <GrClose />
-                </p>
-                <p className="text-xl pr-5">99</p>
-              </div>
-            </div>
+            ))}
+
             {/* AddToCart Single Product End */}
           </div>
         )}

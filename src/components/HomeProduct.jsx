@@ -25,7 +25,8 @@ const HomeProduct = ({
       title: title,
       price: price,
       img: imgSrc,
-      quantity: 1
+      quantity: 1,
+      color: productColor,
     }))
   }
   return (

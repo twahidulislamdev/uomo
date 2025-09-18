@@ -116,12 +116,12 @@ const Trending = () => {
             <div>
               <HomeProduct
                 imgSrc={ProductOne}
-                imgAlt="Arive One"
+                imgAlt={"Arive One"}
                 imgSrcTwo={ProductOneSide}
-                badgeText="New"
-                title="Cropped Faux Leather Jacket"
-                price="$29.00"
-                productColor="Gray"
+                badgeText={"New"}
+                title={"Cropped Faux Leather Jacket"}
+                price={29.00}
+                productColor={"Gray"}
                 badgeClassName="bg-white"
               />
             </div>
@@ -130,10 +130,10 @@ const Trending = () => {
                 imgSrc={ProductTwo}
                 imgAlt="Arive Two"
                 imgSrcTwo={ProductTwoSide}
-                badgeText="10%"
-                title="Calvin Shorts"
-                price="$62.00"
-                productColor="White"
+                badgeText={"10%"}
+                title={"Calvin Shorts"}
+                price={62.00}
+                productColor={"White"}
                 badgeClassName="bg-green-300"
               />
             </div>
@@ -142,10 +142,10 @@ const Trending = () => {
                 imgSrc={ProductThree}
                 imgAlt="Arive Three"
                 imgSrcTwo={ProductThreeSide}
-                badgeText="New"
-                title="Kirby T-Shirt"
-                price="$17.00"
-                productColor="Black"
+                badgeText={"New"}
+                title={"Kirby T-Shirt"}
+                price={17.00}
+                productColor={"Black"}
                 badgeClassName="bg-white"
               />
             </div>
@@ -154,10 +154,10 @@ const Trending = () => {
                 imgSrc={ProductFour}
                 imgAlt="Arive Four"
                 imgSrcTwo={ProductFourSide}
-                badgeText="10%"
-                title="Cableknit Shawl"
-                price="$99.00"
-                productColor="White"
+                badgeText={"10%"}
+                title={"Cableknit Shawl"}
+                price={99.00}
+                productColor={"White"}
                 badgeClassName="bg-green-300"
               />
             </div>
@@ -166,10 +166,10 @@ const Trending = () => {
                 imgSrc={ProductFive}
                 imgAlt="Arive Five"
                 imgSrcTwo={ProductFiveSide}
-                badgeText="New"
-                title="Colorful Jacket"
-                price="$29.00"
-                productColor="Black"
+                badgeText={"New"}
+                title={"Colorful Jacket"}
+                price={29.00}
+                productColor={"Black"}
                 badgeClassName="bg-white"
               />
             </div>
@@ -178,10 +178,10 @@ const Trending = () => {
                 imgSrc={ProductSix}
                 imgAlt="Arive Six"
                 imgSrcTwo={ProductSixSide}
-                badgeText="10%"
-                title="Shirt In Botanical Cheetah Print"
-                price="$52.00"
-                productColor="White"
+                badgeText={"10%"}
+                title={"Shirt In Botanical Cheetah Print"}
+                price={52.00}
+                productColor={"White"}
                 badgeClassName="bg-green-300"
               />
             </div>
@@ -190,10 +190,10 @@ const Trending = () => {
                 imgSrc={ProductSeven}
                 imgAlt="Arive Seven"
                 imgSrcTwo={ProductSevenSide}
-                badgeText="New"
-                title="Cotton Jersey T-Shirt"
-                price="$17.00"
-                productColor="White"
+                badgeText={"New"}
+                title={"Cotton Jersey T-Shirt"}
+                price={17.00}
+                productColor={"White"}
                 badgeClassName="bg-white"
               />
             </div>
@@ -202,10 +202,10 @@ const Trending = () => {
                 imgSrc={ProductEight}
                 imgAlt="Arive Eight"
                 imgSrcTwo={ProductEightSide}
-                badgeText="10%"
-                title="Zessi Dresses"
-                price="$49.00"
-                productColor="Black"
+                badgeText={"10%"}
+                title={"Zessi Dresses"}
+                price={49.00}
+                productColor={"Black"}
                 badgeClassName="bg-green-300"
               />
             </div>

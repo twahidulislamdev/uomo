@@ -3,14 +3,34 @@ import { createSlice } from "@reduxjs/toolkit";
 export const addToCartSlice = createSlice({
   name: "cart",
   initialState: {
-    value: 0,
+    value: [],
   },
   reducers: {
     addToCart: (state, action) => {
-      console.log(state.value);
-      console.log(action.payload);
+      let allData = state.value.find(
+        (item) => item.title === action.payload.title
+      );
+      if (allData) {
+        allData.quantity += 1;
+      } else {
+        state.value.push({ ...action.payload, quantity: 1 });
+      }
+    },
+    increment: (state, action) => {
+      state.value.map((item) => {
+        if (item.title === action.payload.title) {
+          item.quantity += 1;
+        }
+      });
+    },
+    decrement: (state, action) => {
+      state.value.map((item) => {
+        if (item.title === action.payload.title) {
+          item.quantity -= 1;
+        }
+      });
     },
   },
 });
-export const { addToCart } = addToCartSlice.actions;
+export const { addToCart, increment, decrement } = addToCartSlice.actions;
 export default addToCartSlice.reducer;
