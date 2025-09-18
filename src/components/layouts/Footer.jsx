@@ -11,12 +11,7 @@ import {
   FaYoutube,
   FaPinterest,
 } from "react-icons/fa";
-import {
-  SiVisa,
-  SiMastercard,
-  SiDiscover,
-  SiGooglepay,
-} from "react-icons/si";
+import { SiVisa, SiMastercard, SiDiscover, SiGooglepay } from "react-icons/si";
 import { BiLogoPaypal } from "react-icons/bi";
 
 const Footer = () => {
@@ -26,9 +21,13 @@ const Footer = () => {
         <Flex className="flex-col lg:flex-row lg:justify-between gap-10 lg:gap-0">
           {/* Left Logo & Info */}
           <div className="w-full lg:w-[30%] m-auto lg:m-0 text-center  lg:text-left">
-           <div className="flex justify-center lg:justify-start">
-             <Image imgSrc={HeaderLogo} imgAlt={"FooterLogo"} className="flex justify-center m-auto lg:mx-0" />
-           </div>
+            <div className="flex justify-center lg:justify-start">
+              <Image
+                imgSrc={HeaderLogo}
+                imgAlt={"FooterLogo"}
+                className="flex justify-center m-auto lg:mx-0"
+              />
+            </div>
             <p className="mt-6 lg:mt-10 text-sm px-5 lg:px-0 lg:pr-[100px]">
               1418 River Drive, Suite 35 Cottonhall, CA 96232 United States
             </p>
@@ -46,7 +45,11 @@ const Footer = () => {
 
           {/* Company */}
           <div className="w-1/2 lg:w-[10%] m-auto text-center lg:text-left">
-            <Heading className="text-lg font-medium" txt={"COMPANY"} as={"h4"} />
+            <Heading
+              className="text-lg font-medium"
+              txt={"COMPANY"}
+              as={"h4"}
+            />
             <ul className="mt-6 lg:mt-10 space-y-2 lg:space-y-3">
               <li className="text-sm">About Us</li>
               <li className="text-sm">Careers</li>
@@ -83,7 +86,11 @@ const Footer = () => {
 
           {/* Subscribe */}
           <div className="w-full lg:w-[30%] text-center lg:text-left">
-            <Heading className="text-lg font-medium" txt={"Subscribe"} as={"h4"} />
+            <Heading
+              className="text-lg font-medium"
+              txt={"Subscribe"}
+              as={"h4"}
+            />
             <p className="w-3/4 lg:w-auto m-auto lg:m-0  mt-6 lg:mt-10 text-sm px-5 lg:px-0">
               Be the first to get the latest news about trends, promotions, and
               much more!

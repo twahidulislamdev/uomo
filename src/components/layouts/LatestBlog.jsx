@@ -47,7 +47,9 @@ const LatestBlog = () => {
   return (
     <div className="py-[60px] bg-[#F3EDDF] px-3 lg:px-0 lg:block overflow-hidden">
       <Container>
-        <h3 className="text-center text-4xl font-medium mb-10">Latest in Blog</h3>
+        <h3 className="text-center text-4xl font-medium mb-10">
+          Latest in Blog
+        </h3>
         <Slider {...settings}>
           <div>
             <LatestBlogCard

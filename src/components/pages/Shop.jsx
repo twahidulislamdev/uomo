@@ -221,7 +221,7 @@ const Shop = () => {
                     imgAlt="Arive Eight"
                     badgeText={"10%"}
                     title={"Basic Crew Neck Tee"}
-                    price={44.00}
+                    price={44.0}
                     productColor={"Black"}
                     badgeClassName="bg-green-300"
                   />

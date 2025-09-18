@@ -58,17 +58,17 @@ const ShopProducts = ({
         {/* <Badge className={"absolute top-5 left-5"} badgeText={text} /> */}
         <div className=" p-7.5 space-y-3 absolute bottom-30 left-0 w-full lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out">
           <Flex className={"justify-center space-x-5"}>
-            <div className="relative w-[30px] lg:w-[40px] h-[30px] lg:h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
+            <div className="relative w-[35px] lg:w-[40px] h-[35px] lg:h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
               <HiOutlineShoppingBag
                 onClick={handleAddToCart}
-                className="text-lg lg:text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
               />
             </div>
-            <div className="relative w-[30px] lg:w-[40px] h-[30px] lg:h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200">
-              <HiOutlineEye className="text-lg lg:text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+            <div className="relative w-[35px] lg:w-[40px] h-[35px] lg:h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200">
+              <HiOutlineEye className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
-            <div className="relative w-[30px] lg:w-[40px] h-[30px] lg:h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
-              <HiOutlineHeart className="text-lg lg:text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+            <div className="relative w-[35px] lg:w-[40px] h-[35px] lg:h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
+              <HiOutlineHeart className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
           </Flex>
         </div>

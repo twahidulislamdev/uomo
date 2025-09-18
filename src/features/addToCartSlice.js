@@ -37,5 +37,6 @@ export const addToCartSlice = createSlice({
     },
   },
 });
-export const { addToCart, increment, decrement, remove } = addToCartSlice.actions;
+export const { addToCart, increment, decrement, remove } =
+  addToCartSlice.actions;
 export default addToCartSlice.reducer;

@@ -120,7 +120,7 @@ const Trending = () => {
                 imgSrcTwo={ProductOneSide}
                 badgeText={"New"}
                 title={"Cropped Faux Leather Jacket"}
-                price={29.00}
+                price={29.0}
                 productColor={"Gray"}
                 badgeClassName="bg-white"
               />
@@ -132,7 +132,7 @@ const Trending = () => {
                 imgSrcTwo={ProductTwoSide}
                 badgeText={"10%"}
                 title={"Calvin Shorts"}
-                price={62.00}
+                price={62.0}
                 productColor={"White"}
                 badgeClassName="bg-green-300"
               />
@@ -144,7 +144,7 @@ const Trending = () => {
                 imgSrcTwo={ProductThreeSide}
                 badgeText={"New"}
                 title={"Kirby T-Shirt"}
-                price={17.00}
+                price={17.0}
                 productColor={"Black"}
                 badgeClassName="bg-white"
               />
@@ -156,7 +156,7 @@ const Trending = () => {
                 imgSrcTwo={ProductFourSide}
                 badgeText={"10%"}
                 title={"Cableknit Shawl"}
-                price={99.00}
+                price={99.0}
                 productColor={"White"}
                 badgeClassName="bg-green-300"
               />
@@ -168,7 +168,7 @@ const Trending = () => {
                 imgSrcTwo={ProductFiveSide}
                 badgeText={"New"}
                 title={"Colorful Jacket"}
-                price={29.00}
+                price={29.0}
                 productColor={"Black"}
                 badgeClassName="bg-white"
               />
@@ -180,7 +180,7 @@ const Trending = () => {
                 imgSrcTwo={ProductSixSide}
                 badgeText={"10%"}
                 title={"Shirt In Botanical Cheetah Print"}
-                price={52.00}
+                price={52.0}
                 productColor={"White"}
                 badgeClassName="bg-green-300"
               />
@@ -192,7 +192,7 @@ const Trending = () => {
                 imgSrcTwo={ProductSevenSide}
                 badgeText={"New"}
                 title={"Cotton Jersey T-Shirt"}
-                price={17.00}
+                price={17.0}
                 productColor={"White"}
                 badgeClassName="bg-white"
               />
@@ -204,7 +204,7 @@ const Trending = () => {
                 imgSrcTwo={ProductEightSide}
                 badgeText={"10%"}
                 title={"Zessi Dresses"}
-                price={49.00}
+                price={49.0}
                 productColor={"Black"}
                 badgeClassName="bg-green-300"
               />

@@ -56,7 +56,7 @@ const LimitedEdition = () => {
   };
   return (
     <>
-      <div className="bg-black pt-10 lg:pt-15 pb-20 flex lg:block  px-3 lg:px-0 overflow-hidden" >
+      <div className="bg-black pt-10 lg:pt-15 pb-20 flex lg:block  px-3 lg:px-0 overflow-hidden">
         <Container>
           <h3 className="text-center text-4xl font-medium text-white">
             Limited Edition

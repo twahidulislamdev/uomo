@@ -165,7 +165,7 @@ const Header = () => {
 
         {/* Cart Sidebar */}
         {isCartOpen && (
-          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-screen px-3 py-10 bg-white shadow-lg z-50 overflow-y-auto">
+          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-screen px-5 py-10 bg-white shadow-lg z-50 overflow-y-auto">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-xl font-medium">SHOPPING BAG</h4>
               <GrClose
@@ -175,49 +175,65 @@ const Header = () => {
             </div>
             {/* AddToCart Single Product start */}
             {data.map((item) => (
-              <div className="flex justify-between bg-neutral-100 mb-5">
-                <div className="flex justify-center gap-x-5 lg:gap-x-7">
-                  <Image
-                    className={"w-170px h-[150px]"}
-                    imgSrc={item.img}
-                    imgAlt={""}
-                  />
-                  <div>
-                    <h4 className="text-xl font-normal text-mainColor pt-2">
-                      {item.title}
-                    </h4>
-                    <h5 className="text-md text-[#767676] pt-2">
-                      Color:{item.color}{" "}
-                    </h5>
-                    <h6 className="text-md text-[#767676] pt-2">Size: </h6>
-                    {/* Increment Decrement start */}
-                    <div className="flex justify-start items-center gap-x-5 mt-2">
-                      <span className="text-xl text-[#767676]">
-                        <HiMinusSmall onClick={() => handleDecerment(item)} />
-                      </span>
-                      <p className="text-xl text-[#767676]">{item.quantity}</p>
-                      <span className="text-xl text-[#767676]">
-                        <HiPlusSmall onClick={() => handleIncerment(item)} />
-                      </span>
+              <div className=" bg-neutral-100 gap  ">
+                <div className="flex justify-between mb-5">
+                  <div className="flex justify-center gap-x-5 lg:gap-x-7">
+                    <Image
+                      className={"w-170px h-[150px]"}
+                      imgSrc={item.img}
+                      imgAlt={""}
+                    />
+                    <div>
+                      <h4 className="w-full pr-2 text-lg font-normal text-mainColor pt-2 text-wrap">
+                        {item.title}
+                      </h4>
+                      <h5 className="text-base text-[#767676] pt-2">
+                        Color:{item.color}{" "}
+                      </h5>
+                      <h6 className="text-base text-[#767676] pt-2">Size: </h6>
+                      {/* Increment Decrement start */}
+                      <div className="flex justify-start items-center gap-x-5 mt-2">
+                        <span className="text-xl text-[#767676]">
+                          <HiMinusSmall onClick={() => handleDecerment(item)} />
+                        </span>
+                        <p className="text-xl text-[#767676]">
+                          {item.quantity}
+                        </p>
+                        <span className="text-xl text-[#767676]">
+                          <HiPlusSmall onClick={() => handleIncerment(item)} />
+                        </span>
+                      </div>
+                      {/* Increment Decrement End */}
                     </div>
-                    {/* Increment Decrement End */}
                   </div>
+                  {/* Price And Cross part start  */}
+                  <div className="relative space-y-20">
+                    <p className="absolute top-0 right-3 text-sm pt-4 px-2 cursor-pointer">
+                      <GrClose onClick={() => handleRemove(item)} />
+                    </p>
+                    <p className="text-xl absolute bottom-2 right-3 ">
+                      {item.price * item.quantity}
+                    </p>
+                  </div>
+                  {/* Price And Cross part End  */}
                 </div>
-                {/* Price And Cross part start  */}
-                <div className="relative space-y-20">
-                  <p className="absolute top-0 right-3 text-sm pt-4 cursor-pointer">
-                    <GrClose onClick={() => handleRemove(item)} />
-                  </p>
-                  <p className="text-xl absolute bottom-2 right-3 ">
-                    {item.price * item.quantity}
-                  </p>
-                </div>
-                {/* Price And Cross part End  */}
               </div>
             ))}
             {/* AddToCart Single Product End */}
-            <div className="">
+            {/* Sub Total/ view cart section Start  */}
+            <div className="border-t-2 border-gray-300 pt-5 ">
+              <div className="flex justify-between items-center">
+                <h5 className="text-2xl font-semibold">SUBTOTAL:</h5>
+                <p className="text-2xl font-semibold">175.00</p>
+              </div>
+              <div className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer">
+                VIEW CART
+              </div>
+              <div className="text-center text-lg text-white font-medium mt-5 py-5 lg:py-3 w-full bg-mainColor hover:cursor-pointer">
+                CHECKOUT
+              </div>
             </div>
+            {/* Sub Total/ view cart section Start  */}
           </div>
         )}
 

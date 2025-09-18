@@ -7,9 +7,7 @@ const ShopProductCatagories = () => {
   return (
     <div className="">
       <Flex className={"justify-between items-center mb-5"}>
-        <h4 className="text-md text-mainColor">
-          PRODUCT CATEGORIES
-        </h4>
+        <h4 className="text-md text-mainColor">PRODUCT CATEGORIES</h4>
         <IoIosArrowUp
           onClick={() => SetExpand(!isExpand)}
           className={`text-xl text-mainColor mr-10 cursor-pointer ${

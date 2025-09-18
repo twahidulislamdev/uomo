@@ -19,11 +19,14 @@ const LimitedEditionCard = ({
         <div className="relative h-[420px] ">
           {/* Default Image */}
           <Link to={"/shop"}>
-          <img src={imgSrc} alt={imgAlt} className="w-full h-full flex justify-center items-center  " />
+            <img
+              src={imgSrc}
+              alt={imgAlt}
+              className="w-full h-full flex justify-center items-center  "
+            />
           </Link>
           {/* Default Image */}
           <div className="absolute bottom-3 left-2 pt-10 px-2  z-10 ">
-            
             <h3 className="text-[#262626] text-base font-bold py-1">{title}</h3>
             <h4
               className={`text-mainColor text-base font-bold ${priceClassName}`}
@@ -43,9 +46,9 @@ const LimitedEditionCard = ({
               <HiOutlineEye className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
             <Link to={"/collect"}>
-            <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
-              <HiOutlineHeart className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-            </div>
+              <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
+                <HiOutlineHeart className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+              </div>
             </Link>
           </Flex>
         </div>
