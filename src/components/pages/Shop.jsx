@@ -102,7 +102,7 @@ const Shop = () => {
               <Flex className="justify-between items-center">
                 {/* Filter Button (Mobile Only) */}
                 <div
-                  className="block lg:hidden ml-4  px-6 py-2 border-1 border-neutral-400 text-center text-white cursor-pointer"
+                  className="block lg:hidden ml-4  px-8 py-2 border-1 border-neutral-400 text-center text-white cursor-pointer"
                   onClick={() => setIsFilters(true)}
                 >
                   <h6 className="text-lg font-medium text-black text-center">

@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
 import ProductOne from "../../assets/productOne.jpg";
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment } from "../../features/addToCartSlice";
+import { decrement, increment, remove } from "../../features/addToCartSlice";
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -38,6 +38,9 @@ const Header = () => {
   };
   let handleDecerment = (item) => {
     dispatch(decrement(item));
+  };
+  let handleRemove = (item) => {
+    dispatch(remove(item));
   };
   useEffect(() => {
     if (isCartOpen || isUserOpen || isCategoryOpen) {
@@ -203,7 +206,7 @@ const Header = () => {
                 {/* Price And Cross part start  */}
                 <div className="relative space-y-20">
                   <p className="absolute top-0 right-3 text-sm pt-4 cursor-pointer">
-                    <GrClose />
+                    <GrClose onClick={() => handleRemove(item)} />
                   </p>
                   <p className="text-xl absolute bottom-2 right-3 ">
                     {item.price * item.quantity}
@@ -214,7 +217,6 @@ const Header = () => {
             ))}
             {/* AddToCart Single Product End */}
             <div className="">
-              
             </div>
           </div>
         )}

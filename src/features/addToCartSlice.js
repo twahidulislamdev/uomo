@@ -30,12 +30,12 @@ export const addToCartSlice = createSlice({
         }
       });
     },
-     remove: (state, action) => {
+    remove: (state, action) => {
       state.value = state.value.filter(
         (item) => item.title !== action.payload.title
       );
     },
   },
 });
-export const { addToCart, increment, decrement } = addToCartSlice.actions;
+export const { addToCart, increment, decrement, remove } = addToCartSlice.actions;
 export default addToCartSlice.reducer;
