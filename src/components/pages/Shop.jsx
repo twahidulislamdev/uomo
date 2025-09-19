@@ -106,7 +106,7 @@ const Shop = () => {
                   className="flex justify-between items-center gap-x-2 lg:hidden ml-4  px-8 py-2 border-1 border-neutral-400 text-center text-white cursor-pointer"
                   onClick={() => setIsFilters(true)}
                 >
-                  <IoFilter className="text-black text-2xl"/>
+                  <IoFilter className="text-black text-2xl" />
                   <h6 className="text-lg font-medium text-black text-center">
                     FILTERS
                   </h6>
