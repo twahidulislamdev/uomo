@@ -3,6 +3,11 @@ import Container from "../Container";
 import Flex from "../Flex";
 import Image from "../Image";
 import HeaderLogo from "../../assets/headerLogo.png";
+import CatagoryOne from "../../assets/catagoryOne.jpg";
+import CatagoryTwo from "../../assets/catagoryTwo.jpg";
+import CatagoryThree from "../../assets/catagoryThree.jpg";
+import CatagoryFour from "../../assets/catagoryFour.jpg";
+import CatagoryFive from "../../assets/catagoryFive.jpg";
 import {
   FaRegUser,
   FaRegHeart,
@@ -251,7 +256,7 @@ const Header = () => {
                 {/* Login By Google Account start  */}
                 <div className="bg-black mt-5 w-full flex justify-center items-center gap-x-3 border-1 border-gray-400 px-5 py-3">
                   <span>
-                    <FaGoogle className="text-white text-lg font-medium"/>
+                    <FaGoogle className="text-white text-lg font-medium" />
                   </span>
                   <h6 className="text-white text-lg font-medium">
                     Login With Google
@@ -339,13 +344,59 @@ const Header = () => {
 
         {/* Category Sidebar */}
         {isCategoryOpen && (
-          <div className="fixed top-0 left-0 w-full h-screen px-10 lg:px-4 py-5 bg-white shadow-lg z-50">
-            <div className="flex justify-between items-center mb-5">
+          <div className="fixed top-0 left-0 w-full h-screen  bg-white shadow-lg z-50">
+            {/* <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">MENU</h4>
               <GrClose
                 onClick={() => setIsCategoryOpen(false)}
                 className="text-xl cursor-pointer mr-3 lg:mr-0"
               />
+            </div> */}
+            <div className="flex">
+              <div className="w-[50%] h-screen">
+                <Image
+                  className={"w-full h-full"}
+                  imgSrc={CatagoryFive}
+                  imgAlt={""}
+                />
+              </div>
+              <div className="w-[50%] p-10">
+                <div className="flex justify-between  ">
+                  <div className="flex gap-x-15 ">
+                    <h5 className="py-2 px-5 hover:bg-black hover:text-white rounded-md text-lg font-semibold transition-all duration-300 delay-200 border-2 border-gray-300">
+                      WOMEN
+                    </h5>
+                    <h6 className="py-2 px-5 hover:bg-black hover:text-white rounded-md text-lg font-semibold transition-all duration-300 delay-200 border-2 border-gray-300">
+                      MAN
+                    </h6>
+                    <p className="py-2 px-5 hover:bg-black hover:text-white rounded-md text-lg font-semibold  transition-all duration-300 delay-200 border-2 border-gray-300">
+                      KIDS
+                    </p>
+                  </div>
+                  <div className="">
+                    <GrClose
+                      onClick={() => setIsCategoryOpen(false)}
+                      className="text-xl cursor-pointer mr-3 lg:mr-0"
+                    />
+                  </div>
+                </div>
+                <div className="px-5 mt-10">
+                  <ul className="space-y-5">
+                    <li className="text-xl font-medium">New</li>
+                    <li className="text-xl font-medium">Best Sellers</li>
+                    <li className="text-xl font-medium">Collaborations®</li>
+                    <li className="text-xl font-medium">Denim</li>
+                    <li className="text-xl font-medium">Jackets & Coats</li>
+                    <li className="text-xl font-medium">Overshirts</li>
+                    <li className="text-xl font-medium">Trousers</li>
+                    <li className="text-xl font-medium">Jeans</li>
+                    <li className="text-xl font-medium">T-shirts & Tops</li>
+                    <li className="text-xl font-medium">Shirts & Blouses</li>
+                    <li className="text-xl font-medium">Shoes</li>
+                    <li className="text-xl font-medium">Accessories</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         )}
