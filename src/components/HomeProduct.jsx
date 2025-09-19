@@ -7,6 +7,7 @@ import {
 } from "react-icons/hi2";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/addToCartSlice";
+
 const HomeProduct = ({
   imgSrc,
   imgAlt,
@@ -34,23 +35,23 @@ const HomeProduct = ({
   return (
     <>
       <div
-        className={`relative w-[320px]  h-130 lg:h-130 lg:group border-2 border-gray-200 m-auto lg:m-0 ${productClassName}`}
+        className={`relative w-[320px] h-130 lg:h-130 group border-2 border-gray-200 m-auto lg:m-0 ${productClassName}`}
       >
         <div className="">
           <Link to={"/shop"}>
-            <div className="relative w-[320px]  h-100  overflow-hidden">
+            <div className="relative w-[320px] h-100 overflow-hidden">
               {/* Default Image */}
               <img
                 src={imgSrc}
                 alt={imgAlt}
-                className="absolute inset-0 w-full  h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
               />
 
               {/* Hover Image */}
               <img
                 src={imgSrcTwo}
                 alt={imgAlt}
-                className=" absolute inset-0 w-full  h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
             </div>
           </Link>
@@ -61,10 +62,10 @@ const HomeProduct = ({
             {badgeText}
           </div>
           {/* Badge part End  */}
-          {/* <Badge className={"absolute top-5 left-5"} badgeText={text} /> */}
-          <div className="lg:p-7.5 space-y-3 absolute bottom-40 left-0 w-full lg:opacity-0 translate-y-4 lg:group-hover:opacity-100  lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+          {/* Group Hover Part Start  */}
+          <div className="lg:p-7.5 space-y-3 absolute bottom-40 left-0 w-full lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 sm:opacity-100 sm:translate-y-0 transition-all duration-300 ease-in-out">
             <Flex className={"justify-center space-x-5"}>
-              <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
+              <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200">
                 <HiOutlineShoppingBag
                   onClick={handleAddToCart}
                   className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
@@ -73,12 +74,13 @@ const HomeProduct = ({
               <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200">
                 <HiOutlineEye className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
               </div>
-              <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
+              <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200">
                 <HiOutlineHeart className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
               </div>
             </Flex>
           </div>
-          <div className="pb-5 pl-2 mt-5 ">
+          {/* Group Hover Part End  */}
+          <div className="pb-5 pl-2 mt-5">
             <p className="text-[#767676] text-base font-bold pt-2">
               {productColor}
             </p>

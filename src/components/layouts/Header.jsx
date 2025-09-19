@@ -3,7 +3,14 @@ import Container from "../Container";
 import Flex from "../Flex";
 import Image from "../Image";
 import HeaderLogo from "../../assets/headerLogo.png";
-import { FaRegUser, FaRegHeart, FaBars, FaTimes } from "react-icons/fa";
+import {
+  FaRegUser,
+  FaRegHeart,
+  FaBars,
+  FaTimes,
+  FaGoogle,
+} from "react-icons/fa";
+
 import {
   HiOutlineShoppingBag,
   HiMiniBars3CenterLeft,
@@ -152,13 +159,102 @@ const Header = () => {
 
         {/* User Sidebar */}
         {isUserOpen && (
-          <div className="fixed top-0 right-0 w-[98%] lg:w-[500px] h-screen px-10 lg:px-4 py-5 bg-white shadow-lg z-50">
+          <div className="fixed top-0 right-0 w-[98%] lg:w-[500px] h-screen p-7 lg:p-10  bg-white shadow-lg z-50">
             <div className="flex justify-between items-center mb-5">
               <h4 className="text-lg font-medium">LOGIN</h4>
               <GrClose
                 onClick={() => setIsUserOpen(false)}
-                className="text-xl cursor-pointer mr-3 lg:mr-0"
+                className="text-xl cursor-pointer  lg:mr-0"
               />
+            </div>
+            <div className="mt-10">
+              <form className="max-w-sm mx-auto">
+                {/* Email Start  */}
+                <div className="mb-5">
+                  <label
+                    htmlFor="email"
+                    className="block mb-2 text-base font-medium text-black"
+                  >
+                    Your email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="bg-gray-50 border border-gray-400 text-gray-900 text-lg block w-full py-3 px-2 dark:placeholder-gray-400"
+                    placeholder="name@gmail.com"
+                    required=""
+                  />
+                </div>
+                {/* Email End  */}
+                {/* PassWord Start  */}
+                <div className="mb-5">
+                  <label
+                    htmlFor="password"
+                    className="block mb-2 text-base font-medium text-black"
+                  >
+                    Your password
+                  </label>
+                  <input
+                    type="password"
+                    id="password"
+                    className="bg-gray-50 border border-gray-400 text-gray-900 text-lg block w-full py-3 px-2"
+                    placeholder="*******"
+                    required=""
+                  />
+                </div>
+                {/* Password End  */}
+                {/* Checkbox Start  */}
+                <div className="flex justify-between items-center ">
+                  <div className="flex justify-start items-center mb-5">
+                    <div className="flex  items-center h-5">
+                      <input
+                        id="remember"
+                        type="checkbox"
+                        defaultValue=""
+                        className="w-4 h-4 border border-gray-400 rounded-sm bg-gray-50 "
+                        required=""
+                      />
+                    </div>
+                    <label
+                      htmlFor="remember"
+                      className="ms-2 text-base font-medium text-mainColor dark:text-gray-700"
+                    >
+                      Remember me
+                    </label>
+                  </div>
+                  <div className="mb-5">
+                    <p className="text-base font-medium text-mainColor dark:text-gray-700 border-b-1 pb-0 border-gray-700 hover:cursor-pointer">
+                      Forget Password?
+                    </p>
+                  </div>
+                </div>
+                {/* Checkbox End  */}
+                {/* Submit Button Start  */}
+                <button
+                  type="submit"
+                  className="w-full bg-black text-white font-medium  text-lg  px-5 py-3 text-center hover:cursor-pointer"
+                >
+                  LOG IN
+                </button>
+                {/* Submit Button ENd  */}
+                {/* Creat Account Part Start  */}
+                <div className="mt-5 text-center">
+                  <p className="">
+                    No account yet?
+                    <span className="w-auto text-base font-medium text-mainColor dark:text-gray-700 border-b-1 pb-0 px-2 border-gray-700 hover:cursor-pointer">
+                      Creat Account
+                    </span>
+                  </p>
+                </div>
+                {/* Creat Account Part End  */}
+                <hr className="w-full m-auto items-center border-neutral-400 mt-5" />
+                <div className="mt-5 w-full flex justify-center items-center gap-x-3 border-1 border-gray-400 px-5 py-3">
+                  <span>
+                    <FaGoogle />
+                  </span>
+                  <h6>Login With Google</h6>
+                </div>
+              </form>
             </div>
           </div>
         )}
