@@ -19,6 +19,7 @@ import DefaultSorting from "../layouts/DefaultSorting";
 import ShopProducts from "../ShopProducts";
 import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
+import { IoFilter } from "react-icons/io5";
 
 const Shop = () => {
   const [isFilters, setIsFilters] = useState(false);
@@ -102,11 +103,12 @@ const Shop = () => {
               <Flex className="justify-between items-center">
                 {/* Filter Button (Mobile Only) */}
                 <div
-                  className="block lg:hidden ml-4  px-8 py-2 border-1 border-neutral-400 text-center text-white cursor-pointer"
+                  className="flex justify-between items-center gap-x-2 lg:hidden ml-4  px-8 py-2 border-1 border-neutral-400 text-center text-white cursor-pointer"
                   onClick={() => setIsFilters(true)}
                 >
+                  <IoFilter className="text-black text-2xl"/>
                   <h6 className="text-lg font-medium text-black text-center">
-                    Filters
+                    FILTERS
                   </h6>
                 </div>
 

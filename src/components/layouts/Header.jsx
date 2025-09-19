@@ -248,12 +248,16 @@ const Header = () => {
                 </div>
                 {/* Creat Account Part End  */}
                 <hr className="w-full m-auto items-center border-neutral-400 mt-5" />
-                <div className="mt-5 w-full flex justify-center items-center gap-x-3 border-1 border-gray-400 px-5 py-3">
+                {/* Login By Google Account start  */}
+                <div className="bg-black mt-5 w-full flex justify-center items-center gap-x-3 border-1 border-gray-400 px-5 py-3">
                   <span>
-                    <FaGoogle />
+                    <FaGoogle className="text-white text-lg font-medium"/>
                   </span>
-                  <h6>Login With Google</h6>
+                  <h6 className="text-white text-lg font-medium">
+                    Login With Google
+                  </h6>
                 </div>
+                {/* Login By Google Account End  */}
               </form>
             </div>
           </div>
