@@ -284,7 +284,7 @@ const Header = () => {
               />
             </div>
             {/* AddToCart Single Product start */}
-            <div className="overflow-y-auto max-h-[calc(97vh-250px)]">
+            <div className="overflow-y-auto max-h-[calc(98vh-250px)]">
               {data.map((item) => (
                 <div className="bg-neutral-100 mb-3  rounded-md" key={item.title}>
                   <div className="flex justify-between">
@@ -338,7 +338,7 @@ const Header = () => {
             </div>
             {/* AddToCart Single Product End */}
             {/* Sub Total/ view cart section Start */}
-            <div className="border-t-2 border-gray-300 pt-5">
+            <div className="border-t-2 border-gray-300 pt-3">
               <div className="flex justify-between items-center">
                 <h5 className="text-2xl font-semibold">SUBTOTAL:</h5>
                 <p className="text-2xl font-semibold">${calculateSubtotal()}</p>
@@ -367,7 +367,7 @@ const Header = () => {
               </div>
               <div className="w-full lg:w-[50%] p-5 lg:p-10">
                 <div className="flex justify-between items-center">
-                  <div className="flex gap-x-5 lg:gap-x-15">
+                  <div className="flex gap-x-5 lg:gap-x-10">
                     <h5 className="py-2 px-5 hover:bg-black hover:text-white rounded-md text-lg font-semibold transition-all duration-300 delay-200 border-2 border-gray-300">
                       WOMEN
                     </h5>

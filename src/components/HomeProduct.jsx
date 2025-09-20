@@ -70,7 +70,7 @@ const HomeProduct = ({
                   onClick={handleAddToCart}
                   className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                 />
-              </div>
+              </div>F
               <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200">
                 <HiOutlineEye className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
               </div>
