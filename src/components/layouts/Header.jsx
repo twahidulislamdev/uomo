@@ -15,7 +15,6 @@ import {
   FaTimes,
   FaGoogle,
 } from "react-icons/fa";
-
 import {
   HiOutlineShoppingBag,
   HiMiniBars3CenterLeft,
@@ -45,6 +44,12 @@ const Header = () => {
 
   let data = useSelector((state) => state.addtocart.value);
   let dispatch = useDispatch();
+
+  // Calculate subtotal
+  const calculateSubtotal = () => {
+    return data.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
+  };
+
   let handleIncerment = (item) => {
     dispatch(increment(item));
   };
@@ -270,8 +275,8 @@ const Header = () => {
 
         {/* Cart Sidebar */}
         {isCartOpen && (
-          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-screen px-5 py-10 bg-white shadow-lg z-50 overflow-y-auto">
-            <div className="flex justify-between items-center mb-5">
+          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-[100vh] px-5 py-5 bg-white shadow-lg z-50">
+            <div className="flex justify-between items-center mb-3">
               <h4 className="text-xl font-medium">SHOPPING BAG</h4>
               <GrClose
                 onClick={() => setIsCartOpen(false)}
@@ -279,57 +284,64 @@ const Header = () => {
               />
             </div>
             {/* AddToCart Single Product start */}
-            {data.map((item) => (
-              <div className=" bg-neutral-100 gap  ">
-                <div className="flex justify-between mb-5">
-                  <div className="flex justify-center gap-x-5 lg:gap-x-7">
-                    <Image
-                      className={"w-170px h-[150px]"}
-                      imgSrc={item.img}
-                      imgAlt={""}
-                    />
-                    <div>
-                      <h4 className="w-full pr-2 text-lg font-normal text-mainColor pt-2 text-wrap">
-                        {item.title}
-                      </h4>
-                      <h5 className="text-base text-[#767676] pt-2">
-                        Color:{item.color}{" "}
-                      </h5>
-                      <h6 className="text-base text-[#767676] pt-2">Size: </h6>
-                      {/* Increment Decrement start */}
-                      <div className="flex justify-start items-center gap-x-5 mt-2">
-                        <span className="text-xl text-[#767676]">
-                          <HiMinusSmall onClick={() => handleDecerment(item)} />
-                        </span>
-                        <p className="text-xl text-[#767676]">
-                          {item.quantity}
-                        </p>
-                        <span className="text-xl text-[#767676]">
-                          <HiPlusSmall onClick={() => handleIncerment(item)} />
-                        </span>
+            <div className="overflow-y-auto max-h-[calc(97vh-250px)]">
+              {data.map((item) => (
+                <div className="bg-neutral-100 mb-3  rounded-md" key={item.title}>
+                  <div className="flex justify-between">
+                    <div className="flex justify-center gap-x-5 lg:gap-x-7">
+                      <Image
+                        className={"w-[170px] h-auto"}
+                        imgSrc={item.img}
+                        imgAlt={item.title}
+                      />
+                      <div>
+                        <h4 className="w-full pr-2 text-lg font-normal text-mainColor pt-2 text-wrap">
+                          {item.title}
+                        </h4>
+                        <h5 className="text-base text-[#767676] pt-2">
+                          Color: {item.color}
+                        </h5>
+                        <h6 className="text-base text-[#767676] pt-2">
+                          Size: {item.size}
+                        </h6>
+                        <h6 className="text-base text-[#767676] pt-2">
+                          Unit Price: ${item.price.toFixed(2)}
+                        </h6>
+                        <h6 className="text-base font-medium pt-2">
+                          Total: ${(item.price * item.quantity).toFixed(2)}
+                        </h6>
+                        {/* Increment Decrement start */}
+                        <div className="flex justify-start items-center gap-x-5 mt-2">
+                          <span className="text-xl text-[#767676]">
+                            <HiMinusSmall onClick={() => handleDecerment(item)} />
+                          </span>
+                          <p className="text-xl text-[#767676]">
+                            {item.quantity}
+                          </p>
+                          <span className="text-xl text-[#767676]">
+                            <HiPlusSmall onClick={() => handleIncerment(item)} />
+                          </span>
+                        </div>
+                        {/* Increment Decrement End */}
                       </div>
-                      {/* Increment Decrement End */}
                     </div>
+                    {/* Price And Cross part start */}
+                    <div className="relative">
+                      <p className="absolute top-0 right-3 text-sm pt-3 px-2 cursor-pointer">
+                        <GrClose onClick={() => handleRemove(item)} />
+                      </p>
+                    </div>
+                    {/* Price And Cross part End */}
                   </div>
-                  {/* Price And Cross part start  */}
-                  <div className="relative space-y-20">
-                    <p className="absolute top-0 right-3 text-sm pt-4 px-2 cursor-pointer">
-                      <GrClose onClick={() => handleRemove(item)} />
-                    </p>
-                    <p className="text-xl absolute bottom-2 right-3 ">
-                      {item.price * item.quantity}
-                    </p>
-                  </div>
-                  {/* Price And Cross part End  */}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
             {/* AddToCart Single Product End */}
-            {/* Sub Total/ view cart section Start  */}
-            <div className="border-t-2 border-gray-300 pt-5 ">
+            {/* Sub Total/ view cart section Start */}
+            <div className="border-t-2 border-gray-300 pt-5">
               <div className="flex justify-between items-center">
                 <h5 className="text-2xl font-semibold">SUBTOTAL:</h5>
-                <p className="text-2xl font-semibold">175.00</p>
+                <p className="text-2xl font-semibold">${calculateSubtotal()}</p>
               </div>
               <div className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer">
                 VIEW CART
@@ -338,62 +350,55 @@ const Header = () => {
                 CHECKOUT
               </div>
             </div>
-            {/* Sub Total/ view cart section Start  */}
+            {/* Sub Total/ view cart section End */}
           </div>
         )}
 
         {/* Category Sidebar */}
         {isCategoryOpen && (
-          <div className="fixed top-0 left-0 w-full h-screen  bg-white shadow-lg z-50">
-            {/* <div className="flex justify-between items-center mb-5">
-              <h4 className="text-lg font-medium">MENU</h4>
-              <GrClose
-                onClick={() => setIsCategoryOpen(false)}
-                className="text-xl cursor-pointer mr-3 lg:mr-0"
-              />
-            </div> */}
+          <div className="fixed top-0 left-0 w-full h-screen bg-white shadow-lg z-50">
             <div className="flex">
-              <div className="w-[50%] h-screen">
+              <div className="w-[50%] h-screen hidden lg:block">
                 <Image
                   className={"w-full h-full"}
                   imgSrc={CatagoryFive}
                   imgAlt={""}
                 />
               </div>
-              <div className="w-[50%] p-10">
-                <div className="flex justify-between  ">
-                  <div className="flex gap-x-15 ">
+              <div className="w-full lg:w-[50%] p-5 lg:p-10">
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-x-5 lg:gap-x-15">
                     <h5 className="py-2 px-5 hover:bg-black hover:text-white rounded-md text-lg font-semibold transition-all duration-300 delay-200 border-2 border-gray-300">
                       WOMEN
                     </h5>
                     <h6 className="py-2 px-5 hover:bg-black hover:text-white rounded-md text-lg font-semibold transition-all duration-300 delay-200 border-2 border-gray-300">
                       MAN
                     </h6>
-                    <p className="py-2 px-5 hover:bg-black hover:text-white rounded-md text-lg font-semibold  transition-all duration-300 delay-200 border-2 border-gray-300">
+                    <p className="py-2 px-5 hover:bg-black hover:text-white rounded-md text-lg font-semibold transition-all duration-300 delay-200 border-2 border-gray-300">
                       KIDS
                     </p>
                   </div>
-                  <div className="">
+                  <div>
                     <GrClose
                       onClick={() => setIsCategoryOpen(false)}
-                      className="text-xl cursor-pointer mr-3 lg:mr-0"
+                      className="text-xl cursor-pointer"
                     />
                   </div>
                 </div>
                 <div className="px-5 mt-10">
                   <ul className="space-y-5">
-                    <li className="text-xl font-medium">New</li>
-                    <li className="text-xl font-medium">Best Sellers</li>
-                    <li className="text-xl font-medium">Collaborations®</li>
-                    <li className="text-xl font-medium">Denim</li>
-                    <li className="text-xl font-medium">Jackets & Coats</li>
-                    <li className="text-xl font-medium">Overshirts</li>
-                    <li className="text-xl font-medium">Trousers</li>
-                    <li className="text-xl font-medium">Jeans</li>
-                    <li className="text-xl font-medium">T-shirts & Tops</li>
-                    <li className="text-xl font-medium">Shirts & Blouses</li>
-                    <li className="text-xl font-medium">Shoes</li>
-                    <li className="text-xl font-medium">Accessories</li>
+                    <li className="text-xl font-medium uppercase">New</li>
+                    <li className="text-xl font-medium uppercase">Best Sellers</li>
+                    <li className="text-xl font-medium uppercase">Collaborations®</li>
+                    <li className="text-xl font-medium uppercase">Denim</li>
+                    <li className="text-xl font-medium uppercase">Jackets & Coats</li>
+                    <li className="text-xl font-medium uppercase">Overshirts</li>
+                    <li className="text-xl font-medium uppercase">Trousers</li>
+                    <li className="text-xl font-medium uppercase">Jeans</li>
+                    <li className="text-xl font-medium uppercase">T-shirts & Tops</li>
+                    <li className="text-xl font-medium uppercase">Shirts & Blouses</li>
+                    <li className="text-xl font-medium uppercase">Shoes</li>
+                    <li className="text-xl font-medium uppercase">Accessories</li>
                   </ul>
                 </div>
               </div>
