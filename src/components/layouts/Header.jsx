@@ -66,7 +66,6 @@ const Header = () => {
       document.body.style.overflow = "auto";
     }
   }, [isCartOpen, isUserOpen, isCategoryOpen]);
-
   return (
     <>
       {/* Desktop Header start */}
@@ -343,9 +342,11 @@ const Header = () => {
                 <h5 className="text-2xl font-semibold">SUBTOTAL:</h5>
                 <p className="text-2xl font-semibold">${calculateSubtotal()}</p>
               </div>
-              <div className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer">
-                VIEW CART
-              </div>
+              <Link to={"/addToCart"}>
+                <div className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer">
+                  VIEW CART
+                </div>
+              </Link>
               <div className="text-center text-lg text-white font-medium mt-5 py-5 lg:py-3 w-full bg-mainColor hover:cursor-pointer">
                 CHECKOUT
               </div>
