@@ -7,7 +7,7 @@ import Blog from "./components/pages/Blog";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Pages from "./components/pages/Pages";
-import AddToCart from "./components/pages/addToCart";
+import AddToCart from "./components/pages/AddToCart";
 
 function App() {
   return (
