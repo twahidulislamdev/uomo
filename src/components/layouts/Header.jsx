@@ -23,7 +23,6 @@ import {
 } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import { GrClose } from "react-icons/gr";
-import ProductOne from "../../assets/productOne.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment, remove } from "../../features/addToCartSlice";
 

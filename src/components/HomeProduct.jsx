@@ -29,6 +29,7 @@ const HomeProduct = ({
         img: imgSrc,
         quantity: 1,
         color: productColor,
+        
       })
     );
   };
