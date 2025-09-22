@@ -342,7 +342,7 @@ const Header = () => {
                 <p className="text-2xl font-semibold">${calculateSubtotal()}</p>
               </div>
               <Link to={"/addToCart"}>
-                <div className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer">
+                <div onClick={()=>setIsCartOpen(false) } className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer">
                   VIEW CART
                 </div>
               </Link>
