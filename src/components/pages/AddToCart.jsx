@@ -21,15 +21,15 @@ const AddToCart = () => {
     let handleRemove = (item) => {
         dispatch(remove(item));
     };
-    // const calculateSubtotal = () => {
-    //     return data.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
-    // };
+    const calculateSubtotal = () => {
+        return data.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
+    };
     return (
-        <div className="py-5">
+        <div className="p-5 overflow-hidden">
             <Container>
                 <div className="text-4xl font-bold">CART</div>
-                <Flex className={"justify-between mt-10"}>
-                    <div className="w-full lg:w-[55%] rounded-md">
+                <Flex className={"justify-between mt-10 flex-wrap"}>
+                    <div className="w-full lg:w-[55%] rounded-md overflow-hidden">
                         {
                             data.map((item) => (
                                 <div className="flex justify-between  bg-neutral-100 mb-5 ">
@@ -85,27 +85,74 @@ const AddToCart = () => {
                             ))
                         }
                     </div>
-                    <div className="w-[43%] ">
-                        <div className="w-full h-[450px] border-2 border-black">
+                    <div className="w-full lg:w-[43%] ">
+                        <div className="w-full h-[515px] border-1 border-black p-10 ">
+                            <h4 className="text-2xl font-medium uppercase">Cart Totals</h4>
+                            {/* Cart SubTotal part Start  */}
+                            <h5 className="text-lg font-medium pt-10 uppercase border-b-1 border-gray-300 pb-5"><span className="pr-5">Subtotal:</span> $     {calculateSubtotal()} </h5>
+                            {/* Cart SubTotal part End  */}
 
+                            {/* Shipping procedure part start   */}
+                            <div className="flex mt-5 gap-x-5 lg:gap-x-20 border-b-1 border-gray-300 pb-5 overflow-hidden">
+                                <h6 className="text-lg font-medium uppercase">Shipping</h6>
+                                <div className="space-y-5">
+                                    <label className="flex  space-x-2">
+                                        <input
+                                            type="checkbox"
+                                            className="form-checkbox h-5 w-5 text-blue-600"
+                                        />
+                                        <span className="text-gray-700 text-base">Free shipping</span>
+                                    </label>
+                                    <label className="flex  space-x-2">
+                                        <input
+                                            type="checkbox"
+                                            className="form-checkbox h-5 w-5 text-blue-600"
+                                        />
+                                        <span className="text-gray-700 text-base">Local pickup: ${10}</span>
+                                    </label>
+
+                                    <label className="flex  space-x-2">
+                                        <input
+                                            type="checkbox"
+                                            className="form-checkbox h-5 w-5 text-blue-600"
+                                        />
+                                        <span className="text-gray-700 text-base">Home Delevery: ${50}</span>
+                                    </label>
+                                    <h6 className="text-gray-700 text-base">Shipping To All : <span className="text-sm  hover:text-black hover:font-medium transition-all duration-300  pt-2 hover:cursor-pointer block "> CHANGE ADDRESS</span>
+                                    </h6>
+                                </div>
+                            </div>
+                            {/* Shipping procedure part End   */}
+                            {/* Vat and Total calculation part start  */}
+                            <div className="flex mt-5 gap-x-10 lg:gap-x-35 border-b-1 border-gray-300 pb-3 overflow-hidden">
+                                <h6 className="text-lg">VAT:</h6>
+                                <p className="text-lg">${5}</p>
+                            </div>
+                            <div className="flex mt-5  gap-x-10 lg:gap-x-30 overflow-hidden ">
+                                <h6 className="text-xl">TOTAL:</h6>
+                                <p className="text-xl">${100}</p>
+                            </div>
+                            {/* Vat and Total calculation part End  */}
                         </div>
-                        <div className="mt-5 flex justify-between items-center">
+                        <div className="mt-5 flex justify-between items-center mb-5">
                             {/* Coupon Part Start  */}
-                            <div className="flex justify-start items-center ">
-                                <input className=" px-2 py-2 w-[220px] h-[55px] border-2 border-mainColor text-sm " type="text" placeholder="Coupon Code" />
-                                <div className="w-[140px] h-[55px] bg-mainColor hover:cursor-pointer ">
-                                    <p className="py-4 text-md text-center text-white ">APPLY COUPON</p>
+                            <div className="w-full flex justify-between items-center ">
+                                <input className=" px-5 py-2 w-[60%] lg:w-[50%] h-[55px] border-2 border-mainColor text-sm " type="text" placeholder="Coupon Code" />
+                                <div className="lg:w-[140px] h-[55px] bg-mainColor hover:cursor-pointer ">
+                                    <p className="py-4 px-3 text-md text-center text-white ">APPLY COUPON</p>
                                 </div>
                             </div>
                             {/* Coupon Part End  */}
-                            {/* Cart Upadate part start  */}
-                            <div className="w-[140px] h-[55px] bg-mainColor hover:cursor-pointer ">
-                                <p className="py-4 text-md text-center text-white ">UPDATE CART</p>
-                            </div>
-                             {/* Cart Upadate part End  */}
+
                         </div>
 
-                        <div className="w-full bg-mainColor mt-5 hover:cursor-pointer">
+                        {/* Cart Upadate part start  */}
+                        <div className="w-full h-[55px]  bg-mainColor hover:cursor-pointer mb-5 ">
+                            <p className="py-4 px-3 text-md text-center text-white ">UPDATE CART</p>
+                        </div>
+                        {/* Cart Upadate part End  */}
+
+                        <div className="w-full m-auto lg:m-0 bg-mainColor mt-5 hover:cursor-pointer ">
                             <p className="py-3 px-3 text-lg text-center text-white ">PROCEED TO CHECKOUT</p>
                         </div>
                     </div>
