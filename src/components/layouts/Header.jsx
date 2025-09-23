@@ -133,7 +133,7 @@ const Header = () => {
       {/* Mobile Header End */}
 
       {/* Header Lower Part Start */}
-      <div className="w-full flex justify-center m-auto px-3 py-4 bg-[#F5F5F3] overflow-hidden">
+      <div className="w-full flex justify-center m-auto px-3 py-4 bg-[#F5F5F3] shadow-sm overflow-hidden">
         <Container>
           <div className="flex justify-between items-center">
             {/* Category Icon */}
@@ -273,7 +273,7 @@ const Header = () => {
 
         {/* Cart Sidebar */}
         {isCartOpen && (
-          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-[100vh] px-5 py-5 bg-white shadow-lg z-50">
+          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-[100vh] px-5 py-5 bg-white shadow-lg z-50 overflow-y-auto">
             <div className="flex justify-between items-center mb-3">
               <h4 className="text-xl font-medium">SHOPPING BAG</h4>
               <GrClose
@@ -282,7 +282,7 @@ const Header = () => {
               />
             </div>
             {/* AddToCart Single Product start */}
-            <div className="overflow-y-auto max-h-[calc(98vh-250px)]">
+            <div className="overflow-y-auto max-h-[calc(95vh-250px)]">
               {data.map((item) => (
                 <div className="bg-neutral-100 mb-3  rounded-md" key={item.title}>
                   <div className="flex justify-between">

@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "../Image";
+import Flex from "../Flex";
 import Container from "../Container";
 import { GrClose } from "react-icons/gr";
 import { HiPlusSmall, HiMinusSmall } from "react-icons/hi2";
-import ProductOne from "../../assets/productOne.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment, remove } from "../../features/addToCartSlice";
-import Flex from "../Flex";
 
 const AddToCart = () => {
     let data = useSelector((state) => state.addtocart.value);
