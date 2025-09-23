@@ -6,6 +6,7 @@ import { GrClose } from "react-icons/gr";
 import { HiPlusSmall, HiMinusSmall } from "react-icons/hi2";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment, remove } from "../../features/addToCartSlice";
+import { Link } from "react-router-dom";
 
 const AddToCart = () => {
     let data = useSelector((state) => state.addtocart.value);
@@ -26,7 +27,7 @@ const AddToCart = () => {
     return (
         <div className="p-5 overflow-hidden">
             <Container>
-                <div className="text-4xl font-bold">CART</div>
+                <div className="text-4xl font-semibold">CART</div>
                 <Flex className={"justify-between mt-10 flex-wrap"}>
                     <div className="w-full lg:w-[55%] rounded-md overflow-hidden">
                         {
@@ -151,9 +152,11 @@ const AddToCart = () => {
                         </div>
                         {/* Cart Upadate part End  */}
 
-                        <div className="w-full m-auto lg:m-0 bg-mainColor mt-5 hover:cursor-pointer ">
-                            <p className="py-3 px-3 text-lg text-center text-white ">PROCEED TO CHECKOUT</p>
-                        </div>
+                        <Link to={"/checkout"}>
+                            <div className="w-full m-auto lg:m-0 bg-mainColor mt-5 hover:cursor-pointer ">
+                                <p className="py-3 px-3 text-lg text-center text-white ">PROCEED TO CHECKOUT</p>
+                            </div>
+                        </Link>
                     </div>
                 </Flex>
 

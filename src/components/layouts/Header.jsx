@@ -273,7 +273,7 @@ const Header = () => {
 
         {/* Cart Sidebar */}
         {isCartOpen && (
-          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-[100vh] px-5 py-5 bg-white shadow-lg z-50 overflow-y-auto">
+          <div className="fixed top-0 right-0 w-full lg:w-[500px] h-[100vh] px-2 lg:px-5 py-5 bg-white shadow-lg z-50 overflow-y-auto">
             <div className="flex justify-between items-center mb-3">
               <h4 className="text-xl font-medium">SHOPPING BAG</h4>
               <GrClose
@@ -341,14 +341,17 @@ const Header = () => {
                 <h5 className="text-2xl font-semibold">SUBTOTAL:</h5>
                 <p className="text-2xl font-semibold">${calculateSubtotal()}</p>
               </div>
-              <Link to={"/addToCart"}>
-                <div onClick={()=>setIsCartOpen(false) } className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer">
+              <Link to={"/addtocart"}>
+                <div onClick={() => setIsCartOpen(false)} className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer">
                   VIEW CART
                 </div>
               </Link>
-              <div className="text-center text-lg text-white font-medium mt-5 py-5 lg:py-3 w-full bg-mainColor hover:cursor-pointer">
-                CHECKOUT
-              </div>
+              <Link to={"/checkout"}>
+                <div onClick={() => setIsCartOpen(false)} className="text-center text-lg text-white font-medium mt-5 py-5 lg:py-3 w-full bg-mainColor hover:cursor-pointer">
+                  CHECKOUT
+                </div>
+              </Link>
+
             </div>
             {/* Sub Total/ view cart section End */}
           </div>
