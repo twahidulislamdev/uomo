@@ -75,7 +75,7 @@ const HomeProduct = ({
             {/* AddToCart button start */}
             <div
               onClick={handleAddToCart}
-              className="relative flex justify-center m-auto w-[97%] h-[50px] hover:cursor-pointer bg-white hover:bg-gray-200 transition-all duration-300"
+              className="w-[97%] h-[50px] rounded-lg relative flex justify-center m-auto hover:cursor-pointer bg-white hover:bg-gray-200 transition-all duration-300"
             >
               <p className="py-3 text-lg font-medium text-black">ADD TO CART</p>
             </div>
