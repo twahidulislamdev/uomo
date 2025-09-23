@@ -13,7 +13,7 @@ const CheckOut = () => {
           <h6 className="text-4xl font-semibold text-center">CHECKOUT</h6>
           <div className="flex justify-center i flex-wrap gap-6 mt-6">
             {/* Billing Details part start */}
-            <div className="w-[50%] bg-white rounded-lg shadow-lg p-5 border-1 border-gray-300">
+            <div className="w-full lg:w-[50%] h-[650px] bg-white rounded-lg shadow-lg p-5 border-1 border-gray-300">
               <div className="">
                 <label
                   htmlFor="firstName"
@@ -123,8 +123,9 @@ const CheckOut = () => {
                 </label>
               </div>
             </div>
-            <div className="w-[40%] h-[450px] border-1 border-gray-300 rounded-lg ">
-              <div className="p-5 bg-white ">
+            <div className="w-full lg:w-[40%] h-auto ">
+              {/* Order Summary part start  */}
+              <div className="p-5 bg-white h-[450px]  border-1 border-gray-300 rounded-lg">
                 <h2 className="text-2xl font-medium mb-5">YOUR ORDER</h2>
                 <div className="space-y-3 mt-5 ">
                   <div className="flex justify-between items-center">
@@ -152,8 +153,8 @@ const CheckOut = () => {
                     <span className='text-base text-mainColor'>Free shipping</span>
                   </div>
                   <div className="flex justify-between">
-                    <span  className='text-base text-mainColor'>VAT</span>
-                    <span  className='text-base text-mainColor'>$19</span>
+                    <span className='text-base text-mainColor'>VAT</span>
+                    <span className='text-base text-mainColor'>$19</span>
                   </div>
                   <div className="flex justify-between font-semibold border-t pt-2 mt-2">
                     <span>TOTAL</span>
@@ -161,6 +162,101 @@ const CheckOut = () => {
                   </div>
                 </div>
               </div>
+              {/* Order Summary part end  */}
+
+              <div className="max-w-full mx-auto border border-gray-300 mt-5 p-6">
+                {/* Payment Options */}
+                <div className="space-y-6">
+                  {/* Direct Bank Transfer */}
+                  <label className="flex items-start space-x-3 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="payment"
+                      defaultChecked=""
+                      className="mt-1 h-4 w-4 border-gray-400 text-black focus:ring-black"
+                    />
+                    <div>
+                      <p className="font-medium text-gray-900">Direct bank transfer</p>
+                      <p className="text-sm text-gray-600 mt-1">
+                        Make your payment directly into our bank account. Please use your
+                        Order ID as the payment reference. Your order will not be shipped
+                        until the funds have cleared in our account.
+                      </p>
+                    </div>
+                  </label>
+                  {/* Check Payments */}
+                  <label className="flex items-start space-x-3 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="payment"
+                      className="mt-1 h-4 w-4 border-gray-400 text-black focus:ring-black"
+                    />
+                    <div>
+                      <p className="font-medium text-gray-900">Check payments</p>
+                      <p className="text-sm text-gray-600 mt-1">
+                        Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum
+                        gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus
+                        sodales eu. Donec dignissim viverra nunc, ut aliquet magna posuere
+                        eget.
+                      </p>
+                    </div>
+                  </label>
+                  {/* Cash on Delivery */}
+                  <label className="flex items-start space-x-3 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="payment"
+                      className="mt-1 h-4 w-4 border-gray-400 text-black focus:ring-black"
+                    />
+                    <div>
+                      <p className="font-medium text-gray-900">Cash on delivery</p>
+                      <p className="text-sm text-gray-600 mt-1">
+                        Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum
+                        gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus
+                        sodales eu. Donec dignissim viverra nunc, ut aliquet magna posuere
+                        eget.
+                      </p>
+                    </div>
+                  </label>
+                  {/* Paypal */}
+                  <label className="flex items-start space-x-3 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="payment"
+                      className="mt-1 h-4 w-4 border-gray-400 text-black focus:ring-black"
+                    />
+                    <div>
+                      <p className="font-medium text-gray-900">Paypal</p>
+                      <p className="text-sm text-gray-600 mt-1">
+                        Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum
+                        gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus
+                        sodales eu. Donec dignissim viverra nunc, ut aliquet magna posuere
+                        eget.
+                      </p>
+                    </div>
+                  </label>
+                </div>
+                {/* Privacy Note */}
+                <p className="text-xs text-gray-500 mt-6">
+                  Your personal data will be used to process your order, support your
+                  experience throughout this website, and for other purposes described in our
+                  <a href="#" className="text-red-500 underline">
+                    privacy policy
+                  </a>
+                  .
+                </p>
+
+              </div>
+              {/* Place Order Button */}
+              <button
+                type="button"
+                className="w-full bg-black text-white text-sm font-medium uppercase py-3 mt-5 hover:bg-gray-900 transition"
+              >
+                Place Order
+              </button>
+
+
+
             </div>
           </div>
         </Container>
