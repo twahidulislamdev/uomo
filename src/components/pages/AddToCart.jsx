@@ -25,7 +25,7 @@ const AddToCart = () => {
         return data.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
     };
     return (
-        <div className="p-5 overflow-hidden">
+        <div className="p-3 overflow-hidden">
             <Container>
                 <div className="text-4xl font-semibold">CART</div>
                 <Flex className={"justify-between mt-10 flex-wrap"}>
