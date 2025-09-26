@@ -7,6 +7,7 @@ import {
 } from "react-icons/hi2";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/addToCartSlice";
+import { useState } from "react";
 
 const ShopProducts = ({
   imgSrc,
@@ -17,7 +18,10 @@ const ShopProducts = ({
   productColor,
   badgeClassName,
   priceClassName,
+  sizeClassName,
+  size,
 }) => {
+   const [isWishColor, setIsWishColor] = useState(false);
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
@@ -33,9 +37,9 @@ const ShopProducts = ({
   };
 
   return (
-    <div className="w-[48%] lg:w-[32%] m-auto lg:m-0 relative group border-2 border-gray-100  rounded-xl">
+    <div className="w-[48%] lg:w-[32%] h-[430px] lg:h-[480px] m-auto lg:m-0 relative group border-2 border-gray-100  rounded-xl">
       {/* Product Image */}
-      <div className="w-full h-[300px] lg:h-[400px] relative ">
+      <div className="w-full h-[300px] lg:h-[350px] relative ">
         <img
           src={imgSrc}
           alt={imgAlt}
@@ -53,39 +57,62 @@ const ShopProducts = ({
       )}
       {/* Badge End */}
 
-      {/* Action Icons (Cart, Quick View, Wishlist) start */}
-      <div
-        className="absolute bottom-40 left-0 w-full opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out"
-      >
-        <Flex className="justify-center space-x-5 z-22">
-          {/* Add to Cart */}
-          <div className="relative w-[40px] h-[40px] rounded-full bg-white hover:bg-gray-200 cursor-pointer shadow-md z-10">
-            <HiOutlineShoppingBag
+      {/* Group Hover Part Start */}
+          <div className="lg:p-0 space-y-3 absolute bottom-33 lg:bottom-35  left-0 w-full lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 sm:opacity-100 sm:translate-y-0 transition-all duration-300 ease-in-out">
+            {/* AddToCart button start */}
+            <div
               onClick={handleAddToCart}
-              className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            />
+              className="w-[97%] h-[50px] rounded-lg relative flex justify-center m-auto hover:cursor-pointer bg-white hover:bg-gray-200 transition-all duration-300"
+            >
+              <p className="py-4 lg:py-3 text-base lg:text-lg font-medium  text-black">ADD TO CART</p>
+            </div>
+            {/* AddToCart button end */}
           </div>
-          {/* Quick View */}
-          <div className="relative w-[40px] h-[40px] rounded-full bg-white hover:bg-gray-200 cursor-pointer shadow-md z-10">
-            <HiOutlineEye className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+          {/* Group Hover Part End */}
+
+          <div className="pb-10 px-3 mt-5">
+            {/* ====================================================== */}
+            <div className="flex justify-between items-center">
+              {/* Product Color start */}
+              <p className="text-[#767676] text-base font-semibold ">
+                {productColor}
+              </p>
+              {/* Product Color end */}
+              {/*  Product Wish List Start */}
+              <div
+                className="hover:cursor-pointer"
+                onClick={() => setIsWishColor(!isWishColor)}
+              >
+                <HiOutlineHeart
+                  className={`text-2xl font-xl transition-colors duration-300 ${isWishColor ? "fill-red-500" : "text-[#767676]"
+                    }`}
+                />
+              </div>
+              {/* Product Wish List End */}
+            </div>
+            {/* ============================================================= */}
+            {/* Title part start */}
+            <h3 className="text-[#262626] text-sm lg:text-lg font-bold py-1">{title}</h3>
+            {/* Title part end */}
+
+            {/* Size and Price part start */}
+            <div className="flex justify-between items-center">
+              <h4
+                className={`text-mainColor text-base font-bold ${sizeClassName}`}
+              >
+                Size: {size}
+              </h4>
+              <h4
+                className={`text-mainColor text-lg font-bold ${priceClassName}`}
+              >
+                ${price}
+              </h4>
+            </div>
+            {/* Size and Price part end */}
           </div>
 
-          {/* Wishlist */}
-          <div className="relative w-[40px] h-[40px] rounded-full bg-white hover:bg-gray-200 cursor-pointer shadow-md z-10">
-            <HiOutlineHeart className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-          </div>
-        </Flex>
-      </div>
-      {/* Action Icons (Cart, Quick View, Wishlist) End */}
 
-      {/* Product Info */}
-      <div className="pb-5 px-2 mt-5">
-        <p className="text-[#767676] text-sm lg:text-base font-bold">{productColor}</p>
-        <h3 className="text-[#262626] text-xs lg:text-lg font-bold py-1">{title}</h3>
-        <h4 className={`text-mainColor text-sm lg:text-base font-bold ${priceClassName}`}>
-          {price}
-        </h4>
-      </div>
+      
     </div>
   );
 };

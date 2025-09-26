@@ -71,12 +71,12 @@ const AddToCart = () => {
                                     </div>
                                     {/* Price And Cross part start */}
                                     <div className="relative ">
-                                        <p className="absolute top-3 right-3 text-sm pt-3 px-2 cursor-pointer">
+                                        <p className="absolute top-2 right-3 text-sm pt-3 px-2 cursor-pointer">
                                             <GrClose onClick={() => handleRemove(item)} />
                                         </p>
                                         {/* Product quantaty Total Start  */}
-                                        <h6 className="absolute bottom-3 right-3 text-lg pt-3 px-2 cursor-pointer">
-                                            Total: ${(item.price * item.quantity).toFixed(2)}
+                                        <h6 className="absolute bottom-2 right-0 lg:right-3  text-lg text-center pt-3 px-1 lg:px-2 cursor-pointer">
+                                            Total ${(item.price * item.quantity).toFixed(2)}
                                         </h6>
                                         {/* Product quantaty Total End  */}
                                     </div>

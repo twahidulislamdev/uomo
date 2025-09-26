@@ -282,7 +282,7 @@ const Header = () => {
               />
             </div>
             {/* AddToCart Single Product start */}
-            <div className="overflow-y-auto max-h-[calc(95vh-250px)]">
+            <div className="overflow-y-auto max-h-[calc(100vh-250px)]">
               {data.map((item) => (
                 <div className="bg-neutral-100 mb-3  rounded-md" key={item.title}>
                   <div className="flex justify-between">
@@ -293,16 +293,16 @@ const Header = () => {
                         imgAlt={item.title}
                       />
                       <div>
-                        <h4 className="w-full pr-2 text-lg font-normal text-mainColor pt-2 text-wrap">
+                        <h4 className="w-[99%] pr-2 text-lg font-normal text-mainColor py-1 text-wrap">
                           {item.title}
                         </h4>
-                        <h5 className="text-base text-[#767676] pt-2">
+                        <h5 className="text-base text-[#767676] pt-1">
                           Color: {item.color}
                         </h5>
-                        <h6 className="text-base text-[#767676] pt-2">
+                        <h6 className="text-base text-[#767676] pt-1.5">
                           Size: {item.size}
                         </h6>
-                        <h6 className="text-base text-[#767676] pt-2">
+                        <h6 className="text-base text-[#767676] pt-1">
                           Unit Price: ${item.price.toFixed(2)}
                         </h6>
                         <h6 className="text-base font-medium pt-2">
@@ -325,7 +325,7 @@ const Header = () => {
                     </div>
                     {/* Price And Cross part start */}
                     <div className="relative">
-                      <p className="absolute top-0 right-3 text-sm pt-3 px-2 cursor-pointer">
+                      <p className="absolute top-0 right-2 text-sm pt-3 px-2 cursor-pointer">
                         <GrClose onClick={() => handleRemove(item)} />
                       </p>
                     </div>

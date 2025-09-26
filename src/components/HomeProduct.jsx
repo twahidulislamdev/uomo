@@ -97,7 +97,7 @@ const HomeProduct = ({
                 onClick={() => setIsWishColor(!isWishColor)}
               >
                 <HiOutlineHeart
-                  className={`text-2xl font-xl transition-colors duration-300 ${isWishColor ? "text-red-500" : "text-[#767676]"
+                  className={`text-2xl font-xl transition-colors duration-300 ${isWishColor ? "fill-red-500" : "text-[#767676]"
                     }`}
                 />
               </div>
