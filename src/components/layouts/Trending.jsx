@@ -132,7 +132,7 @@ const Trending = () => {
                 imgSrcTwo={ProductTwoSide}
                 badgeText={"10%"}
                 title={"Calvin Shorts"}
-                price={62.00}
+                price={49.00}
                 productColor={"White"}
                 badgeClassName="bg-green-300"
               />

@@ -118,7 +118,7 @@ const HomeProduct = ({
               <h4
                 className={`text-mainColor text-lg font-bold ${priceClassName}`}
               >
-                ${price}
+                ${price.toFixed(2)}
               </h4>
             </div>
             {/* Size and Price part end */}
