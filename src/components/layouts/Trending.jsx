@@ -115,9 +115,9 @@ const Trending = () => {
           <Slider className="pb-5" {...settings}>
             <div>
               <HomeProduct
-                imgSrc={ProductOne}
+                imgSrcFirst={ProductOne}
                 imgAlt={"Arive One"}
-                imgSrcTwo={ProductOneSide}
+                imgSrcSide={ProductOneSide}
                 badgeText={"New"}
                 title={"Cropped Faux Leather Jacket"}
                 price={29.00}
@@ -127,9 +127,9 @@ const Trending = () => {
             </div>
             <div>
               <HomeProduct
-                imgSrc={ProductTwo}
+                imgSrcFirst={ProductTwo}
                 imgAlt="Arive Two"
-                imgSrcTwo={ProductTwoSide}
+                imgSrcSide={ProductTwoSide}
                 badgeText={"10%"}
                 title={"Calvin Shorts"}
                 price={49.00}
@@ -139,9 +139,9 @@ const Trending = () => {
             </div>
             <div>
               <HomeProduct
-                imgSrc={ProductThree}
+                imgSrcFirst={ProductThree}
                 imgAlt="Arive Three"
-                imgSrcTwo={ProductThreeSide}
+                imgSrcSide={ProductThreeSide}
                 badgeText={"New"}
                 title={"Kirby T-Shirt"}
                 price={17.00}
@@ -151,9 +151,9 @@ const Trending = () => {
             </div>
             <div>
               <HomeProduct
-                imgSrc={ProductFour}
+                imgSrcFirst={ProductFour}
                 imgAlt="Arive Four"
-                imgSrcTwo={ProductFourSide}
+                imgSrcSide={ProductFourSide}
                 badgeText={"10%"}
                 title={"Cableknit Shawl"}
                 price={99.00}
@@ -163,9 +163,9 @@ const Trending = () => {
             </div>
             <div>
               <HomeProduct
-                imgSrc={ProductFive}
+                imgSrcFirst={ProductFive}
                 imgAlt="Arive Five"
-                imgSrcTwo={ProductFiveSide}
+                imgSrcSide={ProductFiveSide}
                 badgeText={"New"}
                 title={"Colorful Jacket"}
                 price={29.00}
@@ -175,9 +175,9 @@ const Trending = () => {
             </div>
             <div>
               <HomeProduct
-                imgSrc={ProductSix}
+                imgSrcFirst={ProductSix}
                 imgAlt="Arive Six"
-                imgSrcTwo={ProductSixSide}
+                imgSrcSide={ProductSixSide}
                 badgeText={"10%"}
                 title={"Shirt In Botanical Cheetah Print"}
                 price={52.00}
@@ -187,9 +187,9 @@ const Trending = () => {
             </div>
             <div>
               <HomeProduct
-                imgSrc={ProductSeven}
+                imgSrcFirst={ProductSeven}
                 imgAlt="Arive Seven"
-                imgSrcTwo={ProductSevenSide}
+                imgSrcSide={ProductSevenSide}
                 badgeText={"New"}
                 title={"Cotton Jersey T-Shirt"}
                 price={17.00}
@@ -199,9 +199,9 @@ const Trending = () => {
             </div>
             <div>
               <HomeProduct
-                imgSrc={ProductEight}
+                imgSrcFirst={ProductEight}
                 imgAlt="Arive Eight"
-                imgSrcTwo={ProductEightSide}
+                imgSrcSide={ProductEightSide}
                 badgeText={"10%"}
                 title={"Zessi Dresses"}
                 price={49.00}
