@@ -9,6 +9,7 @@ import Contact from "./components/pages/Contact";
 import Pages from "./components/pages/Pages";
 import AddToCart from "./components/pages/AddToCart";
 import CheckOut from "./components/pages/CheckOut";
+import QuickView from "./components/pages/QuickView";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<RootLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/quickview" element={<QuickView />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
