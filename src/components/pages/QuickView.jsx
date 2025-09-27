@@ -5,6 +5,12 @@ import QuickOneFirst from '../../assets/quickOneFirst.jpg'
 import QuickOneSecond from '../../assets/quickOneSecond.jpg'
 import QuickOneThird from '../../assets/quickOneThird.jpg'
 import QuickOneFourth from '../../assets/quickOneFourth.jpg'
+import {
+    HiPlusSmall,
+    HiMinusSmall,
+    HiOutlineHeart,
+    HiOutlineShare,
+} from "react-icons/hi2";
 
 const QuickView = () => {
     return (
@@ -34,9 +40,10 @@ const QuickView = () => {
                         {/* Right Part Start */}
                         <div className="w-full lg:w-[45%] p-3 lg:pl-15 mt-5 lg:mt-0">
                             <p className='text-base font-medium uppercase text-mainColor hidden lg:block'>Home / Shop</p>
-                            <h3 className='pt-5 text-3xl lg:text-4xl font-semibold leading-13 text-mainColor'>Lightweight Puffer Jacket With a Hood</h3>
+                            <h3 className='pt-3 text-3xl lg:text-4xl font-semibold leading-13 text-mainColor'>Lightweight Puffer Jacket With a Hood</h3>
                             <h4 className='text-xl font-semibold text-mainColor pt-3 lg:pt-5 '>PRICE: ${70.00.toFixed(2)}</h4>
-                            <div className="flex justify-start gap-x-5 pt-5">
+                            {/* Rating part Start */}
+                            <div className="flex justify-start gap-x-5 mt-5">
                                 <div className="rating">
                                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
                                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
@@ -46,23 +53,50 @@ const QuickView = () => {
                                 </div>
                                 <h5 className='text-lg font-medium'>8K+ Reviews</h5>
                             </div>
-                            <p className='text-base text-seconderyColor pt-5'>
+                            {/* Rating part End */}
+
+                            {/* Description part Start */}
+                            <p className='text-base text-seconderyColor pt-3'>
                                 Phasellus sed volutpat orci. Fusce eget lore mauris vehicula elementum gravida nec dui. Aenean aliquam varius ipsum, non ultricies tellus sodales eu. Donec dignissim viverra nunc, ut aliquet magna posuere eget.
                             </p>
-                            <div className="mt-10">
-                                <div class="flex items-center space-x-5">
-                                    <div class="flex items-center border border-gray-300 rounded">
-                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100">-</button>
-                                        <span class="px-7 py-4">1</span>
-                                        <button class="px-2 py-1 text-gray-600 hover:bg-gray-100">+</button>
-                                    </div>
-                                    <button class="px-15 py-4 bg-mainColor text-white font-semibold rounded-none hover:bg-gray-800 hover:cursor-pointer">
-                                        ADD TO CART
-                                    </button>
+                            {/* Description part End */}
+
+                            {/* Select Size part Start */}
+                            <div className="mt-5">
+                                <h4 className='text-xl font-semibold text-mainColor '>SELECT SIZE:</h4>
+                                <div className="flex justify-start gap-3 lg:gap-5 pt-3 flex-wrap">
+                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">XS</button>
+                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">S</button>
+                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">M</button>
+                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">L</button>
+                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">XL</button>
                                 </div>
                             </div>
+                            {/* Select Size part End */}
 
+                            {/* AddToWish list and Share part Start */}
+                            <div className="space-x-3 mt-5">
+                                <button className="text-base font-medium hover:cursor-pointer"><span>
+                                    <HiOutlineHeart className="inline-block ml-1 text-2xl" />
+                                </span> ADD TO WISH LIST </button>
+                                <button className="text-base font-medium  hover:cursor-pointer ml-5"><span>
+                                    <HiOutlineShare className="inline-block ml-1 text-xl" />
+                                </span> SHARE </button>
+                            </div>
+                            {/* AddToWish list and Share part End */}
 
+                            {/* AddTOCart and Quantity part Start */}
+                            <div className="mt-5 flex  justify-between lg:justify-start items-center space-x-5">
+                                <div className="flex items-center border border-gray-300 rounded">
+                                    <button className="text-2xl px-2 py-1 text-gray-600 hover:bg-gray-100"><HiMinusSmall /></button>
+                                    <span className="px-5 py-4">1</span>
+                                    <button className="text-2xl px-2 py-1 text-gray-600 hover:bg-gray-100"><HiPlusSmall /></button>
+                                </div>
+                                <button className="px-10 lg:px-15 py-4 bg-mainColor text-white font-semibold rounded-none hover:bg-gray-800 hover:cursor-pointer">
+                                    ADD TO CART
+                                </button>
+                            </div>
+                            {/* AddTOCart and Quantity part End */}
                         </div>
                         {/* Right Part End */}
                     </Flex>
