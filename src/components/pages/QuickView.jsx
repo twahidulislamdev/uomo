@@ -40,52 +40,52 @@ const QuickView = () => {
                 <Container>
                     <Flex className="justify-between flex-wrap">
                         {/* Left Part Start */}
-                        <div className="w-full m-auto lg:w-[55%] flex flex-col-reverse lg:flex-row justify-between gap-4">
+                        <div className="w-full m-auto lg:w-[55%] h-auto flex flex-col-reverse lg:flex-row justify-between gap-4">
                             {/* Click Image (Bottom on mobile, Left on desktop) */}
-                            <div className="w-full lg:w-[18%] flex flex-row lg:flex-col justify-between  mt-4 lg:mt-0">
+                            <div className="w-full lg:w-[18%] h-full gap-y-5 flex flex-row lg:flex-col justify-between  mt-5  lg:mt-0">
                                 <img
                                     src={quickViewData?.img || QuickOneFirst}
                                     alt="thumb-1"
-                                    className={`w-[23%] lg:w-full h-[110px] lg:h-auto cursor-pointer ${mainImage === QuickOneFirst ? 'border-2 border-mainColor' : ''
+                                    className={`w-[23%] lg:w-full h-[110px] lg:h-[120px] cursor-pointer ${mainImage === quickViewData?.img ? 'border-2 border-mainColor' : ''
                                         }`}
                                     onClick={() => handleThumbnailClick(quickViewData?.img || QuickOneFirst)}
                                 />
                                 <img
                                     src={QuickOneSecond}
                                     alt="thumb-2"
-                                    className={`w-[23%] lg:w-full h-[110px] lg:h-auto cursor-pointer ${mainImage === QuickOneSecond ? 'border-2 border-mainColor' : ''
+                                    className={`w-[23%] lg:w-full h-[110px] lg:h-[120px] cursor-pointer ${mainImage === QuickOneSecond ? 'border-2 border-mainColor' : ''
                                         }`}
                                     onClick={() => handleThumbnailClick(QuickOneSecond)}
                                 />
                                 <img
                                     src={QuickOneThird}
                                     alt="thumb-3"
-                                    className={`w-[23%]  lg:w-full  h-[110px] lg:h-auto cursor-pointer ${mainImage === QuickOneThird ? 'border-2 border-mainColor' : ''
+                                    className={`w-[23%]  lg:w-full  h-[110px] lg:h-[120px]cursor-pointer ${mainImage === QuickOneThird ? 'border-2 border-mainColor' : ''
                                         }`}
                                     onClick={() => handleThumbnailClick(QuickOneThird)}
                                 />
                                 <img
                                     src={QuickOneFourth}
                                     alt="thumb-4"
-                                    className={`w-[23%] lg:w-full h-[110px] lg:h-auto  cursor-pointer ${mainImage === QuickOneFourth ? 'border-2 border-mainColor' : ''
+                                    className={`w-[23%] lg:w-full h-[110px] lg:h-[120px]cursor-pointer ${mainImage === QuickOneFourth ? 'border-2 border-mainColor' : ''
                                         }`}
                                     onClick={() => handleThumbnailClick(QuickOneFourth)}
                                 />
                             </div>
 
                             {/* Display Image (Top on mobile, Right on desktop) */}
-                            <div className="w-full lg:w-[80%]">
+                            <div className="w-full h-[350px] lg:h-[600px] border border-gray-400">
                                 <img
                                     src={mainImage || quickViewData?.img}
                                     alt={quickViewData?.title || 'Product Image'}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full  object-cover"
                                 />
                             </div>
                         </div>
                         {/* Left Part End */}
 
                         {/* Right Part Start */}
-                        <div className="w-full lg:w-[45%] p-3 lg:pl-15 mt-5 lg:mt-0">
+                        <div className="w-full lg:w-[40%] p-3 lg:pl-15 mt-5 lg:mt-0">
                             <p className="text-base font-medium uppercase text-mainColor hidden lg:block">Home / Shop</p>
                             <h3 className="pt-3 text-3xl lg:text-4xl font-semibold leading-13 text-mainColor">
                                 {quickViewData?.title || 'Lightweight Puffer Jacket With a Hood'}
