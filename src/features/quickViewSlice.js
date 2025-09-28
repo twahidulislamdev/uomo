@@ -9,23 +9,22 @@ const quickViewSlice = createSlice({
     setQuickViewItem: (state, action) => {
       state.item = action.payload;
     },
-    increment: (state, action) => {
-      state.value.map((item) => {
-        if (item.title === action.payload.title) {
-          item.quantity += 1;
-        }
-      });
+    clearQuickViewItem: (state) => {
+      state.item = null;
     },
-    decrement: (state, action) => {
-      state.value.map((item) => {
-        if (item.title === action.payload.title) {
-          item.quantity -= 1;
-        }
-      });
+    decrementQuickViewItem: (state) => {
+      if (state.item) {
+        state.item.quantity -= 1;
+      }
+    },
+    incrementQuickViewItem: (state) => {
+      if (state.item) {
+        state.item.quantity += 1;
+      }
     },
   },
 });
 
-export const { setQuickViewItem, increment, decrement } = quickViewSlice.actions;
+export const { setQuickViewItem, clearQuickViewItem, decrementQuickViewItem, incrementQuickViewItem  } = quickViewSlice.actions;
 
 export default quickViewSlice.reducer;

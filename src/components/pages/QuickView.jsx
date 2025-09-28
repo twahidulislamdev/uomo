@@ -12,26 +12,45 @@ import {
     HiOutlineShare,
 } from 'react-icons/hi2';
 import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment } from '../../features/quickViewSlice'; // Fixed import
+import { decrementQuickViewItem, incrementQuickViewItem } from '../../features/quickViewSlice';
+import { addToCart } from '../../features/addToCartSlice';
 
 const QuickView = () => {
-    let quickViewData = useSelector((state) => state.quickView.item);
-    let dispatch = useDispatch();
+    // State to manage the selected size
+    const [selectedSize, setSelectedSize] = useState(null);
+
+    const dispatch = useDispatch();
+    const quickViewData = useSelector((state) => state.quickView.item);
 
     // State to manage the currently displayed main image
     const [mainImage, setMainImage] = useState(quickViewData?.img || QuickOneFirst);
-
-    let handleIncrement = () => {
-        dispatch(increment());
-    };
-
-    let handleDecrement = () => {
-        dispatch(decrement());
-    };
-
     // Function to handle thumbnail click
     const handleThumbnailClick = (image) => {
         setMainImage(image);
+    };
+
+    // Functions to handle increment and decrement of quantity
+    const handleIncrement = () => {
+        dispatch(incrementQuickViewItem());
+    };
+    const handleDecrement = () => {
+        if (quickViewData?.quantity > 1) {
+            dispatch(decrementQuickViewItem());
+        }
+    };
+
+    // HandleAddToCart function (unchanged, as it correctly sends quantity)
+    const handleAddToCart = () => {
+        dispatch(
+            addToCart({
+                title: quickViewData?.title || 'Lightweight Puffer Jacket With a Hood',
+                price: quickViewData?.price || 70.00,
+                img: mainImage || quickViewData?.img || QuickOneFirst,
+                color: quickViewData?.color || 'default',
+                size: selectedSize || 'M',
+                quantity: quickViewData?.quantity || 1,
+            })
+        );
     };
 
     return (
@@ -74,7 +93,7 @@ const QuickView = () => {
                             </div>
 
                             {/* Display Image (Top on mobile, Right on desktop) */}
-                            <div className="w-full h-[350px] lg:h-[600px] border border-gray-400">
+                            <div className="w-full h-[500px] lg:h-[600px] border border-gray-400">
                                 <img
                                     src={mainImage || quickViewData?.img}
                                     alt={quickViewData?.title || 'Product Image'}
@@ -85,7 +104,7 @@ const QuickView = () => {
                         {/* Left Part End */}
 
                         {/* Right Part Start */}
-                        <div className="w-full lg:w-[40%] p-3 lg:pl-15 mt-5 lg:mt-0">
+                        <div className="w-full lg:w-[45%] p-3 lg:pl-15 mt-5 lg:mt-0">
                             <p className="text-base font-medium uppercase text-mainColor hidden lg:block">Home / Shop</p>
                             <h3 className="pt-3 text-3xl lg:text-4xl font-semibold leading-13 text-mainColor">
                                 {quickViewData?.title || 'Lightweight Puffer Jacket With a Hood'}
@@ -119,11 +138,36 @@ const QuickView = () => {
                             <div className="mt-5">
                                 <h4 className="text-xl font-semibold text-mainColor">SELECT SIZE:</h4>
                                 <div className="flex justify-start gap-3 lg:gap-5 pt-3 flex-wrap">
-                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">XS</button>
-                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">S</button>
-                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">M</button>
-                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">L</button>
-                                    <button className="px-5 py-2 border border-gray-300 hover:border-black text-base font-medium hover:cursor-pointer">XL</button>
+                                    <button
+                                        className={`px-5 py-2 border ${selectedSize === 'XS' ? 'border-black' : 'border-gray-300'} hover:border-black text-base font-medium hover:cursor-pointer`}
+                                        onClick={() => setSelectedSize('XS')}
+                                    >
+                                        XS
+                                    </button>
+                                    <button
+                                        className={`px-5 py-2 border ${selectedSize === 'S' ? 'border-black' : 'border-gray-300'} hover:border-black text-base font-medium hover:cursor-pointer`}
+                                        onClick={() => setSelectedSize('S')}
+                                    >
+                                        S
+                                    </button>
+                                    <button
+                                        className={`px-5 py-2 border ${selectedSize === 'M' ? 'border-black' : 'border-gray-300'} hover:border-black text-base font-medium hover:cursor-pointer`}
+                                        onClick={() => setSelectedSize('M')}
+                                    >
+                                        M
+                                    </button>
+                                    <button
+                                        className={`px-5 py-2 border ${selectedSize === 'L' ? 'border-black' : 'border-gray-300'} hover:border-black text-base font-medium hover:cursor-pointer`}
+                                        onClick={() => setSelectedSize('L')}
+                                    >
+                                        L
+                                    </button>
+                                    <button
+                                        className={`px-5 py-2 border ${selectedSize === 'XL' ? 'border-black' : 'border-gray-300'} hover:border-black text-base font-medium hover:cursor-pointer`}
+                                        onClick={() => setSelectedSize('XL')}
+                                    >
+                                        XL
+                                    </button>
                                 </div>
                             </div>
                             {/* Select Size part End */}
@@ -144,19 +188,19 @@ const QuickView = () => {
                                 <div className="flex items-center border border-gray-300 rounded">
                                     <button
                                         className="text-2xl px-2 py-1 text-gray-600 hover:bg-gray-100"
-                                        onClick={() => handleDecrement(quickViewData)} // Fixed to pass quickViewData
+                                        onClick={() => handleDecrement()}
                                     >
                                         <HiMinusSmall />
                                     </button>
                                     <span className="px-5 py-4">{quickViewData?.quantity || 1}</span>
                                     <button
                                         className="text-2xl px-2 py-1 text-gray-600 hover:bg-gray-100"
-                                        onClick={() => handleIncrement(quickViewData)} // Fixed to pass quickViewData
+                                        onClick={() => handleIncrement()}
                                     >
                                         <HiPlusSmall />
                                     </button>
                                 </div>
-                                <button className="px-10 lg:px-15 py-4 bg-mainColor text-white font-semibold rounded-none hover:bg-gray-800 hover:cursor-pointer">
+                                <button onClick={handleAddToCart} className="px-10 lg:px-15 py-4 bg-mainColor text-white font-semibold rounded-none hover:bg-gray-800 hover:cursor-pointer">
                                     ADD TO CART
                                 </button>
                             </div>
