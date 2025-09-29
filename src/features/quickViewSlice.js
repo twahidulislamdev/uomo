@@ -9,9 +9,6 @@ const quickViewSlice = createSlice({
     setQuickViewItem: (state, action) => {
       state.item = action.payload;
     },
-    clearQuickViewItem: (state) => {
-      state.item = null;
-    },
     decrementQuickViewItem: (state) => {
       if (state.item) {
         state.item.quantity -= 1;

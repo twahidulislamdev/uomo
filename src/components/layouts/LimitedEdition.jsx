@@ -66,7 +66,7 @@ const LimitedEdition = () => {
               <div className="">
                 <LimitedEditionCard
                   className={""}
-                  imgSrc={LimitedOne}
+                  imgSrcFirst={LimitedOne}
                   imgAlt={"Arive One"}
                   badgeText={"New"}
                   title={"Basic Crew Neck Tee"}
@@ -78,7 +78,7 @@ const LimitedEdition = () => {
               <div className="">
                 <LimitedEditionCard
                   className={""}
-                  imgSrc={LimitedTwo}
+                  imgSrcFirst={LimitedTwo}
                   imgAlt={"Arive One"}
                   badgeText={"New"}
                   title={"Basic Crew Neck Tee"}
@@ -90,7 +90,7 @@ const LimitedEdition = () => {
               <div className="">
                 <LimitedEditionCard
                   className={""}
-                  imgSrc={LimitedThree}
+                  imgSrcFirst={LimitedThree}
                   imgAlt={"Arive One"}
                   badgeText={"New"}
                   title={"Basic Crew Neck Tee"}
@@ -102,7 +102,7 @@ const LimitedEdition = () => {
               <div className="">
                 <LimitedEditionCard
                   className={""}
-                  imgSrc={LimitedFour}
+                  imgSrcFirst={LimitedFour}
                   imgAlt={"Arive One"}
                   badgeText={"New"}
                   title={"Basic Crew Neck Tee"}
@@ -114,7 +114,7 @@ const LimitedEdition = () => {
               <div className="">
                 <LimitedEditionCard
                   className={""}
-                  imgSrc={LimitedFive}
+                  imgSrcFirst={LimitedFive}
                   imgAlt={"Arive One"}
                   badgeText={"New"}
                   title={"Basic Crew Neck Tee"}

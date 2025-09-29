@@ -8,9 +8,10 @@ import {
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/addToCartSlice";
 import { useState } from "react";
+import { setQuickViewItem } from "../features/quickViewSlice";
 
 const ShopProducts = ({
-  imgSrc,
+  imgSrcFirst,
   imgAlt,
   badgeText,
   title,
@@ -29,23 +30,38 @@ const ShopProducts = ({
       addToCart({
         title,
         price,
-        img: imgSrc,
+        img: imgSrcFirst,
         quantity: 1,
         color: productColor,
       })
     );
   };
 
+  const handleQuickView = () => {
+    dispatch(
+      setQuickViewItem({
+        title,
+        price,
+        img: imgSrcFirst,
+        quantity: 1,
+      })
+    );
+  };
+
   return (
     <div className="w-[48%] lg:w-[32%] h-[430px] lg:h-[480px] m-auto lg:m-0 relative group border-2 border-gray-100  rounded-xl">
-      {/* Product Image */}
-      <div className="w-full h-[300px] lg:h-[350px] relative ">
-        <img
-          src={imgSrc}
-          alt={imgAlt}
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 "
-        />
-      </div>
+
+      <Link to={"/quickview"} onClick={handleQuickView}>
+        {/* Product Image */}
+        <div className="w-full h-[300px] lg:h-[350px] relative ">
+          <img
+            src={imgSrcFirst}
+            alt={imgAlt}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 "
+          />
+        </div>
+      </Link>
+
 
       {/* Badge start */}
       {badgeText && (
@@ -62,7 +78,7 @@ const ShopProducts = ({
         {/* AddToCart button start */}
         <div
           onClick={handleAddToCart}
-          className="w-[100%] h-[50px]  relative flex justify-center m-auto hover:cursor-pointer bg-black hover:bg-mainColor transition-all duration-300"
+          className="w-[100%] h-[50px]  relative flex justify-center m-auto hover:cursor-pointer bg-black hover:bg-mainColor transition-all duration-300 delay-200"
         >
           <p className="py-4 lg:py-3 text-base lg:text-lg font-medium  text-white">ADD TO CART</p>
         </div>

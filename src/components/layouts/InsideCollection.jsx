@@ -122,7 +122,7 @@ const InsideCollection = () => {
                 title={"Cropped Faux Leather Jacket"}
                 price={29.00}
                 productColor={"Gray"}
-                badgeClassName="bg-white"
+                badgeClassName={"bg-white"}
               />
             </div>
             <div>
@@ -134,7 +134,7 @@ const InsideCollection = () => {
                 title={"Calvin Shorts"}
                 price={49.00}
                 productColor={"White"}
-                badgeClassName="bg-green-300"
+                badgeClassName={"bg-green-300"}
               />
             </div>
             <div>
@@ -146,7 +146,7 @@ const InsideCollection = () => {
                 title={"Kirby T-Shirt"}
                 price={17.00}
                 productColor={"Black"}
-                badgeClassName="bg-white"
+                badgeClassName={"bg-white"}
               />
             </div>
             <div>
@@ -158,7 +158,7 @@ const InsideCollection = () => {
                 title={"Cableknit Shawl"}
                 price={99.00}
                 productColor={"White"}
-                badgeClassName="bg-green-300"
+                badgeClassName={"bg-green-300"}
               />
             </div>
             <div>
@@ -170,7 +170,7 @@ const InsideCollection = () => {
                 title={"Colorful Jacket"}
                 price={29.00}
                 productColor={"Black"}
-                badgeClassName="bg-white"
+                badgeClassName={"bg-white"}
               />
             </div>
             <div>
@@ -182,7 +182,7 @@ const InsideCollection = () => {
                 title={"Shirt In Botanical Cheetah Print"}
                 price={52.00}
                 productColor={"White"}
-                badgeClassName="bg-green-300"
+                badgeClassName={"bg-green-300"}
               />
             </div>
             <div>
@@ -194,7 +194,7 @@ const InsideCollection = () => {
                 title={"Cotton Jersey T-Shirt"}
                 price={17.00}
                 productColor={"White"}
-                badgeClassName="bg-white"
+                badgeClassName={"bg-white"}
               />
             </div>
             <div>
@@ -206,7 +206,7 @@ const InsideCollection = () => {
                 title={"Zessi Dresses"}
                 price={49.00}
                 productColor={"Black"}
-                badgeClassName="bg-green-300"
+                badgeClassName={"bg-green-300"}
               />
             </div>
           </Slider>

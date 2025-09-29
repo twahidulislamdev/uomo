@@ -45,6 +45,7 @@ const HomeProduct = ({
         price,
         img: imgSrcFirst,
         quantity: 1,
+        color: productColor,
       })
     );
   };
@@ -78,10 +79,10 @@ const HomeProduct = ({
       </div>
 
       {/* Group Hover Add To Cart */}
-      <div className="lg:p-0 space-y-3 absolute bottom-29 left-0 w-full lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 sm:opacity-100 sm:translate-y-0 transition-all duration-300 ease-in-out">
+      <div className="lg:p-0 space-y-3 absolute bottom-29 left-0 w-full lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 sm:opacity-100 sm:translate-y-0 transition-all duration-300 ease-in-out delay-100">
         <div
           onClick={handleAddToCart}
-          className="w-[100%] h-[50px]  relative flex justify-center m-auto hover:cursor-pointer bg-black hover:bg-mainColor transition-all duration-300"
+          className="w-[100%] h-[50px]  relative flex justify-center m-auto hover:cursor-pointer bg-black hover:bg-mainColor transition-all duration-300 "
         >
           <p className="py-3 text-lg font-medium text-white">ADD TO CART</p>
         </div>

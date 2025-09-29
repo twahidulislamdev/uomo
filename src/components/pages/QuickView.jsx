@@ -200,7 +200,7 @@ const QuickView = () => {
                                         <HiPlusSmall />
                                     </button>
                                 </div>
-                                <button onClick={handleAddToCart} className="px-10 lg:px-15 py-4 bg-mainColor text-white font-semibold rounded-none hover:bg-gray-800 hover:cursor-pointer">
+                                <button onClick={handleAddToCart} className="px-10 lg:px-15 py-4 bg-mainColor text-white font-semibold rounded hover:bg-gray-800 hover:cursor-pointer">
                                     ADD TO CART
                                 </button>
                             </div>

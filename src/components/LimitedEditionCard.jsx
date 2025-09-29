@@ -1,26 +1,57 @@
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import Flex from "./Flex";
 import {
   HiOutlineShoppingBag,
   HiOutlineEye,
   HiOutlineHeart,
 } from "react-icons/hi2";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/addToCartSlice";
+import { setQuickViewItem } from "../features/quickViewSlice";
 
 const LimitedEditionCard = ({
-  imgSrc,
-  imgAlt,
   title,
   price,
+  imgSrcFirst,
+  imgAlt,
+  productColor,
   priceClassName,
 }) => {
+  const dispatch = useDispatch();
+  // const navigate = useNavigate(); 
+
+  const handleAddToCart = () => {
+    dispatch(
+      addToCart({
+        title,
+        price,
+        img: imgSrcFirst,
+        quantity: 1,
+        color: productColor,
+      })
+    );
+    // navigate("/cart"); 
+  };
+
+  const handleQuickView = () => {
+    dispatch(
+      setQuickViewItem({
+        title,
+        price,
+        img: imgSrcFirst,
+        quantity: 1,
+      })
+    );
+  };
+
   return (
     <>
       <div className="mx-3 relative group border-2 border-gray-100 bg-[url(/src/assets/collectionThree.jpg)]">
         <div className="relative h-[420px] ">
           {/* Default Image */}
-          <Link to={"/shop"}>
+          <Link onClick={handleQuickView}>
             <img
-              src={imgSrc}
+              src={imgSrcFirst}
               alt={imgAlt}
               className="w-full h-full flex justify-center items-center  "
             />
@@ -33,13 +64,14 @@ const LimitedEditionCard = ({
             >
               {price}
             </h4>
+            <h5>{productColor}</h5>
           </div>
         </div>
         {/* <Badge className={"absolute top-5 left-5"} badgeText={text} /> */}
         {/* Hover Effect Start  */}
         <div className=" p-7.5 space-y-3 absolute bottom-30 left-0 w-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
           <Flex className={"justify-center space-x-5"}>
-            <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
+            <div onClick={handleAddToCart} className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 ">
               <HiOutlineShoppingBag className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
             <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200">

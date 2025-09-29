@@ -22,8 +22,8 @@ import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import TestiPrevArrow from "../TestiPrevArrow";
-import TestiNextArrow from "../TestiNextArrow";
+// import TestiPrevArrow from "../TestiPrevArrow";
+// import TestiNextArrow from "../TestiNextArrow";
 
 const Trending = () => {
   // function SampleNextArrow(props) {
@@ -47,7 +47,6 @@ const Trending = () => {
   //     />
   //   );
   // }
-
   var settings = {
     dots: true,
     infinite: true,
@@ -122,7 +121,7 @@ const Trending = () => {
                 title={"Cropped Faux Leather Jacket"}
                 price={29.00}
                 productColor={"Gray"}
-                badgeClassName="bg-white"
+                badgeClassName={"bg-white"}
               />
             </div>
             <div>
@@ -134,7 +133,7 @@ const Trending = () => {
                 title={"Calvin Shorts"}
                 price={49.00}
                 productColor={"White"}
-                badgeClassName="bg-green-300"
+                badgeClassName={"bg-green-300"}
               />
             </div>
             <div>
@@ -146,7 +145,7 @@ const Trending = () => {
                 title={"Kirby T-Shirt"}
                 price={17.00}
                 productColor={"Black"}
-                badgeClassName="bg-white"
+                badgeClassName={"bg-white"}
               />
             </div>
             <div>
@@ -158,7 +157,7 @@ const Trending = () => {
                 title={"Cableknit Shawl"}
                 price={99.00}
                 productColor={"White"}
-                badgeClassName="bg-green-300"
+                badgeClassName={"bg-green-300"}
               />
             </div>
             <div>
@@ -170,7 +169,7 @@ const Trending = () => {
                 title={"Colorful Jacket"}
                 price={29.00}
                 productColor={"Black"}
-                badgeClassName="bg-white"
+                badgeClassName={"bg-white"}
               />
             </div>
             <div>
@@ -182,7 +181,7 @@ const Trending = () => {
                 title={"Shirt In Botanical Cheetah Print"}
                 price={52.00}
                 productColor={"White"}
-                badgeClassName="bg-green-300"
+                badgeClassName={"bg-green-300"}
               />
             </div>
             <div>
@@ -194,7 +193,7 @@ const Trending = () => {
                 title={"Cotton Jersey T-Shirt"}
                 price={17.00}
                 productColor={"White"}
-                badgeClassName="bg-white"
+                badgeClassName={"bg-white"}
               />
             </div>
             <div>
@@ -206,7 +205,7 @@ const Trending = () => {
                 title={"Zessi Dresses"}
                 price={49.00}
                 productColor={"Black"}
-                badgeClassName="bg-green-300"
+                badgeClassName={"bg-green-300"}
               />
             </div>
           </Slider>
