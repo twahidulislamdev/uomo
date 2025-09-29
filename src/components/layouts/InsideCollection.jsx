@@ -1,5 +1,7 @@
+import React from "react";
 import Container from "../Container";
 import Flex from "../Flex";
+import HomeProduct from "../HomeProduct";
 import ProductOne from "../../assets/productOne.jpg";
 import ProductOneSide from "../../assets/productOneSide.jpg";
 import ProductTwo from "../../assets/productTwo.jpg";
@@ -16,20 +18,42 @@ import ProductSeven from "../../assets/productSeven.jpg";
 import ProductSevenSide from "../../assets/productSevenSide.jpg";
 import ProductEight from "../../assets/productEight.jpg";
 import ProductEightSide from "../../assets/productEightSide.jpg";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import HomeProduct from "../HomeProduct";
 import TestiPrevArrow from "../TestiPrevArrow";
 import TestiNextArrow from "../TestiNextArrow";
 
 const InsideCollection = () => {
-  const settings = {
+  // function SampleNextArrow(props) {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{ ...style, display: "block" }}
+  //       onClick={onClick}
+  //     />
+  //   );
+  // }
+
+  // function SamplePrevArrow(props) {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{ ...style, display: "block" }}
+  //       onClick={onClick}
+  //     />
+  //   );
+  // }
+
+  var settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 4,
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 2500,
@@ -39,9 +63,9 @@ const InsideCollection = () => {
       {
         breakpoint: 1024, // tablets
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true,
         },
       },
       {
@@ -61,116 +85,149 @@ const InsideCollection = () => {
       },
     ],
   };
+
   return (
-    <>
-      <div className="bg-[#F8F8F8] py-5 lg:py-15 mb-10  lg:block overflow-hidden">
-        <Container>
-          <h3 className="text-center text-4xl font-medium">
-            The Inside Collection
+    <div className="w-[96%] m-auto flex justify-center  px-0 lg:px-0 mt-5 lg:mt-0  py-10 lg:py-16 overflow-hidden">
+      <Container>
+        {/* Heading */}
+        <div className="text-center">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+            Inside Collection
           </h3>
-          <div className="mt-10">
-            <Slider className="pb-5" {...settings}>
-              <div>
-                <HomeProduct
-                  imgSrc={ProductOne}
-                  imgAlt={"Arive One"}
-                  imgSrcTwo={ProductOneSide}
-                  badgeText={"New"}
-                  title={"Cropped Faux Leather Jacket"}
-                  price={29.0}
-                  productColor={"Gray"}
-                  badgeClassName="bg-white"
-                />
-              </div>
-              <div>
-                <HomeProduct
-                  imgSrc={ProductTwo}
-                  imgAlt="Arive Two"
-                  imgSrcTwo={ProductTwoSide}
-                  badgeText={"10%"}
-                  title={"Calvin Shorts"}
-                  price={62.0}
-                  productColor={"White"}
-                  badgeClassName="bg-green-300"
-                />
-              </div>
-              <div>
-                <HomeProduct
-                  imgSrc={ProductThree}
-                  imgAlt="Arive Three"
-                  imgSrcTwo={ProductThreeSide}
-                  badgeText={"New"}
-                  title={"Kirby T-Shirt"}
-                  price={17.0}
-                  productColor={"Black"}
-                  badgeClassName="bg-white"
-                />
-              </div>
-              <div>
-                <HomeProduct
-                  imgSrc={ProductFour}
-                  imgAlt="Arive Four"
-                  imgSrcTwo={ProductFourSide}
-                  badgeText={"10%"}
-                  title={"Cableknit Shawl"}
-                  price={99.0}
-                  productColor={"White"}
-                  badgeClassName="bg-green-300"
-                />
-              </div>
-              <div>
-                <HomeProduct
-                  imgSrc={ProductFive}
-                  imgAlt="Arive Five"
-                  imgSrcTwo={ProductFiveSide}
-                  badgeText={"New"}
-                  title={"Colorful Jacket"}
-                  price={29.0}
-                  productColor={"Black"}
-                  badgeClassName="bg-white"
-                />
-              </div>
-              <div>
-                <HomeProduct
-                  imgSrc={ProductSix}
-                  imgAlt="Arive Six"
-                  imgSrcTwo={ProductSixSide}
-                  badgeText={"10%"}
-                  title={"Shirt In Botanical Cheetah Print"}
-                  price={52.0}
-                  productColor={"White"}
-                  badgeClassName="bg-green-300"
-                />
-              </div>
-              <div>
-                <HomeProduct
-                  imgSrc={ProductSeven}
-                  imgAlt="Arive Seven"
-                  imgSrcTwo={ProductSevenSide}
-                  badgeText={"New"}
-                  title={"Cotton Jersey T-Shirt"}
-                  price={17.0}
-                  productColor={"White"}
-                  badgeClassName="bg-white"
-                />
-              </div>
-              <div>
-                <HomeProduct
-                  imgSrc={ProductEight}
-                  imgAlt="Arive Eight"
-                  imgSrcTwo={ProductEightSide}
-                  badgeText={"10%"}
-                  title={"Zessi Dresses"}
-                  price={49.0}
-                  productColor={"Black"}
-                  badgeClassName="bg-green-300"
-                />
-              </div>
-            </Slider>
-          </div>
-        </Container>
-      </div>
-    </>
+          <ul className="flex flex-wrap justify-center gap-4 md:gap-8 mt-5">
+            {["ALL", "WOMEN", "MAN", "KIDS"].map((item, idx) => (
+              <li
+                key={idx}
+                className="relative group px-2 py-1 text-sm md:text-base font-medium text-seconderyColor hover:text-mainColor cursor-pointer"
+              >
+                {item}
+                <span
+                  className="absolute left-0 bottom-0 h-0.5 bg-black w-0 
+                  group-hover:w-full transition-all duration-300 ease-in-out"
+                ></span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Products Slider */}
+        <div className="mt-10">
+          <Slider className="pb-5" {...settings}>
+            <div>
+              <HomeProduct
+                imgSrcFirst={ProductOne}
+                imgAlt={"Arive One"}
+                imgSrcSide={ProductOneSide}
+                badgeText={"New"}
+                title={"Cropped Faux Leather Jacket"}
+                price={29.00}
+                productColor={"Gray"}
+                badgeClassName="bg-white"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrcFirst={ProductTwo}
+                imgAlt="Arive Two"
+                imgSrcSide={ProductTwoSide}
+                badgeText={"10%"}
+                title={"Calvin Shorts"}
+                price={49.00}
+                productColor={"White"}
+                badgeClassName="bg-green-300"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrcFirst={ProductThree}
+                imgAlt="Arive Three"
+                imgSrcSide={ProductThreeSide}
+                badgeText={"New"}
+                title={"Kirby T-Shirt"}
+                price={17.00}
+                productColor={"Black"}
+                badgeClassName="bg-white"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrcFirst={ProductFour}
+                imgAlt="Arive Four"
+                imgSrcSide={ProductFourSide}
+                badgeText={"10%"}
+                title={"Cableknit Shawl"}
+                price={99.00}
+                productColor={"White"}
+                badgeClassName="bg-green-300"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrcFirst={ProductFive}
+                imgAlt="Arive Five"
+                imgSrcSide={ProductFiveSide}
+                badgeText={"New"}
+                title={"Colorful Jacket"}
+                price={29.00}
+                productColor={"Black"}
+                badgeClassName="bg-white"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrcFirst={ProductSix}
+                imgAlt="Arive Six"
+                imgSrcSide={ProductSixSide}
+                badgeText={"10%"}
+                title={"Shirt In Botanical Cheetah Print"}
+                price={52.00}
+                productColor={"White"}
+                badgeClassName="bg-green-300"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrcFirst={ProductSeven}
+                imgAlt="Arive Seven"
+                imgSrcSide={ProductSevenSide}
+                badgeText={"New"}
+                title={"Cotton Jersey T-Shirt"}
+                price={17.00}
+                productColor={"White"}
+                badgeClassName="bg-white"
+              />
+            </div>
+            <div>
+              <HomeProduct
+                imgSrcFirst={ProductEight}
+                imgAlt="Arive Eight"
+                imgSrcSide={ProductEightSide}
+                badgeText={"10%"}
+                title={"Zessi Dresses"}
+                price={49.00}
+                productColor={"Black"}
+                badgeClassName="bg-green-300"
+              />
+            </div>
+          </Slider>
+        </div>
+
+        {/* See More Button */}
+        <div className="flex justify-center mt-6">
+          <Link to="/shop">
+            <button className="relative px-0 py-2 text-black text-sm md:text-base font-medium group cursor-pointer">
+              <span className="group-hover:text-black transition-colors duration-300">
+                SEE MORE
+              </span>
+              <span
+                className="absolute left-0 bottom-0 h-0.5 bg-black 
+                w-1/3 group-hover:w-full transition-all duration-300 ease-in-out"
+              ></span>
+            </button>
+          </Link>
+        </div>
+      </Container>
+    </div>
   );
 };
 

@@ -58,13 +58,13 @@ const ShopProducts = ({
       {/* Badge End */}
 
       {/* Group Hover Part Start */}
-      <div className="lg:p-0 space-y-3 absolute bottom-33 lg:bottom-35  left-0 w-full lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 sm:opacity-100 sm:translate-y-0 transition-all duration-300 ease-in-out">
+      <div className="lg:p-0 space-y-3 absolute bottom-30 lg:bottom-31  left-0 w-full lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 sm:opacity-100 sm:translate-y-0 transition-all duration-300 ease-in-out">
         {/* AddToCart button start */}
         <div
           onClick={handleAddToCart}
-          className="w-[97%] h-[50px] rounded-lg relative flex justify-center m-auto hover:cursor-pointer bg-white hover:bg-gray-200 transition-all duration-300"
+          className="w-[100%] h-[50px]  relative flex justify-center m-auto hover:cursor-pointer bg-black hover:bg-mainColor transition-all duration-300"
         >
-          <p className="py-4 lg:py-3 text-base lg:text-lg font-medium  text-black">ADD TO CART</p>
+          <p className="py-4 lg:py-3 text-base lg:text-lg font-medium  text-white">ADD TO CART</p>
         </div>
         {/* AddToCart button end */}
       </div>
