@@ -61,8 +61,6 @@ const ShopProducts = ({
           />
         </div>
       </Link>
-
-
       {/* Badge start */}
       {badgeText && (
         <div
