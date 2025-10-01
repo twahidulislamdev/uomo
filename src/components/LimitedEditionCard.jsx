@@ -57,7 +57,7 @@ const LimitedEditionCard = ({
             />
           </Link>
           {/* Default Image */}
-          <div className="absolute bottom-3 left-2 pt-10 px-2  z-10 ">
+          <div className="absolute bottom-0 left-2 pt-10 px-2  z-10 ">
             <h3 className="text-[#262626] text-base font-bold py-1">{title}</h3>
             <h4
               className={`text-mainColor text-base font-bold ${priceClassName}`}

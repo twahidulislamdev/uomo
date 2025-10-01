@@ -1,15 +1,9 @@
 import Container from "../Container";
-import Flex from "../Flex";
 import LimitedOne from "../../assets/limitedOne.jpg";
-
 import LimitedTwo from "../../assets/limitedTwo.jpg";
-
 import LimitedThree from "../../assets/limitedThree.jpg";
-
 import LimitedFour from "../../assets/limitedFour.jpg";
-
 import LimitedFive from "../../assets/limitedFive.jpg";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -31,103 +25,50 @@ const LimitedEdition = () => {
     responsive: [
       {
         breakpoint: 1024, // tablets
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        },
+        settings: { slidesToShow: 3, slidesToScroll: 3, infinite: true },
       },
       {
         breakpoint: 768, // large phones
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
+        settings: { slidesToShow: 2, slidesToScroll: 2, initialSlide: 2 },
       },
       {
         breakpoint: 640, // small phones
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+        settings: { slidesToShow: 1, slidesToScroll: 1 },
       },
     ],
   };
+
+  const products = [
+    { img: LimitedOne, title: "Basic Crew Neck Tee", price: "$44.00", color: "Gray" },
+    { img: LimitedTwo, title: "Basic Crew Neck Tee", price: "$44.00", color: "Gray" },
+    { img: LimitedThree, title: "Basic Crew Neck Tee", price: "$44.00", color: "Gray" },
+    { img: LimitedFour, title: "Basic Crew Neck Tee", price: "$44.00", color: "Gray" },
+    { img: LimitedFive, title: "Basic Crew Neck Tee", price: "$44.00", color: "Gray" },
+  ];
+
   return (
-    <>
-      <div className="bg-black pt-10 lg:pt-15 pb-20 flex lg:block  px-3 lg:px-0 overflow-hidden">
-        <Container>
-          <h3 className="text-center text-4xl font-medium text-white">
-            Limited Edition
-          </h3>
-          <div className="mt-10">
-            <Slider className="" {...settings}>
-              <div className="">
+    <div className="bg-black pt-10 lg:pt-16 pb-20 px-3 lg:px-0 overflow-hidden">
+      <Container>
+        <h3 className="text-center text-4xl font-medium text-white">
+          Limited Edition
+        </h3>
+        <div className="mt-10">
+          <Slider {...settings}>
+            {products.map((product, idx) => (
+              <div key={idx}>
                 <LimitedEditionCard
-                  className={""}
-                  imgSrcFirst={LimitedOne}
-                  imgAlt={"Arive One"}
-                  badgeText={"New"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"Gray"}
-                  badgeClassName={"bg-white"}
+                  imgSrcFirst={product.img}
+                  imgAlt={product.title}
+                  title={product.title}
+                  price={product.price}
+                  productColor={product.color}
                 />
               </div>
-              <div className="">
-                <LimitedEditionCard
-                  className={""}
-                  imgSrcFirst={LimitedTwo}
-                  imgAlt={"Arive One"}
-                  badgeText={"New"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"Gray"}
-                  badgeClassName={"bg-white"}
-                />
-              </div>
-              <div className="">
-                <LimitedEditionCard
-                  className={""}
-                  imgSrcFirst={LimitedThree}
-                  imgAlt={"Arive One"}
-                  badgeText={"New"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"Gray"}
-                  badgeClassName={"bg-white"}
-                />
-              </div>
-              <div className="">
-                <LimitedEditionCard
-                  className={""}
-                  imgSrcFirst={LimitedFour}
-                  imgAlt={"Arive One"}
-                  badgeText={"New"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"Gray"}
-                  badgeClassName={"bg-white"}
-                />
-              </div>
-              <div className="">
-                <LimitedEditionCard
-                  className={""}
-                  imgSrcFirst={LimitedFive}
-                  imgAlt={"Arive One"}
-                  badgeText={"New"}
-                  title={"Basic Crew Neck Tee"}
-                  price={"$44.00"}
-                  productColor={"Gray"}
-                  badgeClassName={"bg-white"}
-                />
-              </div>
-            </Slider>
-          </div>
-        </Container>
-      </div>
-    </>
+            ))}
+          </Slider>
+        </div>
+      </Container>
+    </div>
   );
 };
 

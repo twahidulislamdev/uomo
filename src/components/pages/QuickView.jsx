@@ -45,7 +45,7 @@ const QuickView = () => {
             addToCart({
                 title: quickViewData?.title || 'Lightweight Puffer Jacket With a Hood',
                 price: quickViewData?.price || 70.00,
-                img: mainImage || quickViewData?.img || QuickOneFirst,
+                img: mainImage || quickViewData?.img ,
                 color: quickViewData?.color || 'default',
                 size: selectedSize || 'M',
                 quantity: quickViewData?.quantity || 1,
