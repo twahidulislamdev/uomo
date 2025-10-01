@@ -4,6 +4,11 @@ import BannerBg from "../../assets/bannerBg.png";
 import { Link } from "react-router-dom";
 import BlogCard from "../BlogCard";
 import BlogOne from "../../assets/blogOne.jpg"
+import BlogTwo from "../../assets/blogTwo.jpg"
+import BlogThree from "../../assets/blogThree.jpg"
+import BlogFour from "../../assets/blogFour.jpg"
+import BlogFive from "../../assets/blogFive.jpg"
+import BlogSix from "../../assets/blogSix.jpg"
 import Flex from "../Flex";
 
 const Blog = () => {
@@ -35,7 +40,7 @@ const Blog = () => {
       {/* Blog Banner Part End */}
       <div className="py-0 lg:py-10 bg-neutral-100">
         <Container>
-          <Flex className={"lg:flex justify-between items-center flex-wrap gap-y-5"}>
+          <Flex className={"lg:flex justify-between items-center flex-wrap gap-y-5 lg:gap-y-10 "}>
             <BlogCard
               imgSrc={BlogOne}
               imgAlt={"Blog Two"}
@@ -45,7 +50,7 @@ const Blog = () => {
               pTxt={"Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under."}
             />
             <BlogCard
-              imgSrc={BlogOne}
+              imgSrc={BlogTwo}
               imgAlt={"Blog Two"}
               adminTxt={"BY ADMIN"}
               dateTxt={"APRIL 05, 2025"}
@@ -53,7 +58,7 @@ const Blog = () => {
               pTxt={"Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under."}
             />
             <BlogCard
-              imgSrc={BlogOne}
+              imgSrc={BlogThree}
               imgAlt={"Blog Two"}
               adminTxt={"BY ADMIN"}
               dateTxt={"APRIL 05, 2025"}
@@ -61,7 +66,7 @@ const Blog = () => {
               pTxt={"Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under."}
             />
             <BlogCard
-              imgSrc={BlogOne}
+              imgSrc={BlogFour}
               imgAlt={"Blog Two"}
               adminTxt={"BY ADMIN"}
               dateTxt={"APRIL 05, 2025"}
@@ -69,7 +74,7 @@ const Blog = () => {
               pTxt={"Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under."}
             />
             <BlogCard
-              imgSrc={BlogOne}
+              imgSrc={BlogFive}
               imgAlt={"Blog Two"}
               adminTxt={"BY ADMIN"}
               dateTxt={"APRIL 05, 2025"}
@@ -77,7 +82,7 @@ const Blog = () => {
               pTxt={"Midst one brought greater also morning green saying had good. Open stars day let over gathered, grass face one every light of under."}
             />
             <BlogCard
-              imgSrc={BlogOne}
+              imgSrc={BlogSix}
               imgAlt={"Blog Two"}
               adminTxt={"BY ADMIN"}
               dateTxt={"APRIL 05, 2025"}

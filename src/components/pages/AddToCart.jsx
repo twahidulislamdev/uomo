@@ -39,8 +39,7 @@ const AddToCart = () => {
                                             imgSrc={item.img}
                                             imgAlt={"Hi"}
                                         />
-                                        <div className="
-                            py-1">
+                                        <div className="py-1">
                                             <h4 className="w-full pr-2 text-lg font-normal text-mainColor pt-2 text-wrap">
                                                 Blue color shirt
                                             </h4>
@@ -89,36 +88,46 @@ const AddToCart = () => {
                         <div className="w-full h-[515px] border-1 border-black p-10 ">
                             <h4 className="text-2xl font-medium uppercase">Cart Totals</h4>
                             {/* Cart SubTotal part Start  */}
-                            <h5 className="text-lg font-medium pt-10 uppercase border-b-1 border-gray-300 pb-5"><span className="pr-5">Subtotal:</span> $     {calculateSubtotal()} </h5>
+                            <h5 className="text-lg font-medium pt-10 uppercase border-b-1 border-gray-300 pb-5"><span className="pr-5">Subtotal:</span>$     {calculateSubtotal()} </h5>
                             {/* Cart SubTotal part End  */}
 
                             {/* Shipping procedure part start   */}
                             <div className="flex mt-5 gap-x-5 lg:gap-x-20 border-b-1 border-gray-300 pb-5 overflow-hidden">
                                 <h6 className="text-lg font-medium uppercase">Shipping</h6>
                                 <div className="space-y-5">
-                                    <label className="flex  space-x-2">
+                                    <label className="flex space-x-2">
                                         <input
-                                            type="checkbox"
-                                            className="form-checkbox h-5 w-5 text-blue-600"
+                                            type="radio"
+                                            name="shipping"
+                                            value="free"
+                                            defaultChecked
+                                            className="form-radio h-5 w-5 text-blue-600"
                                         />
                                         <span className="text-gray-700 text-base">Free shipping</span>
                                     </label>
-                                    <label className="flex  space-x-2">
+                                    <label className="flex space-x-2">
                                         <input
-                                            type="checkbox"
-                                            className="form-checkbox h-5 w-5 text-blue-600"
+                                            type="radio"
+                                            name="shipping"
+                                            value="local"
+                                            className="form-radio h-5 w-5 text-blue-600"
                                         />
                                         <span className="text-gray-700 text-base">Local pickup: ${10}</span>
                                     </label>
-
-                                    <label className="flex  space-x-2">
+                                    <label className="flex space-x-2">
                                         <input
-                                            type="checkbox"
-                                            className="form-checkbox h-5 w-5 text-blue-600"
+                                            type="radio"
+                                            name="shipping"
+                                            value="home"
+                                            className="form-radio h-5 w-5 text-blue-600"
                                         />
-                                        <span className="text-gray-700 text-base">Home Delevery: ${50}</span>
+                                        <span className="text-gray-700 text-base">Home Delivery: ${50}</span>
                                     </label>
-                                    <h6 className="text-gray-700 text-base">Shipping To All : <span className="text-sm  hover:text-black hover:font-medium transition-all duration-300  pt-2 hover:cursor-pointer block "> CHANGE ADDRESS</span>
+                                    <h6 className="text-gray-700 text-base">
+                                        Shipping To All :{" "}
+                                        <span className="text-sm hover:text-black hover:font-medium transition-all duration-300 pt-2 hover:cursor-pointer block">
+                                            CHANGE ADDRESS
+                                        </span>
                                     </h6>
                                 </div>
                             </div>

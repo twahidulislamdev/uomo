@@ -3,9 +3,9 @@ import React from 'react'
 const BlogCard = ({ imgSrc, imgAlt, adminTxt, dateTxt, pTxt, BlogTitle }) => {
     return (
         <>
-            <div className="w-full lg:w-[32%] h-auto p-5 lg:p-0 bg-white">
-                <img className="w-full" src={imgSrc} alt={imgAlt} />
-                <div className="w-full py-5 px-2">
+            <div className="w-full lg:w-[32%] h-[600px] p-5 lg:p-0 bg-white">
+                <img className="w-full h-[330px] lg:h-[350px]" src={imgSrc} alt={imgAlt} />
+                <div className="w-full h-[250px]  pt-5 px-2">
                     <ul className="flex justify-start gap-x-5">
                         <li className="text-base text-secondaryColor text-gray-600">{adminTxt}</li>
                         <li className="text-base text-secondaryColor text-gray-600">{dateTxt}</li>

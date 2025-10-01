@@ -130,7 +130,7 @@ const CheckOut = () => {
                 <div className="space-y-3 mt-5 ">
                   <div className="flex justify-between items-center">
                     <span className="text-lg text-mainColor font-medium ">PRODUCT</span>
-                    <span className="text-lg text-mainColor font-medium">SUBTOTAL</span>
+                    <span className="text-lg text-mainColor font-medium">PRICE</span>
                   </div>
                   <div className="flex justify-between">
                     <span className='text-base text-seconderyColor'>Calvin Shorts x 1</span>
