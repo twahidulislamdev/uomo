@@ -45,7 +45,7 @@ const QuickView = () => {
             addToCart({
                 title: quickViewData?.title || 'Lightweight Puffer Jacket With a Hood',
                 price: quickViewData?.price || 70.00,
-                img: mainImage || quickViewData?.img ,
+                img: mainImage || quickViewData?.img,
                 color: quickViewData?.color || 'default',
                 size: selectedSize || 'M',
                 quantity: quickViewData?.quantity || 1,
@@ -65,28 +65,28 @@ const QuickView = () => {
                                 <img
                                     src={quickViewData?.img || QuickOneFirst}
                                     alt="thumb-1"
-                                    className={`w-[23%] lg:w-full h-[110px] lg:h-[120px] cursor-pointer ${mainImage === quickViewData?.img ? 'border-2 border-mainColor' : ''
+                                    className={`w-[23%] lg:w-full h-[100px] lg:h-[110px] cursor-pointer ${mainImage === quickViewData?.img ? 'border-2 border-mainColor' : ''
                                         }`}
                                     onClick={() => handleThumbnailClick(quickViewData?.img || QuickOneFirst)}
                                 />
                                 <img
                                     src={QuickOneSecond}
                                     alt="thumb-2"
-                                    className={`w-[23%] lg:w-full h-[110px] lg:h-[120px] cursor-pointer ${mainImage === QuickOneSecond ? 'border-2 border-mainColor' : ''
+                                    className={`w-[23%] lg:w-full h-[100px] lg:h-[110px] cursor-pointer ${mainImage === QuickOneSecond ? 'border-2 border-mainColor' : ''
                                         }`}
                                     onClick={() => handleThumbnailClick(QuickOneSecond)}
                                 />
                                 <img
                                     src={QuickOneThird}
                                     alt="thumb-3"
-                                    className={`w-[23%]  lg:w-full  h-[110px] lg:h-[120px]cursor-pointer ${mainImage === QuickOneThird ? 'border-2 border-mainColor' : ''
+                                    className={`w-[23%]  lg:w-full h-[100px] lg:h-[110px] cursor-pointer ${mainImage === QuickOneThird ? 'border-2 border-mainColor' : ''
                                         }`}
                                     onClick={() => handleThumbnailClick(QuickOneThird)}
                                 />
                                 <img
                                     src={QuickOneFourth}
                                     alt="thumb-4"
-                                    className={`w-[23%] lg:w-full h-[110px] lg:h-[120px]cursor-pointer ${mainImage === QuickOneFourth ? 'border-2 border-mainColor' : ''
+                                    className={`w-[23%] lg:w-full h-[100px] lg:h-[110px] cursor-pointer ${mainImage === QuickOneFourth ? 'border-2 border-mainColor' : ''
                                         }`}
                                     onClick={() => handleThumbnailClick(QuickOneFourth)}
                                 />

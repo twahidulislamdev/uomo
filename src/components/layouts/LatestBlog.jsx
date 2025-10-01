@@ -1,9 +1,10 @@
 import LatestBlogCard from "../LatestBlogCard";
 import Container from "../Container";
 
-import BlogTwo from "../../assets/blogTwo.png";
-import BlogThree from "../../assets/blogThree.png";
-import BlogFour from "../../assets/blogFour.png";
+import BlogOne from "../../assets/LatestBlogOne.jpg";
+import BlogTwo from "../../assets/LatestBlogTwo.png";
+import BlogThree from "../../assets/LatestBlogThree.png";
+import BlogFour from "../../assets/LatestBlogFour.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -53,7 +54,7 @@ const LatestBlog = () => {
         <Slider {...settings}>
           <div>
             <LatestBlogCard
-              imgSrc={BlogThree}
+              imgSrc={BlogOne}
               imgAlt="Blog One"
               adminTxt="BY ADMIN"
               dateTxt="APRIL 05, 2025"

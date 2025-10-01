@@ -1,7 +1,7 @@
 const LatestBlogCard = ({ imgSrc, imgAlt, adminTxt, dateTxt, pTxt }) => {
   return (
     <>
-      <div className="mx-3 bg-white mb-5">
+      <div className="p-5 bg-white ">
         <img className="w-full" src={imgSrc} alt={imgAlt} />
 
         <div className="w-full py-5">
