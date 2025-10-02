@@ -107,7 +107,6 @@ const HomeProduct = ({
         </div>
 
         <h3 className="text-[#262626] text-lg font-bold py-1">{title}</h3>
-
         <div className="flex justify-between items-center">
           <h4
             className={`text-mainColor text-base font-bold ${sizeClassName}`}

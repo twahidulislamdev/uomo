@@ -58,13 +58,14 @@ const Header = () => {
   let handleRemove = (item) => {
     dispatch(remove(item));
   };
-  useEffect(() => {
+    useEffect(() => {
     if (isCartOpen || isUserOpen || isCategoryOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
   }, [isCartOpen, isUserOpen, isCategoryOpen]);
+  
   return (
     <>
       {/* Desktop Header start */}
