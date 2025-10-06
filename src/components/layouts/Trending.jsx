@@ -50,12 +50,12 @@ const Trending = () => {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    initialSlide: 1,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3000,
     // prevArrow: <TestiPrevArrow />,
     // nextArrow: <TestiNextArrow />,
     responsive: [
