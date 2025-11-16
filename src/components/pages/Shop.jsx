@@ -67,9 +67,9 @@ const Shop = () => {
           <Flex className="justify-between gap-x-5">
             {/* Sidebar (Categories + Filters) */}
             <div
-              className={`fixed top-0 left-0 h-full w-[80%] p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50
+              className={`w-[80%] lg:w-[30%]fixed top-0 left-0 h-full  p-5 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50
               ${isFilters ? "translate-x-0" : "-translate-x-full"}
-              lg:static lg:translate-x-0 lg:w-[30%] lg:h-auto overflow-y-auto`}
+              lg:static lg:translate-x-0  lg:h-auto overflow-y-auto`}
             >
               {/* Close Button for Mobile */}
               <div className="flex justify-between items-center lg:hidden mb-5 lg:mb-0 ">
