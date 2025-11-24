@@ -290,7 +290,6 @@ const Shop = () => {
         style={{ backgroundImage: `url(${BannerBg})` }}
       >
         <ToastContainer
-        
           position="top-right"
           autoClose={2000}
           hideProgressBar={false}
@@ -630,6 +629,7 @@ const Shop = () => {
                       price={product.price}
                       productColor={product.productColor}
                       badgeClassName={product.badgeClassName}
+                      size={product.size}
                     />
                   ))}
 

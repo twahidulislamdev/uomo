@@ -22,6 +22,7 @@ const ShopProducts = ({
   priceClassName,
   sizeClassName,
   size,
+  customSize, // Added customSize prop
 }) => {
   const [isWishColor, setIsWishColor] = useState(false);
   const dispatch = useDispatch();
@@ -34,6 +35,8 @@ const ShopProducts = ({
         img: imgSrcFirst,
         quantity: 1,
         color: productColor,
+        size: size,
+        customSize: customSize, // Include custom size in cart
       })
     );
 
@@ -66,6 +69,8 @@ const ShopProducts = ({
         price,
         img: imgSrcFirst,
         quantity: 1,
+        size: size,
+        customSize: customSize, // Include custom size in quick view
       })
     );
 
@@ -75,9 +80,19 @@ const ShopProducts = ({
     });
   };
 
+  // Determine size display text
+  const getSizeDisplay = () => {
+    if (customSize) {
+      return customSize;
+    }
+    return size;
+  };
+
+  // Determine if this is a custom size product
+  const isCustomSize = size === "Custom" || customSize;
+
   return (
     <div className="w-[48%] lg:w-[32%] h-[430px] lg:h-[500px] m-auto lg:m-0 relative group border-2 border-gray-100 rounded-xl">
-
       <Link to={"/quickview"} onClick={handleQuickView}>
         <div className="w-full h-[300px] lg:h-[350px] relative">
           <img
@@ -90,9 +105,12 @@ const ShopProducts = ({
 
       {badgeText && (
         <div
-          className={`absolute top-2 left-2 py-1 px-4 text-black font-bold text-center text-xs lg:text-sm ${badgeClassName}`}
+          className={`absolute top-2 left-2 py-1 px-4 text-black font-bold text-center text-xs lg:text-sm ${badgeClassName} ${
+            isCustomSize ? "border-l-4 border-purple-500" : ""
+          }`}
         >
           {badgeText}
+          {isCustomSize && " ✂️"}
         </div>
       )}
 
@@ -101,7 +119,9 @@ const ShopProducts = ({
           onClick={handleAddToCart}
           className="w-[100%] h-[50px] flex justify-center m-auto hover:cursor-pointer bg-black hover:bg-mainColor transition-all duration-300 delay-200"
         >
-          <p className="py-4 lg:py-3 text-base lg:text-lg font-medium text-white">ADD TO CART</p>
+          <p className="py-4 lg:py-3 text-base lg:text-lg font-medium text-white">
+            {isCustomSize ? "CUSTOM ORDER" : "ADD TO CART"}
+          </p>
         </div>
       </div>
 
@@ -120,16 +140,36 @@ const ShopProducts = ({
           </div>
         </div>
 
-        <h3 className="text-[#262626] text-sm lg:text-lg font-bold py-1">{title}</h3>
+        <h3 className="text-[#262626] text-sm lg:text-lg font-bold py-1">
+          {title}
+        </h3>
 
         <div className="flex justify-between items-center">
-          <h4 className={`text-mainColor text-base font-bold ${sizeClassName}`}>
-            Size: {size}
+          <h4
+            className={`text-mainColor text-base font-bold ${sizeClassName} ${
+              isCustomSize ? "text-purple-600" : ""
+            }`}
+          >
+            {isCustomSize ? "Custom: " : "Size: "}
+            {getSizeDisplay()}
+            {isCustomSize && " 📏"}
           </h4>
-          <h4 className={`text-mainColor text-lg font-bold ${priceClassName}`}>
+          <h4
+            className={`text-mainColor text-lg font-bold ${priceClassName} ${
+              isCustomSize ? "text-purple-600" : ""
+            }`}
+          >
             ${price.toFixed(2)}
+            {isCustomSize && " *"}
           </h4>
         </div>
+
+        {/* Custom size note */}
+        {isCustomSize && (
+          <p className="text-xs text-purple-500 mt-1 font-medium">
+            * Custom sizing available
+          </p>
+        )}
       </div>
     </div>
   );

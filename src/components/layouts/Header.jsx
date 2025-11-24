@@ -46,7 +46,9 @@ const Header = () => {
 
   // Calculate subtotal
   const calculateSubtotal = () => {
-    return data.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
+    return data
+      .reduce((total, item) => total + item.price * item.quantity, 0)
+      .toFixed(2);
   };
 
   let handleIncerment = (item) => {
@@ -58,14 +60,14 @@ const Header = () => {
   let handleRemove = (item) => {
     dispatch(remove(item));
   };
-    useEffect(() => {
+  useEffect(() => {
     if (isCartOpen || isUserOpen || isCategoryOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
   }, [isCartOpen, isUserOpen, isCategoryOpen]);
-  
+
   return (
     <>
       {/* Desktop Header start */}
@@ -285,7 +287,10 @@ const Header = () => {
             {/* AddToCart Single Product start */}
             <div className="overflow-y-auto max-h-[calc(100vh-250px)]">
               {data.map((item) => (
-                <div className="bg-neutral-100 mb-3  rounded-md" key={item.title}>
+                <div
+                  className="bg-neutral-100 mb-3  rounded-md"
+                  key={item.title}
+                >
                   <div className="flex justify-between">
                     <div className="flex justify-center gap-x-5 lg:gap-x-7">
                       <Image
@@ -312,13 +317,17 @@ const Header = () => {
                         {/* Increment Decrement start */}
                         <div className="flex justify-start items-center gap-x-5 mt-2">
                           <span className="text-xl text-[#767676]">
-                            <HiMinusSmall onClick={() => handleDecerment(item)} />
+                            <HiMinusSmall
+                              onClick={() => handleDecerment(item)}
+                            />
                           </span>
                           <p className="text-xl text-[#767676]">
                             {item.quantity}
                           </p>
                           <span className="text-xl text-[#767676]">
-                            <HiPlusSmall onClick={() => handleIncerment(item)} />
+                            <HiPlusSmall
+                              onClick={() => handleIncerment(item)}
+                            />
                           </span>
                         </div>
                         {/* Increment Decrement End */}
@@ -343,16 +352,21 @@ const Header = () => {
                 <p className="text-2xl font-semibold">${calculateSubtotal()}</p>
               </div>
               <Link to={"/addtocart"}>
-                <div onClick={() => setIsCartOpen(false)} className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer">
+                <div
+                  onClick={() => setIsCartOpen(false)}
+                  className="text-center text-lg font-medium mt-5 py-5 lg:py-3 w-full bg-[#E4E4E4] hover:cursor-pointer"
+                >
                   VIEW CART
                 </div>
               </Link>
               <Link to={"/checkout"}>
-                <div onClick={() => setIsCartOpen(false)} className="text-center text-lg text-white font-medium mt-5 py-5 lg:py-3 w-full bg-mainColor hover:cursor-pointer">
+                <div
+                  onClick={() => setIsCartOpen(false)}
+                  className="text-center text-lg text-white font-medium mt-5 py-5 lg:py-3 w-full bg-mainColor hover:cursor-pointer"
+                >
                   CHECKOUT
                 </div>
               </Link>
-
             </div>
             {/* Sub Total/ view cart section End */}
           </div>
@@ -392,17 +406,31 @@ const Header = () => {
                 <div className="px-5 mt-10">
                   <ul className="space-y-5">
                     <li className="text-xl font-medium uppercase">New</li>
-                    <li className="text-xl font-medium uppercase">Best Sellers</li>
-                    <li className="text-xl font-medium uppercase">Collaborations®</li>
+                    <li className="text-xl font-medium uppercase">
+                      Best Sellers
+                    </li>
+                    <li className="text-xl font-medium uppercase">
+                      Collaborations®
+                    </li>
                     <li className="text-xl font-medium uppercase">Denim</li>
-                    <li className="text-xl font-medium uppercase">Jackets & Coats</li>
-                    <li className="text-xl font-medium uppercase">Overshirts</li>
+                    <li className="text-xl font-medium uppercase">
+                      Jackets & Coats
+                    </li>
+                    <li className="text-xl font-medium uppercase">
+                      Overshirts
+                    </li>
                     <li className="text-xl font-medium uppercase">Trousers</li>
                     <li className="text-xl font-medium uppercase">Jeans</li>
-                    <li className="text-xl font-medium uppercase">T-shirts & Tops</li>
-                    <li className="text-xl font-medium uppercase">Shirts & Blouses</li>
+                    <li className="text-xl font-medium uppercase">
+                      T-shirts & Tops
+                    </li>
+                    <li className="text-xl font-medium uppercase">
+                      Shirts & Blouses
+                    </li>
                     <li className="text-xl font-medium uppercase">Shoes</li>
-                    <li className="text-xl font-medium uppercase">Accessories</li>
+                    <li className="text-xl font-medium uppercase">
+                      Accessories
+                    </li>
                   </ul>
                 </div>
               </div>
