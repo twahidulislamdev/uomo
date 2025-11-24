@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import Flex from "./Flex";
-import { 
-  HiOutlineShoppingBag, 
-  HiOutlineEye, 
+import {
+  HiOutlineShoppingBag,
+  HiOutlineEye,
   HiOutlineHeart,
 } from "react-icons/hi2";
 import { useDispatch } from "react-redux";
@@ -43,58 +42,72 @@ const LimitedEditionCard = ({
   };
 
   return (
-    <div className="mx-3 relative group border-2 border-gray-100 bg-[url(/src/assets/collectionThree.jpg)]">
-      <div className="relative h-[420px]">
-        {/* Image with Quick View */}
-        <div 
-          onClick={handleQuickView} 
-          className="cursor-pointer w-full h-full"
-        >
+    <div className="mx-3 relative group overflow-hidden rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+      {/* Image Container */}
+      <div className="relative h-[300px] bg-gray-100 overflow-hidden">
+        <div onClick={handleQuickView} className="cursor-pointer w-full h-full">
           <img
             src={imgSrcFirst}
             alt={imgAlt}
-            className="w-full h-full object-cover flex justify-center items-center"
+            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out"
           />
+
+          {/* Gradient Overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
-        
-        {/* Product Info */}
-        <div className="absolute bottom-0 left-2 pt-10 px-2 z-10">
-          <h3 className="text-[#262626] text-base font-bold py-1">{title}</h3>
-          <h4
-            className={`text-mainColor text-base font-bold ${priceClassName}`}
+
+        {/* Action Buttons - Positioned on image */}
+        <div className="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+          <button
+            onClick={handleQuickView}
+            className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 hover:scale-110"
+            aria-label="Quick view"
           >
-            {price}
-          </h4>
-          <h5 className="text-gray-600 text-sm">{productColor}</h5>
+            <HiOutlineEye className="text-xl text-gray-800" />
+          </button>
+
+          <Link to={"/collect"}>
+            <div className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-200 hover:scale-110">
+              <HiOutlineHeart className="text-xl text-gray-800" />
+            </div>
+          </Link>
+        </div>
+
+        {/* Limited Edition Badge */}
+        <div className="absolute top-4 left-4">
+          <span className="px-3 py-1 bg-black/80 backdrop-blur-sm text-white text-xs font-semibold rounded-full">
+            LIMITED EDITION
+          </span>
         </div>
       </div>
 
-      {/* Hover Effect */}
-      <div className="p-7.5 space-y-3 absolute bottom-30 left-0 w-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-        <Flex className={"justify-center space-x-5"}>
+      {/* Product Info Section */}
+      <div className="bg-white p-4">
+        <div className="mb-3">
+          <h3 className="text-gray-900 text-lg font-semibold mb-1 group-hover:text-gray-600 transition-colors duration-200">
+            {title}
+          </h3>
+          <p className="text-gray-500 text-sm">{productColor}</p>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <div className="flex items-baseline gap-2">
+            <span
+              className={`text-xl font-bold text-gray-900 ${priceClassName}`}
+            >
+              {price}
+            </span>
+          </div>
+
           {/* Add to Cart Button */}
-          <button 
+          <button
             onClick={handleAddToCart}
-            className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 transition-colors duration-200"
+            className="px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-800 flex items-center gap-2 transition-all duration-200 hover:shadow-md active:scale-95"
           >
-            <HiOutlineShoppingBag className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+            <HiOutlineShoppingBag className="text-lg" />
+            <span className="text-sm font-medium">Add</span>
           </button>
-          
-          {/* Quick View Button */}
-          <button 
-            onClick={handleQuickView}
-            className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 transition-colors duration-200"
-          >
-            <HiOutlineEye className="text-2xl text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-          </button>
-          
-          {/* Wishlist Link */}
-          <Link to={"/collect"}>
-            <div className="relative w-[40px] h-[40px] rounded-[50%] hover:cursor-pointer bg-white hover:bg-gray-200 transition-colors duration-200">
-              <HiOutlineHeart className="text-2xl text-black absolute top-1/1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-            </div>
-          </Link>
-        </Flex>
+        </div>
       </div>
     </div>
   );
