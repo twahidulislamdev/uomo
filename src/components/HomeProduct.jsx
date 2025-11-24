@@ -46,6 +46,7 @@ const HomeProduct = ({
         img: imgSrcFirst,
         quantity: 1,
         color: productColor,
+        size: size || "M",
       })
     );
   };
@@ -56,13 +57,11 @@ const HomeProduct = ({
     >
       <Link to={"/quickview"} onClick={handleQuickView}>
         <div className="relative w-[330px] lg:w-[310px] h-100 overflow-hidden">
-          {/* Default Image */}
           <img
             src={imgSrcFirst}
             alt={imgAlt}
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
           />
-          {/* Hover Image */}
           <img
             src={imgSrcSide}
             alt={imgAlt}
@@ -71,27 +70,24 @@ const HomeProduct = ({
         </div>
       </Link>
 
-      {/* Badge */}
       <div
         className={`absolute top-2 left-2 py-2 px-5 text-black font-bold text-center text-sm ${badgeClassName}`}
       >
         {badgeText}
       </div>
 
-      {/* Group Hover Add To Cart */}
       <div className="lg:p-0 space-y-3 absolute bottom-29 left-0 w-full lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 sm:opacity-100 sm:translate-y-0 transition-all duration-300 ease-in-out delay-100">
         <div
           onClick={handleAddToCart}
-          className="w-[100%] h-[50px]  relative flex justify-center m-auto hover:cursor-pointer bg-black hover:bg-mainColor transition-all duration-300 "
+          className="w-[100%] h-[50px] relative flex justify-center m-auto hover:cursor-pointer bg-black hover:bg-mainColor transition-all duration-300"
         >
           <p className="py-3 text-lg font-medium text-white">ADD TO CART</p>
         </div>
       </div>
 
-      {/* Product Info */}
       <div className="pb-10 px-3 mt-5">
         <div className="flex justify-between items-center">
-          <p className="text-[#767676] text-base font-semibold ">
+          <p className="text-[#767676] text-base font-semibold">
             {productColor}
           </p>
           <div
@@ -107,15 +103,12 @@ const HomeProduct = ({
         </div>
 
         <h3 className="text-[#262626] text-lg font-bold py-1">{title}</h3>
+
         <div className="flex justify-between items-center">
-          <h4
-            className={`text-mainColor text-base font-bold ${sizeClassName}`}
-          >
+          <h4 className={`text-mainColor text-base font-bold ${sizeClassName}`}>
             Size: {size}
           </h4>
-          <h4
-            className={`text-mainColor text-lg font-bold ${priceClassName}`}
-          >
+          <h4 className={`text-mainColor text-lg font-bold ${priceClassName}`}>
             ${price.toFixed(2)}
           </h4>
         </div>
