@@ -18,6 +18,7 @@ import { GrClose } from "react-icons/gr";
 import { IoFilter } from "react-icons/io5";
 import { IoIosArrowUp } from "react-icons/io";
 import Heading from "../Heading";
+import { ToastContainer } from "react-toastify";
 
 const Shop = () => {
   const [isFilters, setIsFilters] = useState(false);
@@ -285,9 +286,21 @@ const Shop = () => {
     <>
       {/* Shop Banner Part Start */}
       <div
-        className="py-[30px] lg:py-[100px] w-full m-auto lg:m-0 px-3 bg-no-repeat bg-center bg-cover"
+        className="relative py-[30px] lg:py-[100px] w-full m-auto lg:m-0 px-3 bg-no-repeat bg-center bg-cover"
         style={{ backgroundImage: `url(${BannerBg})` }}
       >
+        <ToastContainer
+        
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <Container>
           <h3 className="text-2xl lg:text-7xl font-bold text-center text-mainColor">
             THE SHOP
