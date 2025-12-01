@@ -160,25 +160,25 @@ const Contact = () => {
             {/* FORM */}
             <div className="bg-white border border-neutral-400 rounded-2xl p-8 shadow-[0_6px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.10)] transition-all duration-300">
               <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-                <div className="w-1.5 h-6 bg-amber-500 rounded-full"></div>
+                <div className="w-1.5 h-5 bg-amber-500 rounded-full"></div>
                 Send Message
               </h2>
 
               {/* Alerts */}
               {status === "success" && (
-                <div className="mb-6 p-4 bg-green-50 text-green-700 border border-green-200 rounded-xl">
+                <div className="mb-5 p-5 bg-green-50 text-green-700 border border-green-200 rounded-xl">
                   ✓ Message sent successfully!
                 </div>
               )}
 
               {status === "error" && (
-                <div className="mb-6 p-4 bg-red-50 text-red-700 border border-red-200 rounded-xl">
+                <div className="mb-5 p-4 bg-red-50 text-red-700 border border-red-200 rounded-xl">
                   ✕ Failed to send message. Try again.
                 </div>
               )}
 
               {status === "validation" && (
-                <div className="mb-6 p-4 bg-yellow-50 text-yellow-700 border border-yellow-200 rounded-xl">
+                <div className="mb-5 p-4 bg-yellow-50 text-yellow-700 border border-yellow-200 rounded-xl">
                   ⚠ Please fill in all required fields.
                 </div>
               )}
