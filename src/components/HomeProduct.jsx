@@ -33,12 +33,12 @@ const HomeProduct = ({
         img: imgSrcFirst,
         quantity: 1,
         color: productColor,
-        size: size || "M",
+        size: size || "S",
       })
     );
 
     // Show toast confirmation
-    toast.success(`${title} (${size || "M"}) added to cart`, {
+    toast.success(`${title} (${size || "S"}) added to cart`, {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
