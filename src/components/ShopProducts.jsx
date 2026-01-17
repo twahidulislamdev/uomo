@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-import Flex from "./Flex";
 import {
-  HiOutlineShoppingBag,
-  HiOutlineEye,
   HiOutlineHeart,
 } from "react-icons/hi2";
 import { useDispatch } from "react-redux";
@@ -37,11 +34,11 @@ const ShopProducts = ({
         color: productColor,
         size: size,
         customSize: customSize, // Include custom size in cart
-      })
+      }),
     );
 
     toast.success(`${title} added to cart!`, {
-      position: "top-center",
+      position: "top-right",
       autoClose: 1500,
     });
   };
@@ -50,8 +47,8 @@ const ShopProducts = ({
     setIsWishColor(!isWishColor);
 
     if (!isWishColor) {
-      toast.success("Added to Wishlist ❤", {
-        position: "top-center",
+      toast.success("Added to Wishlist ", {
+        position: "top-right",
         autoClose: 1500,
       });
     } else {
@@ -71,7 +68,7 @@ const ShopProducts = ({
         quantity: 1,
         size: size,
         customSize: customSize, // Include custom size in quick view
-      })
+      }),
     );
 
     toast.info("Opening Quick View…", {

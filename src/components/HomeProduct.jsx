@@ -34,7 +34,7 @@ const HomeProduct = ({
         quantity: 1,
         color: productColor,
         size: size || "S",
-      })
+      }),
     );
 
     // Show toast confirmation
@@ -57,7 +57,7 @@ const HomeProduct = ({
         quantity: 1,
         color: productColor,
         size: size || "M",
-      })
+      }),
     );
   };
 
