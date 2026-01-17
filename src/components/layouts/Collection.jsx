@@ -1,7 +1,5 @@
 import Container from "../Container";
 import { Link } from "react-router-dom";
-import CollectionOne from "../../assets/collectionOne.jpg";
-import CollectionTwo from "../../assets/collectionTwo.jpg";
 import Flex from "../Flex";
 import Heading from "../Heading";
 

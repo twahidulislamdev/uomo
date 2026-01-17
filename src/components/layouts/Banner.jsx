@@ -1,11 +1,9 @@
-import React from "react";
 import Container from "../Container";
 import Flex from "../Flex";
 import Heading from "../Heading";
 import Image from "../Image";
 import SliderOne from "../../assets/sliderOne.png";
 import SliderTwo from "../../assets/sliderTwo.png";
-import SliderThree from "../../assets/sliderThree.png";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

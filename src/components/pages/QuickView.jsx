@@ -30,7 +30,7 @@ const QuickView = () => {
   const quickViewData = useSelector((state) => state.quickView.item);
 
   const [mainImage, setMainImage] = useState(
-    quickViewData?.img || QuickOneFirst
+    quickViewData?.img || QuickOneFirst,
   );
 
   const handleThumbnailClick = (image) => {
@@ -61,7 +61,7 @@ const QuickView = () => {
         color: quickViewData?.color || "default",
         size: selectedSize,
         quantity: quickViewData?.quantity || 1,
-      })
+      }),
     );
 
     setShowToast(true);
