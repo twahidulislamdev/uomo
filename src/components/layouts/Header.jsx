@@ -3,10 +3,6 @@ import Container from "../Container";
 import Flex from "../Flex";
 import Image from "../Image";
 import HeaderLogo from "../../assets/headerLogo.png";
-import CatagoryOne from "../../assets/catagoryOne.jpg";
-import CatagoryTwo from "../../assets/catagoryTwo.jpg";
-import CatagoryThree from "../../assets/catagoryThree.jpg";
-import CatagoryFour from "../../assets/catagoryFour.jpg";
 import CatagoryFive from "../../assets/catagoryFive.jpg";
 import {
   FaRegUser,
@@ -14,6 +10,11 @@ import {
   FaBars,
   FaTimes,
   FaGoogle,
+  FaHome,
+  FaBlog,
+  FaEnvelope,
+  FaFileAlt,
+  FaListUl,
 } from "react-icons/fa";
 import {
   HiOutlineShoppingBag,
@@ -33,12 +34,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: "HOME", path: "/" },
-    { name: "SHOP", path: "/shop" },
-    { name: "BLOG", path: "/blog" },
-    { name: "ABOUT", path: "/about" },
-    { name: "CONTACT", path: "/contact" },
-    { name: "PAGES", path: "/pages" },
+    { name: "HOME", path: "/", icon: <FaHome /> },
+    { name: "SHOP", path: "/shop", icon: <HiOutlineShoppingBag /> },
+    { name: "BLOG", path: "/blog", icon: <FaBlog /> },
+    { name: "ABOUT", path: "/about", icon: <FaFileAlt /> },
+    { name: "CONTACT", path: "/contact", icon: <FaEnvelope /> },
+    { name: "PAGES", path: "/pages", icon: <FaListUl /> },
   ];
 
   let data = useSelector((state) => state.addtocart.value);
@@ -71,7 +72,7 @@ const Header = () => {
   return (
     <>
       {/* Desktop Header start */}
-      <div className="hidden lg:block w-full m-auto py-5 overflow-hidden">
+      <div className="hidden lg:block  w-full m-auto py-3 overflow-hidden">
         <Container>
           <Flex className="justify-between items-center">
             <Link to={"/"}>
@@ -93,45 +94,79 @@ const Header = () => {
       {/* Desktop Header End */}
 
       {/* Mobile Header start */}
-      <div className="w-full flex justify-center items-center m-auto py-4 px-3 lg:hidden bg-white shadow-sm overflow-hidden">
+      <div className="w-full lg:hidden bg-white shadow-sm relative z-50">
         <Container>
-          <Flex className="justify-between items-center">
-            <Link to={"/"}>
+          <Flex className="justify-between items-center py-3 px-3">
+            <Link to="/" className="flex items-center gap-2">
               <Image imgSrc={HeaderLogo} imgAlt="Header Logo" />
             </Link>
 
-            {isMenuOpen ? (
-              <FaTimes
-                onClick={() => setIsMenuOpen(false)}
-                className="text-3xl cursor-pointer"
-              />
-            ) : (
-              <FaBars
-                onClick={() => setIsMenuOpen(true)}
-                className="text-3xl cursor-pointer"
-              />
-            )}
+            <button
+              onClick={() => setIsMenuOpen(true)}
+              className="p-2 rounded-lg hover:bg-gray-100 transition"
+              aria-label="Open menu"
+            >
+              <FaBars className="text-2xl text-gray-700" />
+            </button>
           </Flex>
+        </Container>
 
-          {isMenuOpen && (
-            <div className="w-full mt-4 bg-gray-100 rounded-md shadow-sm">
-              <ul className="text-center py-3 space-y-2">
-                {menuItems.map((item, idx) => (
+        {/* Overlay */}
+        <div
+          onClick={() => setIsMenuOpen(false)}
+          className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${
+            isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        />
+
+        {/* Drawer */}
+        <aside
+          className={`fixed top-0 left-0 w-full h-screen bg-white z-50 transform transition-transform duration-300 ease-out ${
+            isMenuOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
+          role="dialog"
+          aria-modal="true"
+        >
+          {/* Header */}
+          <div className="flex items-center justify-between px-5 py-5 border-b">
+            <h3 className="text-lg  font-semibold text-gray-800">Navigation</h3>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 rounded-full hover:bg-gray-100 transition"
+              aria-label="Close menu"
+            >
+              <FaTimes className="text-2xl text-gray-800" />
+            </button>
+          </div>
+
+          {/* Menu */}
+          <nav className="px-6 py-6">
+            <ul className="space-y-2">
+              {menuItems.map((item, idx) => (
+                <li key={idx}>
                   <Link
                     to={item.path}
-                    key={idx}
                     onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center gap-4 px-4 py-3 rounded-xl text-gray-700 hover:bg-gray-100 transition"
                   >
-                    <li className="relative list-none py-2 text-sm font-medium text-black group cursor-pointer">
+                    <span className="text-xl text-gray-500">{item.icon}</span>
+
+                    <span className="font-medium text-sm flex-1">
                       {item.name}
-                      <span className="absolute left-0 bottom-0 h-0.5 bg-black w-0 group-hover:w-full transition-all duration-300"></span>
-                    </li>
+                    </span>
+
+                    <span className="text-gray-400">→</span>
                   </Link>
-                ))}
-              </ul>
-            </div>
-          )}
-        </Container>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Footer */}
+          <div className="mt-auto px-6 py-4 border text-center text-xs text-gray-500">
+            © {new Date().getFullYear()} Your Brand
+          </div>
+        </aside>
       </div>
       {/* Mobile Header End */}
 
